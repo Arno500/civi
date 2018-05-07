@@ -10647,7 +10647,7 @@ a.text-dark:focus {
 
 .search-input-icon.empty:before {
   cursor: pointer;
-  background-image: url(/images/delete_icon.png?92791dd5a900d4d1eae9b15c7d0f7f7d);
+  background-image: url(/public/img/delete_icon.png);
 }
 
 /* HITS */
