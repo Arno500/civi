@@ -64,10 +64,17 @@
 
                         <ul class="dropdown-menu">
                             <li class="dropdown-item">
+                                <a href="{{ route('profile') }}">
+                                    Profil
+                                </a>
+                            </li>
+                            <div class="dropdown-divider">
+                            </div>
+                            <li class="dropdown-item">
                                 <a href="{{ route('logout') }}" aria-labelledby="dropdownMenu"
                                    onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
-                                    Logout
+                                    Déconnexion
                                 </a>
 
                                 <form id="logout-form" action="{{ route('logout') }}" method="POST"
