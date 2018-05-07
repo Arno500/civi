@@ -10415,6 +10415,10 @@ a.text-dark:focus {
   }
 }
 
+.navbar-brand {
+  margin-left: 1.8rem;
+}
+
 .row {
   margin-right: initial;
   margin-left: initial;
