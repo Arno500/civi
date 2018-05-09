@@ -13,15 +13,31 @@
 
 
 // Our own classes
-
+.register-bloc input, .register-bloc textarea{
+  color: #333333;
+  border-radius: 9999px;
+  height: 45px;
+}
+.register-bloc input::placeholder{
+  color: #BBBBBB;
+}
+.register-bloc button{
+  color: white;
+  border-radius: 9999px;
+  height: 50px;
+  background: #003cff;
+  background: -moz-linear-gradient(left, #003cff 0%, #435099 55%, #553390 100%);
+  background: -webkit-linear-gradient(left, #003cff 0%,#435099 55%,#553390 100%);
+  background: linear-gradient(to right, #003cff 0%,#435099 55%,#553390 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#003cff', endColorstr='#553390',GradientType=1 );
+  transition: 0.5s all;
+}
+.register-bloc button:hover{
+transform: scale(1.04);
+}
 .navbar-light .navbar-nav .button-register:hover, .navbar-light .navbar-nav .button-register:focus {
   color: white;
   transform: scale(1.1);
-}
-.register-bloc h1{
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background: linear-gradient(to right, #003cff 0%,#435099 55%,#553390 100%);
 }
 .home-text{
   padding:20px;
