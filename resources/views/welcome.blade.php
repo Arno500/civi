@@ -19,27 +19,33 @@
                 <div class="boss">
                     <h1>Boss...</h1>
                     <img src="" alt="">
-                    <p>Pourquoi chercher parmi des millions de profils ? Ne regardez que ceux qui vous corrspondent. Choississez selon différents critères tels que les années d'expérience, les compétences,...
+                    <p>Pourquoi chercher parmi des millions de profils ? Ne regardez que ceux qui vous corrspondent.
+                        Choississez selon différents critères tels que les années d'expérience, les compétences,...
                     </p>
                 </div>
                 <hr>
                 <div class="student">
                     <h1>...et étudiants</h1>
                     <img src="" alt="">
-                    <p>Des offres adaptées et intéressantes qui sont parfaites pour vous ! N'arpentez plus les nombreux sites d'offres, tels qu'<i>Alsa création, Linkedin, MonkeyTie..</i> Un job est à votre portée, maintenant, maintenant !
+                    <p>Des offres adaptées et intéressantes qui sont parfaites pour vous ! N'arpentez plus les nombreux
+                        sites d'offres, tels qu'<i>Alsa création, Linkedin, MonkeyTie..</i> Un job est à votre portée,
+                        maintenant, maintenant !
                     </p>
                 </div>
             </div>
         </div>
-<div class="register-bloc">
-<h1>
-    Rejoignez la plateforme de découverte de talents :
-</h1>
-    <p>Dans quelques secondes, vous pourrez naviguer parmi la crème de la crème en matière de créativité et de talent !
-    </p>
-    <form action="">
-        <div class="form-group"><input type="text" placeholder="Nom"></div>
-        <div class="form-group"><input type="text" placeholder="Prénom"></div>
-    </form>
+        <div class="register-bloc">
+            <h1>
+                Rejoignez la plateforme de découverte de talents :
+            </h1>
+            <p>Dans quelques secondes, vous pourrez naviguer parmi la crème de la crème en matière de créativité et de
+                talent !
+            </p>
+            <form action="" class="col-md-auto">
+                <div class="form-group"><input type="text" placeholder="Nom" class="form-control"></div>
+                <div class="form-group"><input type="text" placeholder="Prénom" class="form-control"></div>
+                <button type="submit" class="btn w-100">Trouver mon bonheur</button>
+            </form>
+        </div>
     </main>
 @endsection
