@@ -10415,6 +10415,16 @@ a.text-dark:focus {
   }
 }
 
+.navbar-nav .nav-link.button-register {
+  padding: 7px 13px;
+  background: #003cff;
+  background: -webkit-gradient(linear, left top, right top, from(#003cff), color-stop(55%, #435099), to(#553390));
+  background: linear-gradient(to right, #003cff 0%, #435099 55%, #553390 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#003cff', endColorstr='#553390',GradientType=1 );
+  border-radius: 9px;
+  color: white;
+}
+
 .navbar-brand {
   margin-left: 1.8rem;
 }
