@@ -14,6 +14,48 @@
 
 // Our own classes
 
+.home-text{
+  padding:20px;
+}
+.home-text,.register-bloc {
+  width: 50%;
+}
+.boss-student{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-content: stretch;
+  align-items: stretch;
+}
+.main-home{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-content: stretch;
+  align-items: stretch;
+}
+hr{
+  width: 1px;
+  height: initial;
+  margin-top: 10%;
+  margin-bottom: 10%;
+  border: 0;
+  border-left: 1px solid rgb(150, 150, 150);
+}
+h1{
+  color:#003CFF;
+}
+h2{
+  color:#435099;
+}
+.boss-student h1{
+text-align: center;
+}
+.student,.boss{
+  padding: 30px;
+}
 .navbar-nav .nav-link.button-register{
   padding: 7px 13px ;
   background: #003cff;
