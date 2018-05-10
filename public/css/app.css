@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Lato|Source+Sans+Pro:400,600,700);@import url(https://fonts.googleapis.com/icon?family=Material+Icons);/*!
+@import url(https://fonts.googleapis.com/css?family=Montserrat:300|Lato|Source+Sans+Pro:400,600,700);@import url(https://fonts.googleapis.com/icon?family=Material+Icons);/*!
  * Bootstrap v4.1.1 (https://getbootstrap.com/)
  * Copyright 2011-2018 The Bootstrap Authors
  * Copyright 2011-2018 Twitter, Inc.
@@ -10521,6 +10521,10 @@ h2 {
 
 .navbar-brand {
   margin-left: 1.8rem;
+}
+
+nav {
+  font-family: "Montserrat Light", "DejaVu Sans", sans-serif;
 }
 
 .row {

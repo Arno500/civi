@@ -1,6 +1,6 @@
 
 // Fonts
-@import url("https://fonts.googleapis.com/css?family=Lato|Source+Sans+Pro:400,600,700");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300|Lato|Source+Sans+Pro:400,600,700");
 
 // Variables
 @import "variables";
@@ -83,8 +83,11 @@ text-align: center;
   transition: 0.5s all;
 }
 .navbar-brand {
-  margin-left: 1.8rem
-;
+  margin-left: 1.8rem;
+}
+
+nav {
+  font-family: "Montserrat Light", "DejaVu Sans", sans-serif;
 }
 
 .row {
@@ -126,7 +129,6 @@ text-align: center;
 .card-horizontal-lg-up {
   flex-direction: row;
 }
-$card-img-width: 200px;
 .card-horizontal .card-img {
   flex: 0 0 $card-img-width;
 }
