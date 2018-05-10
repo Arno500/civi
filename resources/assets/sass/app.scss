@@ -1,6 +1,6 @@
 
 // Fonts
-@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300|Lato|Source+Sans+Pro:400,600,700");
 
 // Variables
 @import "variables";
@@ -13,10 +13,97 @@
 
 
 // Our own classes
-
+.register-bloc input, .register-bloc textarea{
+  color: #333333;
+  border-radius: 9999px;
+  height: 45px;
+}
+.register-bloc input::placeholder{
+  color: #BBBBBB;
+}
+.register-bloc button{
+  color: white;
+  border-radius: 9999px;
+  height: 50px;
+  background: #003cff;
+  background: -moz-linear-gradient(left, #003cff 0%, #435099 55%, #553390 100%);
+  background: -webkit-linear-gradient(left, #003cff 0%,#435099 55%,#553390 100%);
+  background: linear-gradient(to right, #003cff 0%,#435099 55%,#553390 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#003cff', endColorstr='#553390',GradientType=1 );
+  transition: 0.5s all;
+}
+.register-bloc button:hover{
+transform: scale(1.04);
+}
+.navbar-light .navbar-nav .button-register:hover, .navbar-light .navbar-nav .button-register:focus {
+  color: white;
+  transform: scale(1.1);
+}
+.home-text{
+  padding:20px;
+}
+.home-text,.register-bloc {
+  width: 50%;
+}
+.boss-student{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-content: stretch;
+  align-items: stretch;
+}
+.main-home{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-content: stretch;
+  align-items: stretch;
+  width: 80%;
+  margin: 30vh auto;
+  background-color: white;
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+}
+hr{
+  width: 1px;
+  height: initial;
+  margin-top: 10%;
+  margin-bottom: 10%;
+  border: 0;
+  border-left: 1px solid rgb(150, 150, 150);
+}
+h1{
+  color:#003CFF;
+}
+h2{
+  color:#435099;
+}
+.boss-student h1{
+text-align: center;
+}
+.student,.boss{
+  padding: 30px;
+}
+.navbar-nav .nav-link.button-register{
+  padding: 7px 13px ;
+  background: #003cff;
+  background: -moz-linear-gradient(left, #003cff 0%, #435099 55%, #553390 100%);
+  background: -webkit-linear-gradient(left, #003cff 0%,#435099 55%,#553390 100%);
+  background: linear-gradient(to right, #003cff 0%,#435099 55%,#553390 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#003cff', endColorstr='#553390',GradientType=1 );
+  border-radius: 9px;
+  color: white;
+  transition: 0.5s all;
+}
 .navbar-brand {
-  margin-left: 1.8rem
-;
+  margin-left: 1.8rem;
+}
+
+nav {
+  font-family: "Montserrat Light", "DejaVu Sans", sans-serif;
 }
 
 .row {
@@ -58,7 +145,6 @@
 .card-horizontal-lg-up {
   flex-direction: row;
 }
-$card-img-width: 200px;
 .card-horizontal .card-img {
   flex: 0 0 $card-img-width;
 }

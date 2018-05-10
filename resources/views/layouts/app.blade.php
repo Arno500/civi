@@ -53,8 +53,8 @@
                 <li class="nav-item"><a href="{{ route('mmi') }}" class="nav-link">La formation MMI</a></li>
                 <!-- Authentication Links -->
                 @guest
-                    <li class="nav-item"><a href="{{ route('login') }}" class="nav-link">Connexion</a></li>
-                    <li class="nav-item"><a href="{{ route('register') }}" class="nav-link">Inscription</a></li>
+                    <li class="nav-item"><a href="{{ route('login') }}" class="nav-link">Se connecter</a></li>
+                    <li class="nav-item"><a href="{{ route('register') }}" class="nav-link button-register">S'inscrire</a></li>
                 @else
                     <li class="dropdown nav-item">
                         <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown" role="button"
