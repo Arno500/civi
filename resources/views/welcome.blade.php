@@ -35,9 +35,7 @@
             </div>
         </div>
         <div class="register-bloc">
-            <h1>
-                Rejoignez la plateforme de découverte de talents :
-            </h1>
+            <img src="{{ asset('img/catchline.svg') }}" alt="Rejoignez la plateforme de découverte de talents :">
             <p>Dans quelques secondes, vous pourrez naviguer parmi la crème de la crème en matière de créativité et de
                 talent !
             </p>

@@ -10415,18 +10415,51 @@ a.text-dark:focus {
   }
 }
 
+.register-bloc input,
+.register-bloc textarea {
+  color: #333333;
+  border-radius: 9999px;
+  height: 45px;
+}
+
+.register-bloc input::-webkit-input-placeholder {
+  color: #BBBBBB;
+}
+
+.register-bloc input:-ms-input-placeholder {
+  color: #BBBBBB;
+}
+
+.register-bloc input::-ms-input-placeholder {
+  color: #BBBBBB;
+}
+
+.register-bloc input::placeholder {
+  color: #BBBBBB;
+}
+
+.register-bloc button {
+  color: white;
+  border-radius: 9999px;
+  height: 50px;
+  background: #003cff;
+  background: -webkit-gradient(linear, left top, right top, from(#003cff), color-stop(55%, #435099), to(#553390));
+  background: linear-gradient(to right, #003cff 0%, #435099 55%, #553390 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#003cff', endColorstr='#553390',GradientType=1 );
+  -webkit-transition: 0.5s all;
+  transition: 0.5s all;
+}
+
+.register-bloc button:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
 .navbar-light .navbar-nav .button-register:hover,
 .navbar-light .navbar-nav .button-register:focus {
   color: white;
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
-}
-
-.register-bloc h1 {
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background: -webkit-gradient(linear, left top, right top, from(#003cff), color-stop(55%, #435099), to(#553390));
-  background: linear-gradient(to right, #003cff 0%, #435099 55%, #553390 100%);
 }
 
 .home-text {
