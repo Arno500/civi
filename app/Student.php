@@ -4,6 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 use Laravel\Scout\Searchable;
+use Carbon\Carbon;
 
 class Student extends Model
 {
@@ -14,7 +15,7 @@ class Student extends Model
         $record = $this->toArray();
 
 
-        $record['_internship_duration'] = $record['internship_duration'];
+        $record['internship_duration'] = $this->duration();
 
         $record['name'] = $record['firstname']." ".$record['surname'];
 
@@ -25,9 +26,17 @@ class Student extends Model
             return $data['quality'];
         })->toArray();;
 
-        unset($record['internship_duration'], $record['firstname'], $record['surname']);
+        $record['portraiturl'] = env('APP_URL', 'http://localhost').$record['portraiturl'];
+
+        unset($record['firstname'], $record['surname']);
 
         return $record;
+    }
+
+    public function duration() {
+        Carbon::setlocale(app()->getLocale());
+        $duration = Carbon::now()->addDays($this->internship_duration)->diffForHumans(null, true, false, 4);
+        return $duration;
     }
 
     public function searchableAs()

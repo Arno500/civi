@@ -31,7 +31,7 @@ class EnterpriseController extends Controller
         $image = Image::make($request->file('logo'))->widen(250)->encode('jpg');
         $imageFilename = str_slug($validatedData['name']);
         $pathStorage = 'public/img/enterprise-logos/' . $imageFilename . '.jpg';
-        $pathPublic = '/storage/img/enterprise-logos/' . $imageFilename . '.jpg';
+        $pathPublic = 'storage/img/enterprise-logos/' . $imageFilename . '.jpg';
 
         Storage::put($pathStorage, $image->__toString());
 
