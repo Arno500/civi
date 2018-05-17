@@ -17,6 +17,7 @@ class CreateStudentsTable extends Migration
             $table->increments('id');
             $table->string('firstname', 150);
             $table->string('surname', 150);
+            $table->text('description')->nullable();
             $table->string('internship_preference')->nullable();
             $table->integer('internship_duration')->nullable()->unsigned();
             $table->text('resumeurl_interactive')->nullable();
