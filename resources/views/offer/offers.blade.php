@@ -31,7 +31,7 @@
     @endforeach
         </div>
 
-        {{ $offers->links() }}
+        {{ $offers->links('pagination.pagination') }}
     @endif
 
 </div>
