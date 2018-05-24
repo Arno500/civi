@@ -9,6 +9,8 @@ import $ from 'jquery';
 import instantsearch from 'instantsearch.js';
 import {hits, searchBox} from 'instantsearch.js/es/widgets';
 
+import './color-thief.min.js';
+
 $.ajaxSetup({
     headers: {
         'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
@@ -38,7 +40,13 @@ $(document).ready(function() {
                 poweredBy: false,
                 cssClasses: {root: "search-container",
                     input: "search-box"},
-                placeholder: "Essayez de taper \"Valentin photoshop\""
+                placeholder: "Essayez de taper \"Valentin photoshop\"",
+                queryHook: function() {
+                    $(".hit-image>img").each(function() {
+                        colorThief = new ColorThief();
+                        console.log(colorThief.getColor($this));
+                    });
+                }
             })
         );
 

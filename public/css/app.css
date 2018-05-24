@@ -10451,8 +10451,8 @@ a.text-dark:focus {
 }
 
 .register-bloc button:hover {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+  -webkit-transform: scale(1.04);
+          transform: scale(1.04);
 }
 
 .navbar-light .navbar-nav .button-register:hover,
@@ -10466,9 +10466,12 @@ a.text-dark:focus {
   padding: 20px;
 }
 
-.home-text,
+.home-text {
+  width: 60%;
+}
+
 .register-bloc {
-  width: 50%;
+  width: 40%;
 }
 
 .boss-student {

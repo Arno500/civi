@@ -16,7 +16,7 @@
 
                                 <input id="name" type="text"
                                        class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name"
-                                       value="{{ old('name') }}" required autofocus>
+                                       value="{{ old('name') }}" required autofocus autocomplete="username">
 
                                 @if ($errors->has('name'))
                                     <div class="invalid-feedback">
@@ -29,7 +29,7 @@
                                 <label for="email">Adresse de couriel</label>
                                 <input id="email" type="email"
                                        class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email"
-                                       value="{{ old('email') }}" required>
+                                       value="{{ old('email') }}" required autocomplete="mail">
 
                                 @if ($errors->has('email'))
                                     <div class="invalid-feedback">
@@ -43,7 +43,7 @@
 
                                 <input id="password" type="password"
                                        class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}"
-                                       name="password" required aria-describedby="passwordHelpBlock">
+                                       name="password" required aria-describedby="passwordHelpBlock" autocomplete="new-password">
                                 <small id="passwordHelpBlock" class="form-text text-muted">
                                     Votre mot de passe doit contenir au moins 6 caractères.
                                 </small>
@@ -57,13 +57,13 @@
                             <div class="form-group">
                                 <label for="password-confirm">Confirmation du mot de passe</label>
                                 <input id="password-confirm" type="password" class="form-control"
-                                       name="password_confirmation" required>
+                                       name="password_confirmation" required autocomplete="new-password">
                             </div>
 
                             <div class="form-group">
                                 <label for="enterprise">Entreprise</label>
                                 <input id="enterprise" type="text" class="form-control" name="enterprise"
-                                       value="{{ old('enterprise') }}">
+                                       value="{{ old('enterprise') }}" autocomplete="organization">
                             </div>
 
                             <div class="form-group">

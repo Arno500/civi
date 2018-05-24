@@ -26,19 +26,29 @@ class StudentController extends Controller
 
             var_dump($obj);
 
-            $photodata = base64_decode($obj['portrait']);
-            $photo = Image::make($photodata)->widen(400)->encode('jpg');
-            $photoFilename = str_slug($obj['firstname'] . $obj['surname']);
-            $pathStoragePhoto = 'public/img/portrait/' . $photoFilename . '.jpg';
-            $pathPublicPhoto = 'storage/img/portrait/' . $photoFilename . '.jpg';
-            Storage::put($pathStoragePhoto, $photo->__toString());
+            if (isset($obj['portrait']) && $obj['portrait'] != null) {
+                $photodata = base64_decode($obj['portrait']);
+                $photo = Image::make($photodata)->widen(400)->encode('jpg');
+                $photoFilename = str_slug($obj['firstname'] . $obj['surname']);
+                $pathStoragePhoto = 'public/img/portrait/' . $photoFilename . '.jpg';
+                $pathPublicPhoto = 'storage/img/portrait/' . $photoFilename . '.jpg';
+                Storage::put($pathStoragePhoto, $photo->__toString());
+            } else {
+                $pathPublicPhoto = 'img/unknownportrait.svg';
+            }
 
-            $screenshotdata = base64_decode($obj['screenshot']);
-            $screenshot = Image::make($photodata)->widen(400)->encode('jpg');
-            $screenshotFilename = str_slug($obj['firstname'] . $obj['surname']);
-            $pathStorageScreenshot = 'public/img/screenshots/' . $screenshotFilename . '.jpg';
-            $pathPublicScreenshot = 'storage/img/screenshots/' . $screenshotFilename . '.jpg';
-            Storage::put($pathStorageScreenshot, $screenshot->__toString());
+            if (isset($obj['portrait']) && $obj['portrait'] != null) {
+                $screenshotdata = base64_decode($obj['screenshot']);
+                $screenshot = Image::make($screenshotdata)->widen(400)->encode('jpg');
+                $screenshotFilename = str_slug($obj['firstname'] . $obj['surname']);
+                $pathStorageScreenshot = 'public/img/screenshots/' . $screenshotFilename . '.jpg';
+                $pathPublicScreenshot = 'storage/img/screenshots/' . $screenshotFilename . '.jpg';
+                Storage::put($pathStorageScreenshot, $screenshot->__toString());
+            } else {
+                $pathPublicScreenshot = null;
+                //$pathPublicScreenshot = 'img/unknownscreenshot.svg';
+            }
+
 
             $student = Student::create([
                 'firstname' => $obj['firstname'],

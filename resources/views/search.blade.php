@@ -20,11 +20,11 @@
     <script type="text/html" id="hit-template">
         <div class="hit">
             <div class="hit-image">
-                <img src="@{{image}}" alt="@{{name}}">
+                <img src="@{{ screenshoturl }}" alt="Capture d'écran du CV interactif de @{{ firstname }} @{{ surname }}">
             </div>
             <div class="hit-content">
-                <h3 class="hit-price">$@{{price}}</h3>
-                <h2 class="hit-name">@{{{_highlightResult.name.value}}}</h2>
+                <img src="@{{ portraiturl }}" alt="Photo de @{{ firstname }} @{{ surname }}">
+                <h2 class="hit-name">@{{{_highlightResult.firstname.value}}} @{{{_highlightResult.surname.value}}}</h2>
                 <p class="hit-description">@{{{_highlightResult.description.value}}}</p>
             </div>
         </div>

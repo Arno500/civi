@@ -19,7 +19,7 @@ class Student extends Model
         'resumeurl_interactive',
         'resumeurl_static',
         'portraiturl',
-        'screenshot'
+        'screenshoturl'
     ];
 
     public function toSearchableArray()
@@ -35,7 +35,11 @@ class Student extends Model
             return $data['quality'];
         })->toArray();;
 
-        $record['portraiturl'] = env('APP_URL', 'http://localhost') . $record['portraiturl'];
+        //$record['portraiturl'] = env('APP_URL', 'http://localhost') . $record['portraiturl'];
+
+        if ($record['screenshoturl'] == null || !isset($record['screenshoturl'])) {
+            $record['screenshoturl'] = "https://picsum.photos/633/300/?random";
+        }
 
         return $record;
     }
