@@ -18,6 +18,7 @@
                             <a class="btn" href="{{ route('offers.create') }}">Créer une offre</a>
                             <a class="btn" href="{{ route('offers') }}">Accéder aux offres</a>
                             <a class="btn" href="{{ route('search') }}">Accéder aux étudiants</a>
+                            <a class="btn" href="{{ route('profile.modify') }}">Modifier mes informations</a>
                         </div>
 
                     </div>

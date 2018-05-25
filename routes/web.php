@@ -9,17 +9,17 @@
 | routes are loaded by the RouteServiceProvider within a group which
 | contains the "web" middleware group. Now create something great!
 |
-*/
+ */
 
 Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('{n}', function($n) {
-    return view("article")->with('numero',$n);
+Route::get('{n}', function ($n) {
+    return view("article")->with('numero', $n);
 })->where('n', '[0-9]+');
 
-Route::get('facture/{n}', function($n) {
+Route::get('facture/{n}', function ($n) {
     return view('facture')->withNumero($n);
 })->where('n', '[0-9]+');
 
@@ -43,13 +43,16 @@ Auth::routes();
 
 Route::get('/profile', 'HomeController@index')->name('profile');
 
+Route::get('/profile/modify', 'Auth\ModifyAccountController@updateUserForm')->name('profile.modify');
+Route::post('/profile/modify', 'Auth\ModifyAccountController@updateUser')->name('profile.update');
+
 Route::get('/enterprise/register', 'Auth\EnterpriseController@redirect');
 Route::post('/enterprise/register', 'Auth\EnterpriseController@store')->name('enterprise.register');
 
 Route::get('/search', 'SearchController@index')->name('search');
 
 Route::get('/offers', 'OffersController@index')->name('offers');
-Route::get('/offers/create', function() {
+Route::get('/offers/create', function () {
     if (Auth::user()->enterprise != null) {
         return view('offer.createoffer');
     } else {
@@ -59,6 +62,6 @@ Route::get('/offers/create', function() {
 Route::post('/offers/create', 'OffersController@create')->name('offers.create');
 Route::get('offers/{n}', ['uses' => 'OffersController@offer', 'as' => 'offerid'])->where('n', '[0-9]+')->name('offers.offer');
 
-Route::get('/mmi', function() {
+Route::get('/mmi', function () {
     return view('mmi');
 })->name('mmi');
