@@ -38,7 +38,7 @@ class Student extends Model
         //$record['portraiturl'] = env('APP_URL', 'http://localhost') . $record['portraiturl'];
 
         if ($record['screenshoturl'] == null || !isset($record['screenshoturl'])) {
-            $record['screenshoturl'] = "https://picsum.photos/633/300/?random";
+            $record['screenshoturl'] = "/img/unknownscreenshot.png";
         }
 
         return $record;

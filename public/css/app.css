@@ -10415,6 +10415,136 @@ a.text-dark:focus {
   }
 }
 
+hr {
+  width: 1px;
+  height: initial;
+  margin-top: 10%;
+  margin-bottom: 10%;
+  border: 0;
+  border-left: 1px solid #969696;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-bottom: 0.5rem;
+  font-family: inherit;
+  font-weight: 500;
+  line-height: 1;
+  color: #003CFF;
+  font-size: 2.5rem;
+}
+
+h2 {
+  color: #435099;
+  font-size: 1.2rem;
+}
+
+p {
+  font-size: 1.0rem;
+}
+
+.row {
+  margin-right: initial;
+  margin-left: initial;
+}
+
+@media screen and (max-width: 900px) {
+  hr {
+    display: none;
+  }
+}
+
+.flex-responsive {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-line-pack: stretch;
+      align-content: stretch;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+}
+
+@media screen and (max-width: 900px) {
+  .flex-responsive {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+  }
+}
+
+.navbar-light .navbar-nav .button-register:hover,
+.navbar-light .navbar-nav .button-register:focus {
+  color: white;
+  -webkit-transform: scale(1.04);
+          transform: scale(1.04);
+}
+
+.navbar-nav .nav-link.button-register {
+  padding: 7px 13px;
+  background: #003cff;
+  background: -webkit-gradient(linear, left top, right top, from(#003cff), color-stop(55%, #435099), to(#553390));
+  background: linear-gradient(to right, #003cff 0%, #435099 55%, #553390 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#003cff', endColorstr='#553390',GradientType=1 );
+  border-radius: 9px;
+  color: white;
+  -webkit-transition: 0.5s all;
+  transition: 0.5s all;
+}
+
+.navbar-brand {
+  margin-left: 1rem;
+  display: inline-block;
+  padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
+  margin-right: 1rem;
+  font-size: 1.25rem;
+  line-height: inherit;
+  white-space: nowrap;
+}
+
+nav {
+  font-family: "Montserrat Light", "DejaVu Sans", sans-serif;
+}
+
+.banner {
+  margin-top: -35px;
+  background-image: url("/img/banner.png");
+  height: 47vh;
+}
+
+.register-bloc {
+  padding: 15px;
+  max-width: 350px;
+  width: 40%;
+}
+
 .register-bloc input,
 .register-bloc textarea {
   color: #333333;
@@ -10455,87 +10585,77 @@ a.text-dark:focus {
           transform: scale(1.04);
 }
 
-.navbar-light .navbar-nav .button-register:hover,
-.navbar-light .navbar-nav .button-register:focus {
-  color: white;
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+.register-bloc button:active {
+  background: inherit;
+}
+
+.btn:not(:disabled):not(.disabled):active {
+  background: inherit;
+}
+
+.register-bloc-container {
+  position: -webkit-sticky;
+  position: sticky;
+  top: calc(20% + 20px);
+  -webkit-transform: translateY(-33%);
+          transform: translateY(-33%);
+  background-color: white;
+  padding: 15px;
+  border-radius: 15px;
+  -webkit-box-shadow: 0px -2px 33px -8px rgba(0, 0, 0, 0.75);
+          box-shadow: 0px -2px 33px -8px rgba(0, 0, 0, 0.75);
+}
+
+.register-bloc h2 {
+  line-height: 1.9rem;
+  font-weight: 600;
+  font-size: 2rem;
+  background: -webkit-linear-gradient(right, #003CFF, #553390);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .home-text {
   padding: 20px;
-}
-
-.home-text {
   width: 60%;
 }
 
-.register-bloc {
-  width: 40%;
-}
-
-.boss-student {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -ms-flex-line-pack: stretch;
-      align-content: stretch;
-  -webkit-box-align: stretch;
-      -ms-flex-align: stretch;
-          align-items: stretch;
+.home-text p {
+  margin-bottom: 20px;
 }
 
 .main-home {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -ms-flex-line-pack: stretch;
-      align-content: stretch;
-  -webkit-box-align: stretch;
-      -ms-flex-align: stretch;
-          align-items: stretch;
   width: 80%;
-  margin: 30vh auto;
+  max-width: 1000px;
+  position: relative;
+  margin: 0 auto;
+  margin-top: -50px;
   background-color: white;
   -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
 }
 
-hr {
-  width: 1px;
-  height: initial;
-  margin-top: 10%;
-  margin-bottom: 10%;
-  border: 0;
-  border-left: 1px solid #969696;
+.comparison {
+  border-radius: 7px;
+  background-color: #ececec;
+  margin-bottom: 20px;
 }
 
-h1 {
-  color: #003CFF;
-}
-
-h2 {
-  color: #435099;
-}
-
-.boss-student h1 {
+.comparison h1 {
+  font-size: 1.5rem;
   text-align: center;
+}
+
+.comparison p {
+  margin-top: 20px;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.comparison img {
+  width: 150px;
+  margin: 0 auto;
+  display: block;
 }
 
 .student,
@@ -10543,29 +10663,25 @@ h2 {
   padding: 30px;
 }
 
-.navbar-nav .nav-link.button-register {
-  padding: 7px 13px;
-  background: #003cff;
-  background: -webkit-gradient(linear, left top, right top, from(#003cff), color-stop(55%, #435099), to(#553390));
-  background: linear-gradient(to right, #003cff 0%, #435099 55%, #553390 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#003cff', endColorstr='#553390',GradientType=1 );
-  border-radius: 9px;
-  color: white;
-  -webkit-transition: 0.5s all;
-  transition: 0.5s all;
-}
+@media screen and (max-width: 900px) {
+  .register-bloc-container {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
 
-.navbar-brand {
-  margin-left: 1.8rem;
-}
+  .home-text {
+    width: 100%;
+  }
 
-nav {
-  font-family: "Montserrat Light", "DejaVu Sans", sans-serif;
-}
+  .register-bloc {
+    width: 100%;
+  }
 
-.row {
-  margin-right: initial;
-  margin-left: initial;
+  .main-home {
+    width: 100%;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
 }
 
 .offer-link {

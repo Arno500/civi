@@ -27,16 +27,16 @@
         <!-- Branding Image -->
         @guest
             <a class="navbar-brand" href="{{ url('/') }}">
-                {{ config('app.name', 'Laravel') }}
+                <img src="/img/logo.svg" alt="{{ config('app.name', 'Laravel') }}" height="50">
             </a>
         @else
             @if(Auth::user()->enterprise == null)
                 <a class="navbar-brand" href="{{ route('offers') }}">
-                    {{ config('app.name', 'Laravel') }}
+                    <img src="/img/logo.svg" alt="{{ config('app.name', 'Laravel') }}" height="50">
                 </a>
             @else
                 <a class="navbar-brand" href="{{ route('search') }}">
-                    {{ config('app.name', 'Laravel') }}
+                    <img src="/img/logo.svg" alt="{{ config('app.name', 'Laravel') }}" height="50">
                 </a>
             @endif
         @endguest
@@ -88,8 +88,9 @@
             </ul>
         </div>
     </nav>
-
+<main>
     @yield('content')
+</main>
 </div>
 
 <!-- Scripts -->

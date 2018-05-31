@@ -24356,8 +24356,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_jquery__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_instantsearch_js__ = __webpack_require__(232);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_instantsearch_js_es_widgets__ = __webpack_require__(405);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__color_thief_min_js__ = __webpack_require__(513);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__color_thief_min_js___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__color_thief_min_js__);
 /**
  * First we will load all of this project's JavaScript dependencies which
  * includes Vue and other libraries. It is a great starting point when
@@ -24369,7 +24367,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 
-
+var ColorThief = __webpack_require__(513);
 
 __WEBPACK_IMPORTED_MODULE_0_jquery___default.a.ajaxSetup({
     headers: {
@@ -24380,6 +24378,16 @@ __WEBPACK_IMPORTED_MODULE_0_jquery___default.a.ajaxSetup({
 __WEBPACK_IMPORTED_MODULE_0_jquery___default()(document).ready(function () {
 
     if (__WEBPACK_IMPORTED_MODULE_0_jquery___default()("#search-input").length) {
+        var getBase64Image = function getBase64Image(img) {
+            var canvas = document.createElement("canvas");
+            canvas.width = img.width;
+            canvas.height = img.height;
+            var ctx = canvas.getContext("2d");
+            ctx.drawImage(img, 0, 0);
+            var dataURL = canvas.toDataURL("image/png");
+            return dataURL.replace(/^data:image\/(png|jpg);base64,/, "");
+        };
+
         var search = Object(__WEBPACK_IMPORTED_MODULE_1_instantsearch_js__["a" /* default */])({
             // Replace with your own values
             appId: 'LHQG8G2ATM',
@@ -24402,8 +24410,9 @@ __WEBPACK_IMPORTED_MODULE_0_jquery___default()(document).ready(function () {
             placeholder: "Essayez de taper \"Valentin photoshop\"",
             queryHook: function queryHook() {
                 __WEBPACK_IMPORTED_MODULE_0_jquery___default()(".hit-image>img").each(function () {
-                    colorThief = new ColorThief();
-                    console.log(colorThief.getColor($this));
+                    var colorThief = new ColorThief();
+                    //console.log($(this).get(0));
+                    console.log(colorThief.getColor(__WEBPACK_IMPORTED_MODULE_0_jquery___default()(this).get(0)));
                 });
             }
         }));
@@ -52853,6 +52862,9 @@ if (ColorThief.prototype.getColor = function (a, b) {
           d = a[c].color;d[0] > 251 && d[1] > 251 && d[2] > 251 && (a[c].color = [255, 255, 255]);
     } }, { quantize: h };
 }();
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = ColorThief;
 
 /***/ })
 /******/ ]);

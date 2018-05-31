@@ -1,24 +1,19 @@
 @extends('layouts.app')
 @section('content')
-    <main class="main-home">
+    <div class="banner">
+
+    </div>
+    <div class="flex-responsive main-home">
         <div class="home-text">
-            <h1> Parce que les talents ont du mal à rencontrer les gentils employeurs</h1>
-            <h2>Mais nous vous mettons en relation, donc pas de soucis à se faire</h2>
-            <p>Dans un marché paradoxelement saturé avec un haut taux de chômage, il devient difficile de trouver une
-                entreprise/un Créateur/Web-Designer/Dev Full-Stack/CRM/Expert SEO... Et nous sommes là pour vous aider !
-                En vous proposant un moteur de recherche complet et innovant, on relie tout le petit monde avec des
-                critères tels que le niveau d'expérience mininum, les compétences, les langues parlées... Et chaque
-                personne sera présentée à travers son CV interractif, représentant sa personnalité.
+            <h1>Un liste de talent, rien que pour vous !</h1>
+            <h2>Choisissez parmis plus de 50 étudiants prêts à travailler à coup de café !</h2>
+            <p>Grâce à notre moteur de recherche innovant, la moindre particularité peut faire la différence. Que ce soit le métier, les logiciels maîtrisés, les qualités requises...
+                Vous n’avez plus qu’à trouver VOTRE étudiant parfait !
             </p>
-            <h1>La créativité ne se mesure pas à un bout de papier</h1>
-            <h2>Et c'est bien pour ça qu'on est là</h2>
-            <p>On en a marre des entreprises qui prennent juste les premiers de promo, on vous montre que TOUT LE MONDE
-                a des qualités, et rarement des qualités inutiles.
-            </p>
-            <div class="boss-student">
+            <div class="flex-responsive comparison">
                 <div class="boss">
                     <h1>Boss...</h1>
-                    <img src="" alt="">
+                    <img src="/img/boss.svg" alt="">
                     <p>Pourquoi chercher parmi des millions de profils ? Ne regardez que ceux qui vous corrspondent.
                         Choississez selon différents critères tels que les années d'expérience, les compétences,...
                     </p>
@@ -26,24 +21,34 @@
                 <hr>
                 <div class="student">
                     <h1>...et étudiants</h1>
-                    <img src="" alt="">
+                    <img src="/img/student.svg" alt="">
                     <p>Des offres adaptées et intéressantes qui sont parfaites pour vous ! N'arpentez plus les nombreux
                         sites d'offres, tels qu'<i>Alsa création, Linkedin, MonkeyTie..</i> Un job est à votre portée,
                         maintenant, maintenant !
                     </p>
                 </div>
             </div>
+            <h1>La créativité ne se mesure pas à un bout de papier</h1>
+            <h2>Et c'est bien pour ça qu'on est là</h2>
+            <p>Avoir le diplôme n’est pas toujours synonyme d’avoir les compétences. Vous pouvez donc rechercher ce dont vous avez besoin, avec  des mots-clés et un système de filtres.
+                Mais surtout, vous pouvez déposer vos offres pour attirer encore plus de génies !
+            </p>
+
         </div>
         <div class="register-bloc">
-            <img src="{{ asset('img/catchline.svg') }}" alt="Rejoignez la plateforme de découverte de talents :">
-            <p>Dans quelques secondes, vous pourrez naviguer parmi la crème de la crème en matière de créativité et de
-                talent !
-            </p>
-            <form action="" class="col-md-auto">
-                <div class="form-group"><input type="text" placeholder="Nom" class="form-control"></div>
-                <div class="form-group"><input type="text" placeholder="Prénom" class="form-control"></div>
-                <button type="submit" class="btn w-100">Trouver mon bonheur</button>
-            </form>
+            <div class="register-bloc-container">
+{{--
+                <img src="{{ asset('img/catchline.svg') }}" alt="Rejoignez la plateforme de découverte de talents :">
+--}}
+                <h2>Rejoignez la plateforme de découverte de talents</h2>
+                <p>Accéder à nos talents prends deux seco... C'est déjà fini ?
+                </p>
+                <form action="" class="col-md-auto">
+                    <div class="form-group"><input type="text" placeholder="Nom" class="form-control"></div>
+                    <div class="form-group"><input type="text" placeholder="Prénom" class="form-control"></div>
+                    <button type="submit" class="btn w-100">Trouver mon bonheur</button>
+                </form>
+            </div>
         </div>
-    </main>
+    </div>
 @endsection

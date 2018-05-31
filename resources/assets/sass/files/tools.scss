@@ -1,0 +1,19 @@
+.flex-responsive {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-content: stretch;
+  align-items: stretch;
+}
+
+@media screen and (max-width: $responsive-breakpoint) {
+.flex-responsive {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-content: center;
+  align-items: stretch;
+}
+}

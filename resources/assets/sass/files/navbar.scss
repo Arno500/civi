@@ -1,0 +1,29 @@
+.navbar-light .navbar-nav .button-register:hover, .navbar-light .navbar-nav .button-register:focus {
+  color: white;
+  transform: scale(1.04);
+}
+.navbar-nav .nav-link.button-register{
+  padding: 7px 13px ;
+  background: #003cff;
+  background: -moz-linear-gradient(left, #003cff 0%, #435099 55%, #553390 100%);
+  background: -webkit-linear-gradient(left, #003cff 0%,#435099 55%,#553390 100%);
+  background: linear-gradient(to right, #003cff 0%,#435099 55%,#553390 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#003cff', endColorstr='#553390',GradientType=1 );
+  border-radius: 9px;
+  color: white;
+  transition: 0.5s all;
+}
+.navbar-brand {
+  margin-left: 1rem;
+  display: inline-block;
+  padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
+  margin-right: 1rem;
+  font-size: 1.25rem;
+  line-height: inherit;
+  white-space: nowrap;
+}
+
+nav {
+  font-family: "Montserrat Light", "DejaVu Sans", sans-serif;
+}

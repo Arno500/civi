@@ -1,0 +1,35 @@
+hr{
+  width: 1px;
+  height: initial;
+  margin-top: 10%;
+  margin-bottom: 10%;
+  border: 0;
+  border-left: 1px solid rgb(150, 150, 150);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 0.5rem;
+  font-family: inherit;
+  font-weight: 500;
+  line-height: 1;
+  color: #003CFF;
+  font-size: 2.5rem;
+}
+h2 {
+  color: #435099;
+  font-size: 1.2rem;
+}
+p {
+  font-size: 1.0rem;
+}
+
+.row {
+  margin-right: initial;
+  margin-left: initial;
+}
+
+@media screen and (max-width: $responsive-breakpoint) {
+  hr {
+    display: none;
+  }
+}
