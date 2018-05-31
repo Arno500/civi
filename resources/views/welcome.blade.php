@@ -23,8 +23,8 @@
                     <h1>...et étudiants</h1>
                     <img src="/img/student.svg" alt="">
                     <p>Des offres adaptées et intéressantes qui sont parfaites pour vous ! N'arpentez plus les nombreux
-                        sites d'offres, tels qu'<i>Alsa création, Linkedin, MonkeyTie..</i> Un job est à votre portée,
-                        maintenant, maintenant !
+                        sites d'offres, tels qu'<i>AlsaCréation</i>, <i>Linkedin</i>, <i>MonkeyTie</i>... Un job est à votre portée,
+                        maintenant !
                     </p>
                 </div>
             </div>
@@ -41,11 +41,15 @@
                 <img src="{{ asset('img/catchline.svg') }}" alt="Rejoignez la plateforme de découverte de talents :">
 --}}
                 <h2>Rejoignez la plateforme de découverte de talents</h2>
-                <p>Accéder à nos talents prends deux seco... C'est déjà fini ?
+                <p>Accéder à nos talents prends deux secon... C'est déjà fini ?
                 </p>
-                <form action="" class="col-md-auto">
-                    <div class="form-group"><input type="text" placeholder="Nom" class="form-control"></div>
-                    <div class="form-group"><input type="text" placeholder="Prénom" class="form-control"></div>
+                <form action="{{ route('register') }}" class="col-md-auto">
+                    <div class="form-element">
+                        <input type="text" id="name" name="name" placeholder="Pseudo" class="form-control" value="{{ old('name') }}">
+                    </div>
+                    <div class="form-element">
+                        <input type="email" id="email" name="email" placeholder="Email" class="form-control" value="{{ old('mail') }}">
+                    </div>
                     <button type="submit" class="btn w-100">Trouver mon bonheur</button>
                 </form>
             </div>

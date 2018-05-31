@@ -19,6 +19,15 @@ $.ajaxSetup({
 
 $(document).ready(function() {
 
+    $(".dropdown-toggle").click(function () {
+        var menu = $(".dropdown-menu");
+        if (menu.css("display") === 'none') {
+            menu.show();
+        } else {
+            menu.hide();
+        }
+    });
+
     if ($("#search-input").length){
         function getBase64Image(img) {
             var canvas = document.createElement("canvas");
@@ -71,6 +80,24 @@ $(document).ready(function() {
         );
 
         search.start();
+    }
+
+    if ($("#register").length) {
+        var temp;
+        $("body").click(function() {
+            if ($('input[name="account"]')[0].checked === true) {
+                $(".active").removeClass('active focus');
+                $("#studentcheck").parent().addClass('active');
+                $(".enterprise-group").hide('fast');
+                temp = $(".enterprise-group").find("input").val();
+                $(".enterprise-group").find("input").val("");
+            } else {
+                $(".active").removeClass('active focus');
+                $("#enterprisecheck").parent().addClass('active');
+                $(".enterprise-group").show('fast');
+            }
+        })
+
     }
 
 

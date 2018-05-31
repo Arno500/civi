@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="container">
+    <div class="container" id="register">
         <div class="row justify-content-md-center">
             <div class="col col-lg-8">
                 <div class="card">
@@ -16,7 +16,7 @@
 
                                 <input id="name" type="text"
                                        class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name"
-                                       value="{{ old('name') }}" required autofocus autocomplete="username">
+                                       value="{{ request('name', old('name')) }}" required autofocus autocomplete="username">
 
                                 @if ($errors->has('name'))
                                     <div class="invalid-feedback">
@@ -29,7 +29,7 @@
                                 <label for="email">Adresse de couriel</label>
                                 <input id="email" type="email"
                                        class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email"
-                                       value="{{ old('email') }}" required autocomplete="mail">
+                                       value="{{ request('email', old('email')) }}" required autocomplete="mail">
 
                                 @if ($errors->has('email'))
                                     <div class="invalid-feedback">
@@ -61,6 +61,16 @@
                             </div>
 
                             <div class="form-group">
+                                <div class="btn-group btn-group-toggle radio-toggle" data-toggle="buttons">
+                                    <label class="btn btn-primary active">
+                                        <input type="radio" name="account" id="studentcheck" autocomplete="off" checked> Compte étudiant
+                                    </label>
+                                    <label class="btn btn-primary">
+                                        <input type="radio" name="account" id="enterprisecheck" autocomplete="off"> Compte entreprise
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-group enterprise-group">
                                 <label for="enterprise">Entreprise</label>
                                 <input id="enterprise" type="text" class="form-control" name="enterprise"
                                        value="{{ old('enterprise') }}" autocomplete="organization">
