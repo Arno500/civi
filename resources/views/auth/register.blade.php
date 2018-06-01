@@ -2,8 +2,8 @@
 
 @section('content')
     <div class="container" id="register">
-        <div class="row justify-content-md-center">
-            <div class="col col-lg-8">
+        <div class="row">
+            <div class="column">
                 <div class="card">
                     <div class="card-header">Inscription</div>
 
@@ -62,10 +62,10 @@
 
                             <div class="form-group">
                                 <div class="btn-group btn-group-toggle radio-toggle" data-toggle="buttons">
-                                    <label class="btn btn-primary active">
+                                    <label class="btn radio-color active">
                                         <input type="radio" name="account" id="studentcheck" autocomplete="off" checked> Compte étudiant
                                     </label>
-                                    <label class="btn btn-primary">
+                                    <label class="btn radio-color">
                                         <input type="radio" name="account" id="enterprisecheck" autocomplete="off"> Compte entreprise
                                     </label>
                                 </div>
@@ -77,7 +77,7 @@
                             </div>
 
                             <div class="form-group">
-                                <button type="submit" class="btn btn-primary">
+                                <button type="submit" class="button">
                                     Continuer
                                 </button>
                             </div>

@@ -10497,6 +10497,10 @@ p {
         -ms-flex-align: stretch;
             align-items: stretch;
   }
+
+  .container {
+    max-width: 960px;
+  }
 }
 
 .navbar-light .navbar-nav .button-register:hover,
@@ -10516,6 +10520,10 @@ p {
   color: white;
   -webkit-transition: 0.5s all;
   transition: 0.5s all;
+}
+
+.navbar-light .navbar-nav .button-register:hover {
+  color: #e2f1ff;
 }
 
 .navbar-brand {
@@ -10770,36 +10778,32 @@ textarea {
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
   color: #fff;
-  background-color: #007bff;
-  border: 1px solid #007bff;
+  background-color: #8e6cc7;
+  border: 1px solid #8e6cc7;
   cursor: pointer;
   width: 100%;
 }
 
-@media (min-width: 992px) {
-  .container {
-    max-width: 960px;
-  }
+.button:focus,
+button:active {
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(95, 0, 255, 0.5);
+          box-shadow: 0 0 0 0.2rem rgba(95, 0, 255, 0.5);
 }
 
-@media (min-width: 768px) {
-  .container {
-    max-width: 720px;
-  }
+.radio-color {
+  color: white;
+  background-color: #8e6cc7;
+  border: 1px solid #8e6cc7;
 }
 
-@media (min-width: 576px) {
-  .container {
-    max-width: 540px;
-  }
+.radio-color:hover {
+  background-color: #6a4f98;
+  border-color: #6a4f98;
 }
 
-.form button:focus::after {
-  content: '\A0';
-  background-size: 100% 2px;
-  background: radial-gradient(at 50% 0, blue 0%, red 50%, transparent 75%) no-repeat;
-  float: left;
-  width: 100%;
+.active {
+  background-color: #6a4f98;
+  border-color: #6a4f98;
 }
 
 .enterprise-group {
