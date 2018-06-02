@@ -1,0 +1,99 @@
+.search-input {
+  margin: 0 auto;
+  width: 80%;
+}
+
+
+.studentcard {
+  border-radius: 7px;
+  background-color: #f7f7f7;
+  position: relative;
+  width: 40%;
+  max-width: 400px;
+  height: 300px;
+  margin: 1rem 0.8rem;
+}
+
+.studentcard>.screenshot {
+  width: 100%;
+  height: 55%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  border-radius: 7px 7px 0 0;
+}
+
+.studentcard .portrait {
+  border-radius: 9999px;
+  height: 60%;
+  object-fit: cover;
+  background-color: white;
+  margin: auto 2rem;
+}
+
+.studentcard>.informations {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  position: absolute;
+  height: 45%;
+  width: 100%;
+  top: 55%;
+  left: 0;
+  border-radius: 0 0 7px 7px;
+}
+
+.studentcard .card-text {
+  flex: 1 1 auto;
+}
+
+.card-text {
+  color: black;
+}
+
+.card-text h3 {
+  font-family: inherit;
+  line-height: initial;
+  color: inherit;
+  font-size: initial;
+  margin: 0;
+}
+
+.card-text small {
+  color: #596662;
+}
+
+
+.card-text em {
+  font-style: italic;
+  margin-right: 0.1rem;
+}
+
+.resultscontainer {
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-content: center;
+  align-items: flex-start;
+  margin: 50px auto;
+}
+
+.facets {
+  width: 30%;
+}
+
+.entries {
+  width: 70%;
+}
+
+.searchresults {
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}

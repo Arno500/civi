@@ -50,6 +50,7 @@
 
             <!-- Right Side Of Navbar -->
             <ul class="navbar-nav navbar-right">
+                <li class="nav-item"><a href="{{ route('search') }}" class="nav-link">Nos étudiants</a></li>
                 <li class="nav-item"><a href="{{ route('mmi') }}" class="nav-link">La formation MMI</a></li>
                 <!-- Authentication Links -->
                 @guest

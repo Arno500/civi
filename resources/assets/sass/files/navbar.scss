@@ -1,3 +1,14 @@
+.navbar {
+  position: sticky;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+  top: 0;
+  z-index: 1000;
+}
+
 .navbar-light .navbar-nav .button-register:hover, .navbar-light .navbar-nav .button-register:focus {
   color: white;
   transform: scale(1.04);

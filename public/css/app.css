@@ -10458,6 +10458,17 @@ p {
   }
 }
 
+body {
+  margin: 0;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #212529;
+  text-align: left;
+  background-color: initial;
+}
+
 .flex-responsive {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -10503,6 +10514,25 @@ p {
   }
 }
 
+.navbar {
+  position: -webkit-sticky;
+  position: sticky;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0.5rem 1rem;
+  top: 0;
+  z-index: 1000;
+}
+
 .navbar-light .navbar-nav .button-register:hover,
 .navbar-light .navbar-nav .button-register:focus {
   color: white;
@@ -10545,6 +10575,19 @@ nav {
   margin-top: -35px;
   background-image: url("/img/banner.png");
   height: 47vh;
+  position: relative;
+  z-index: -10;
+}
+
+.banner:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(10%, rgba(255, 255, 255, 0.13)), to(white));
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.13) 10%, white 100%);
 }
 
 .register-bloc {
@@ -10604,7 +10647,7 @@ nav {
 .register-bloc-container {
   position: -webkit-sticky;
   position: sticky;
-  top: calc(20% + 20px);
+  top: calc(20% + 90px);
   -webkit-transform: translateY(-33%);
           transform: translateY(-33%);
   background-color: white;
@@ -10630,6 +10673,12 @@ nav {
 
 .home-text p {
   margin-bottom: 20px;
+}
+
+.home-text h1 {
+  background: -webkit-linear-gradient(right, #003CFF, #553390);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .main-home {
@@ -10673,8 +10722,11 @@ nav {
 
 @media screen and (max-width: 900px) {
   .register-bloc-container {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
     -webkit-box-shadow: none;
             box-shadow: none;
+    position: static;
   }
 
   .home-text {
@@ -10682,6 +10734,7 @@ nav {
   }
 
   .register-bloc {
+    max-width: initial;
     width: 100%;
   }
 
@@ -10690,6 +10743,134 @@ nav {
     -webkit-box-shadow: none;
             box-shadow: none;
   }
+}
+
+.search-input {
+  margin: 0 auto;
+  width: 80%;
+}
+
+.studentcard {
+  border-radius: 7px;
+  background-color: #f7f7f7;
+  position: relative;
+  width: 40%;
+  max-width: 400px;
+  height: 300px;
+  margin: 1rem 0.8rem;
+}
+
+.studentcard > .screenshot {
+  width: 100%;
+  height: 55%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 7px 7px 0 0;
+}
+
+.studentcard .portrait {
+  border-radius: 9999px;
+  height: 60%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  background-color: white;
+  margin: auto 2rem;
+}
+
+.studentcard > .informations {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  height: 45%;
+  width: 100%;
+  top: 55%;
+  left: 0;
+  border-radius: 0 0 7px 7px;
+}
+
+.studentcard .card-text {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+
+.card-text {
+  color: black;
+}
+
+.card-text h3 {
+  font-family: inherit;
+  line-height: initial;
+  color: inherit;
+  font-size: initial;
+  margin: 0;
+}
+
+.card-text small {
+  color: #596662;
+}
+
+.card-text em {
+  font-style: italic;
+  margin-right: 0.1rem;
+}
+
+.resultscontainer {
+  width: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin: 50px auto;
+}
+
+.facets {
+  width: 30%;
+}
+
+.entries {
+  width: 70%;
+}
+
+.searchresults {
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 * {
@@ -10784,10 +10965,15 @@ textarea {
   width: 100%;
 }
 
-.button:focus,
-button:active {
+.button-shadow:focus,
+.button-shadow:active {
   -webkit-box-shadow: 0 0 0 0.2rem rgba(95, 0, 255, 0.5);
           box-shadow: 0 0 0 0.2rem rgba(95, 0, 255, 0.5);
+}
+
+.button-short {
+  width: initial;
+  margin-top: initial;
 }
 
 .radio-color {
@@ -10898,14 +11084,6 @@ button:active {
 }
 
 /* CUSTOM */
-
-.search-input {
-  width: 100%;
-}
-
-.search-box {
-  width: 100%;
-}
 
 .ais-search-box--reset {
   cursor: pointer;

@@ -78,8 +78,13 @@ textarea {
   width: 100%;
 }
 
-.button:focus, button:active {
+.button-shadow:focus, .button-shadow:active {
  box-shadow: 0 0 0 0.2rem rgba(95, 0, 255, 0.5);
+}
+
+.button-short {
+  width: initial;
+  margin-top: initial;
 }
 
 .radio-color {

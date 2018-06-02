@@ -6,7 +6,7 @@
     <div class="flex-responsive main-home">
         <div class="home-text">
             <h1>Un liste de talent, rien que pour vous !</h1>
-            <h2>Choisissez parmis plus de 50 étudiants prêts à travailler à coup de café !</h2>
+            <h2>Choisissez parmi plus de 50 étudiants prêts à travailler à coup de café !</h2>
             <p>Grâce à notre moteur de recherche innovant, la moindre particularité peut faire la différence. Que ce soit le métier, les logiciels maîtrisés, les qualités requises...
                 Vous n’avez plus qu’à trouver VOTRE étudiant parfait !
             </p>
@@ -45,10 +45,10 @@
                 </p>
                 <form action="{{ route('register') }}" class="col-md-auto">
                     <div class="form-element">
-                        <input type="text" id="name" name="name" placeholder="Pseudo" class="form-control" value="{{ old('name') }}">
+                        <input type="text" id="name" name="name" placeholder="Pseudo" class="form-control button-shadow" value="{{ old('name') }}">
                     </div>
                     <div class="form-element">
-                        <input type="email" id="email" name="email" placeholder="Email" class="form-control" value="{{ old('mail') }}">
+                        <input type="email" id="email" name="email" placeholder="Email" class="form-control button-shadow" value="{{ old('mail') }}">
                     </div>
                     <button type="submit" class="btn w-100">Trouver mon bonheur</button>
                 </form>

@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-md-center">
-        <div class="col col-lg-8">
+        <div class="col">
             <div class="card">
                 <div class="card-header">Connexion</div>
 
@@ -14,7 +14,7 @@
                         <div class="form-group">
                             <label for="email">Adresse de couriel</label>
 
-                                <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required autofocus>
+                                <input id="email" type="email" class="form-control button-shadow{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required autofocus>
 
                                 @if ($errors->has('email'))
                                 <div class="invalid-feedback">
@@ -26,7 +26,7 @@
                         <div class="form-group">
                             <label for="password">Mot de passe</label>
 
-                                <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
+                                <input id="password" type="password" class="form-control button-shadow{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
 
                                 @if ($errors->has('password'))
                                     <div class="invalid-feedback">
@@ -37,13 +37,13 @@
 
                         <div class="form-group">
                                 <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" name="remember" class="custom-control-input" id="remember" {{ old('remember') ? 'checked' : '' }}>
+                                        <input type="checkbox" name="remember" class="custom-control-input button-shadow" id="remember" {{ old('remember') ? 'checked' : '' }}>
                                         <label class="custom-control-label" for="remember">Rester connecté</label>
                                 </div>
                         </div>
 
                         <div class="form-group">
-                                <button type="submit" class="btn btn-primary">
+                                <button type="submit" class="button button-short btn-shadow">
                                     Connexion
                                 </button>
 

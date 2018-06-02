@@ -15,7 +15,7 @@
                                 <label for="name">Nom d'utilisateur</label>
 
                                 <input id="name" type="text"
-                                       class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name"
+                                       class="form-control button-shadow{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name"
                                        value="{{ request('name', old('name')) }}" required autofocus autocomplete="username">
 
                                 @if ($errors->has('name'))
@@ -28,7 +28,7 @@
                             <div class="form-group">
                                 <label for="email">Adresse de couriel</label>
                                 <input id="email" type="email"
-                                       class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email"
+                                       class="form-control button-shadow{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email"
                                        value="{{ request('email', old('email')) }}" required autocomplete="mail">
 
                                 @if ($errors->has('email'))
@@ -42,7 +42,7 @@
                                 <label for="password">Mot de passe</label>
 
                                 <input id="password" type="password"
-                                       class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}"
+                                       class="form-control button-shadow{{ $errors->has('password') ? ' is-invalid' : '' }}"
                                        name="password" required aria-describedby="passwordHelpBlock" autocomplete="new-password">
                                 <small id="passwordHelpBlock" class="form-text text-muted">
                                     Votre mot de passe doit contenir au moins 6 caractères.
@@ -56,28 +56,28 @@
 
                             <div class="form-group">
                                 <label for="password-confirm">Confirmation du mot de passe</label>
-                                <input id="password-confirm" type="password" class="form-control"
+                                <input id="password-confirm" type="password" class="form-control button-shadow"
                                        name="password_confirmation" required autocomplete="new-password">
                             </div>
 
                             <div class="form-group">
                                 <div class="btn-group btn-group-toggle radio-toggle" data-toggle="buttons">
-                                    <label class="btn radio-color active">
+                                    <label class="btn radio-color button-shadow active">
                                         <input type="radio" name="account" id="studentcheck" autocomplete="off" checked> Compte étudiant
                                     </label>
-                                    <label class="btn radio-color">
+                                    <label class="btn radio-color button-shadow">
                                         <input type="radio" name="account" id="enterprisecheck" autocomplete="off"> Compte entreprise
                                     </label>
                                 </div>
                             </div>
                             <div class="form-group enterprise-group">
                                 <label for="enterprise">Entreprise</label>
-                                <input id="enterprise" type="text" class="form-control" name="enterprise"
+                                <input id="enterprise" type="text" class="form-control button-shadow" name="enterprise"
                                        value="{{ old('enterprise') }}" autocomplete="organization">
                             </div>
 
                             <div class="form-group">
-                                <button type="submit" class="button">
+                                <button type="submit" class="button button-shadow">
                                     Continuer
                                 </button>
                             </div>

@@ -18,6 +18,7 @@
 @import "files/tools";
 @import "files/navbar";
 @import "files/home";
+@import "files/search";
 @import "files/forms";
 
 
@@ -74,14 +75,6 @@
 // Algolia section
 
 /* CUSTOM */
-
-.search-input {
-  width: 100%;
-}
-
-.search-box {
-  width: 100%;
-}
 
 .ais-search-box {
 }

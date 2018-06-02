@@ -13976,6 +13976,15 @@ __WEBPACK_IMPORTED_MODULE_0_jquery___default.a.ajaxSetup({
 
 __WEBPACK_IMPORTED_MODULE_0_jquery___default()(document).ready(function () {
 
+    __WEBPACK_IMPORTED_MODULE_0_jquery___default()(".navbar-toggler").click(function () {
+        var menu = __WEBPACK_IMPORTED_MODULE_0_jquery___default()(".collapse");
+        if (menu.css("display") === 'none') {
+            menu.show();
+        } else {
+            menu.hide();
+        }
+    });
+
     __WEBPACK_IMPORTED_MODULE_0_jquery___default()(".dropdown-toggle").click(function () {
         var menu = __WEBPACK_IMPORTED_MODULE_0_jquery___default()(".dropdown-menu");
         if (menu.css("display") === 'none') {
@@ -13996,6 +14005,37 @@ __WEBPACK_IMPORTED_MODULE_0_jquery___default()(document).ready(function () {
             return dataURL.replace(/^data:image\/(png|jpg);base64,/, "");
         };
 
+        var luminanace = function luminanace(r, g, b) {
+            var a = [r, g, b].map(function (v) {
+                v /= 255;
+                return v <= 0.03928 ? v / 12.92 : Math.pow((v + 0.055) / 1.055, 2.4);
+            });
+            return a[0] * 0.2126 + a[1] * 0.7152 + a[2] * 0.0722;
+        };
+
+        var contrast = function contrast(rgb1, rgb2) {
+            return (luminanace(rgb1[0], rgb1[1], rgb1[2]) + 0.05) / (luminanace(rgb2[0], rgb2[1], rgb2[2]) + 0.05);
+        };
+
+        var setBackgroundColor = function setBackgroundColor() {
+            __WEBPACK_IMPORTED_MODULE_0_jquery___default()(".screenshot").each(function () {
+
+                //console.log($(this).get(0));
+                try {
+                    var _tempArray = colorThief.getColor(__WEBPACK_IMPORTED_MODULE_0_jquery___default()(this).get(0));
+                } catch (event) {
+                    var _tempArray2 = [200, 200, 200];
+                    setBackgroundColor();
+                }
+                var colorArray = [(255 - tempArray[0]) / 2, (255 - tempArray[1]) / 2, (255 - tempArray[2]) / 2];
+                __WEBPACK_IMPORTED_MODULE_0_jquery___default()(this).siblings(".informations").css("background-color", "rgb(" + colorArray[0] + "," + colorArray[1] + "," + colorArray[0] + ")");
+                console.log(contrast(colorArray, [0, 0, 0]));
+                if (contrast(colorArray, [0, 0, 0]) <= 5.14) {
+                    __WEBPACK_IMPORTED_MODULE_0_jquery___default()(this).siblings(".informations").children(".card-text").css("color", "white");
+                }
+            });
+        };
+
         var search = Object(__WEBPACK_IMPORTED_MODULE_1_instantsearch_js__["a" /* default */])({
             // Replace with your own values
             appId: 'LHQG8G2ATM',
@@ -14007,7 +14047,10 @@ __WEBPACK_IMPORTED_MODULE_0_jquery___default()(document).ready(function () {
             }
         });
 
-        search.addWidget(Object(__WEBPACK_IMPORTED_MODULE_2_instantsearch_js_es_widgets__["b" /* searchBox */])({
+        var colorThief = new ColorThief();
+
+
+        search.addWidget(Object(__WEBPACK_IMPORTED_MODULE_2_instantsearch_js_es_widgets__["d" /* searchBox */])({
             container: '#search-input',
             magnifier: false,
             reset: {
@@ -14015,25 +14058,42 @@ __WEBPACK_IMPORTED_MODULE_0_jquery___default()(document).ready(function () {
             poweredBy: false,
             cssClasses: { root: "search-container",
                 input: "search-box" },
-            placeholder: "Essayez de taper \"Valentin photoshop\"",
-            queryHook: function queryHook() {
-                __WEBPACK_IMPORTED_MODULE_0_jquery___default()(".hit-image>img").each(function () {
-                    var colorThief = new ColorThief();
-                    //console.log($(this).get(0));
-                    console.log(colorThief.getColor(__WEBPACK_IMPORTED_MODULE_0_jquery___default()(this).get(0)));
-                });
-            }
+            placeholder: "Essayez de taper \"Valentin photoshop\""
         }));
 
         search.addWidget(Object(__WEBPACK_IMPORTED_MODULE_2_instantsearch_js_es_widgets__["a" /* hits */])({
             container: '#searchResults',
+            cssClasses: {
+                root: "searchresults",
+                item: "studentcard"
+            },
             templates: {
                 item: document.getElementById('hit-template').innerHTML,
                 empty: "We didn't find any results for the search <em>\"{{query}}\"</em>"
             }
         }));
 
+        search.addWidget(Object(__WEBPACK_IMPORTED_MODULE_2_instantsearch_js_es_widgets__["c" /* refinementList */])({
+            container: '#internship',
+            attributeName: 'internship_preference'
+        }));
+        search.addWidget(Object(__WEBPACK_IMPORTED_MODULE_2_instantsearch_js_es_widgets__["c" /* refinementList */])({
+            container: '#softwares',
+            attributeName: 'softwares'
+        }));
+        search.addWidget(Object(__WEBPACK_IMPORTED_MODULE_2_instantsearch_js_es_widgets__["c" /* refinementList */])({
+            container: '#qualities',
+            attributeName: 'qualities'
+        }));
+
+        search.addWidget(Object(__WEBPACK_IMPORTED_MODULE_2_instantsearch_js_es_widgets__["b" /* pagination */])({
+            container: '#pagination',
+            maxPages: 20
+        }));
+
         search.start();
+
+        search.on("render", setBackgroundColor);
     }
 
     if (__WEBPACK_IMPORTED_MODULE_0_jquery___default()("#register").length) {
@@ -36754,19 +36814,19 @@ module.exports = function (str, opts) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__widgets_menu_menu_js__ = __webpack_require__(421);
 /* unused harmony reexport menu */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__widgets_refinement_list_refinement_list_js__ = __webpack_require__(424);
-/* unused harmony reexport refinementList */
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return __WEBPACK_IMPORTED_MODULE_9__widgets_refinement_list_refinement_list_js__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__widgets_numeric_refinement_list_numeric_refinement_list_js__ = __webpack_require__(428);
 /* unused harmony reexport numericRefinementList */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__widgets_numeric_selector_numeric_selector_js__ = __webpack_require__(431);
 /* unused harmony reexport numericSelector */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__widgets_pagination_pagination_js__ = __webpack_require__(433);
-/* unused harmony reexport pagination */
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return __WEBPACK_IMPORTED_MODULE_12__widgets_pagination_pagination_js__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__widgets_price_ranges_price_ranges_js__ = __webpack_require__(442);
 /* unused harmony reexport priceRanges */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__widgets_range_input_range_input_js__ = __webpack_require__(448);
 /* unused harmony reexport rangeInput */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__widgets_search_box_search_box_js__ = __webpack_require__(451);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return __WEBPACK_IMPORTED_MODULE_15__widgets_search_box_search_box_js__["a"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return __WEBPACK_IMPORTED_MODULE_15__widgets_search_box_search_box_js__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__widgets_range_slider_range_slider_js__ = __webpack_require__(454);
 /* unused harmony reexport rangeSlider */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__widgets_sort_by_selector_sort_by_selector_js__ = __webpack_require__(461);
@@ -43999,7 +44059,7 @@ function menu(_ref3) {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* unused harmony export default */
+/* harmony export (immutable) */ __webpack_exports__["a"] = refinementList;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_preact_compat__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_classnames__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_classnames___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_classnames__);
@@ -45585,7 +45645,7 @@ function connectNumericSelector(renderFn, unmountFn) {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* unused harmony export default */
+/* harmony export (immutable) */ __webpack_exports__["a"] = pagination;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_lodash_defaults__ = __webpack_require__(68);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_lodash_defaults___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_lodash_defaults__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_preact_compat__ = __webpack_require__(1);
