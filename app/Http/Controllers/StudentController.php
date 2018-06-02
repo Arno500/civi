@@ -68,8 +68,9 @@ class StudentController extends Controller
                     // Check software and create it if needed
                     $currentSoftware = Software::where('software', $software)->first();
                     if (empty($currentSoftware)) {
+                        $softwareName = trim($software);
                         $currentSoftware = Software::create([
-                            'software' => $software
+                            'software' => $softwareName
                         ]);
                     }
                     $student->softwares()->attach($currentSoftware->id);
