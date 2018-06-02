@@ -78,10 +78,10 @@ $(document).ready(function() {
 
                 //console.log($(this).get(0));
                 try {
-                    let tempArray = colorThief.getColor($(this).get(0));
+                    var tempArray = colorThief.getColor($(this).get(0));
                 } catch(event) {
-                    let tempArray = [200,200,200];
-                    setBackgroundColor();
+                    var tempArray = [255,255,255];
+                    setTimeout(setBackgroundColor, 1000);
                 }
                 let colorArray = [(255-tempArray[0])/2,(255-tempArray[1])/2,(255-tempArray[2])/2];
                 $(this).siblings(".informations").css("background-color", "rgb("+colorArray[0]+","+colorArray[1]+","+colorArray[0]+")");

@@ -14022,10 +14022,10 @@ __WEBPACK_IMPORTED_MODULE_0_jquery___default()(document).ready(function () {
 
                 //console.log($(this).get(0));
                 try {
-                    var _tempArray = colorThief.getColor(__WEBPACK_IMPORTED_MODULE_0_jquery___default()(this).get(0));
+                    var tempArray = colorThief.getColor(__WEBPACK_IMPORTED_MODULE_0_jquery___default()(this).get(0));
                 } catch (event) {
-                    var _tempArray2 = [200, 200, 200];
-                    setBackgroundColor();
+                    var tempArray = [255, 255, 255];
+                    setTimeout(setBackgroundColor, 1000);
                 }
                 var colorArray = [(255 - tempArray[0]) / 2, (255 - tempArray[1]) / 2, (255 - tempArray[2]) / 2];
                 __WEBPACK_IMPORTED_MODULE_0_jquery___default()(this).siblings(".informations").css("background-color", "rgb(" + colorArray[0] + "," + colorArray[1] + "," + colorArray[0] + ")");

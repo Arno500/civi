@@ -10750,6 +10750,10 @@ nav {
   width: 80%;
 }
 
+.search-box {
+  width: 100%;
+}
+
 .studentcard {
   border-radius: 7px;
   background-color: #f7f7f7;
