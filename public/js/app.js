@@ -13995,16 +13995,6 @@ __WEBPACK_IMPORTED_MODULE_0_jquery___default()(document).ready(function () {
     });
 
     if (__WEBPACK_IMPORTED_MODULE_0_jquery___default()("#search-input").length) {
-        var getBase64Image = function getBase64Image(img) {
-            var canvas = document.createElement("canvas");
-            canvas.width = img.width;
-            canvas.height = img.height;
-            var ctx = canvas.getContext("2d");
-            ctx.drawImage(img, 0, 0);
-            var dataURL = canvas.toDataURL("image/png");
-            return dataURL.replace(/^data:image\/(png|jpg);base64,/, "");
-        };
-
         var luminanace = function luminanace(r, g, b) {
             var a = [r, g, b].map(function (v) {
                 v /= 255;
@@ -14031,6 +14021,7 @@ __WEBPACK_IMPORTED_MODULE_0_jquery___default()(document).ready(function () {
             console.log(contrast(colorArray, [0, 0, 0]));
             if (contrast(colorArray, [0, 0, 0]) <= 5.14) {
                 elm.siblings(".informations").children(".card-text").css("color", "white");
+                elm.siblings(".informations").find("small").css("color", "#d8d8d8");
             }
         };
 
@@ -14041,7 +14032,7 @@ __WEBPACK_IMPORTED_MODULE_0_jquery___default()(document).ready(function () {
             indexName: 'civi',
             routing: true,
             searchParameters: {
-                hitsPerPage: 10
+                hitsPerPage: 8
             }
         });
 
@@ -14073,15 +14064,24 @@ __WEBPACK_IMPORTED_MODULE_0_jquery___default()(document).ready(function () {
 
         search.addWidget(Object(__WEBPACK_IMPORTED_MODULE_2_instantsearch_js_es_widgets__["c" /* refinementList */])({
             container: '#internship',
-            attributeName: 'internship_preference'
+            attributeName: 'internship_preference',
+            templates: {
+                header: "<h3 class='facet-title'>Métiers</h3>"
+            }
         }));
         search.addWidget(Object(__WEBPACK_IMPORTED_MODULE_2_instantsearch_js_es_widgets__["c" /* refinementList */])({
             container: '#softwares',
-            attributeName: 'softwares'
+            attributeName: 'softwares',
+            templates: {
+                header: "<h3 class='facet-title'>Logiciels maîtrisés</h3>"
+            }
         }));
         search.addWidget(Object(__WEBPACK_IMPORTED_MODULE_2_instantsearch_js_es_widgets__["c" /* refinementList */])({
             container: '#qualities',
-            attributeName: 'qualities'
+            attributeName: 'qualities',
+            templates: {
+                header: "<h3 class='facet-title'>Qualités</h3>"
+            }
         }));
 
         search.addWidget(Object(__WEBPACK_IMPORTED_MODULE_2_instantsearch_js_es_widgets__["b" /* pagination */])({

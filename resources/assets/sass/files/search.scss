@@ -1,5 +1,27 @@
+.search-intro {
+  width: 100%;
+  text-align: center;
+  height: 30vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-intro h1 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+}
+
+.search-input input {
+  font-size: 28px;
+  font-weight: 100;
+  padding: 10px 0 6px;
+  border: none;
+  border-bottom: 5px solid #eee;
+}
 .search-input {
   margin: 0 auto;
+  padding: 10px 20px 6px;
   width: 80%;
 }
 
@@ -55,6 +77,10 @@
 
 .card-text {
   color: black;
+  padding-right: 10px;
+  line-height: 0.8;
+  align-self: flex-start;
+  margin-top: 10%;
 }
 
 .card-text h3 {
@@ -86,10 +112,6 @@
   margin: 50px auto;
 }
 
-.facets {
-  width: 30%;
-}
-
 .entries {
   width: 70%;
 }
@@ -99,4 +121,84 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+}
+
+.facets {
+  width: 25%;
+  min-width: 280px;
+  box-shadow: 0px 0px 12px -2px rgba(0,0,0,0.75);
+  padding: 10px;
+  position: relative;
+  border-radius: 7px;
+
+  &::before {
+    content:"";
+    display: block;
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(to right, rgba(0,60,255,1) 0%, rgba(85,51,144,1) 100%);
+    border-radius: 7px 7px 0 0;
+  }
+
+  >div {
+    margin-bottom: 2rem;
+  }
+}
+
+.facet-title {
+  font-weight: bold;
+  font-size: 1rem;
+  margin: 1rem 0.5rem;
+}
+
+.ais-refinement-list--checkbox {
+  display: none;
+}
+
+.ais-refinement-list--label {
+  margin: 0 0.5rem;
+  color: #6473a5;
+}
+
+.ais-refinement-list--label:hover,
+.ais-menu--link:hover,
+.ais-menu--item__active .ais-menu--link,
+.ais-hierarchical-menu--list .facet-item.active:hover,
+.ais-hierarchical-menu--list .facet-item.active {
+  color: #6487ff;
+}
+
+.ais-refinement-list--item__active .ais-refinement-list--label {
+  color: #395bff;
+}
+
+.ais-refinement-list--item__active .ais-refinement-list--label:hover,
+.ais-menu--item__active .ais-menu--link:hover,
+.ais-hierarchical-menu--list .facet-item.active:hover {
+  text-decoration: line-through;
+  color: #1a38ff;
+}
+
+.ais-refinement-list--count,
+.ais-hierarchical-menu--count,
+.ais-menu--count,
+.ais-star-rating--count,
+.ais-toggle--count {
+  position: relative;
+  color: #6473a5;
+  padding: 0px 10px;
+  border-radius: 99px;
+  background-color: #f0f1f6;
+  margin-left: 0.2rem;
+}
+
+.ais-refinement-list--label,
+.ais-hierarchical-menu--list .facet-item,
+.ais-menu--link,
+.ais-price-ranges--item {
+  cursor: pointer;
+  line-height: 1.5em;
 }

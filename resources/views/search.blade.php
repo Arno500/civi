@@ -1,6 +1,11 @@
 @extends('layouts.app')
 @section('content')
 
+    <div class="search-intro">
+        <h1>Commencez à rechercher parmi
+            <br>{{ App\Student::all()->count() }} profiles</h1>
+    </div>
+
     <div class="row">
         <div id="search-input" class="search-input search-container">
 
@@ -15,9 +20,9 @@
         <div id="searchResults" class="entries">
         </div>
         <div class="facets">
-            <div id="internship"></div>
-            <div id="softwares"></div>
-            <div id="qualities"></div>
+            <div id="internship" class="internship"></div>
+            <div id="softwares" class="softwares"></div>
+            <div id="qualities" class="softwares"></div>
         </div>
     </div>
 
@@ -30,7 +35,7 @@
             <img class="portrait" src="@{{ portraiturl }}" alt="Photo de @{{ firstname }} @{{ surname }}">
             <div class="card-text">
                 <h3>@{{{ _highlightResult.firstname.value }}} @{{{ _highlightResult.surname.value }}}</h3>
-                <small>@{{{ _highlightResult.internship_preference }}}</small>
+                <small>@{{{ _highlightResult.internship_preference.value }}}</small>
             </div>
         </div>
     </script>
