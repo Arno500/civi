@@ -14017,23 +14017,21 @@ __WEBPACK_IMPORTED_MODULE_0_jquery___default()(document).ready(function () {
             return (luminanace(rgb1[0], rgb1[1], rgb1[2]) + 0.05) / (luminanace(rgb2[0], rgb2[1], rgb2[2]) + 0.05);
         };
 
-        var setBackgroundColor = function setBackgroundColor() {
-            __WEBPACK_IMPORTED_MODULE_0_jquery___default()(".screenshot").each(function () {
-
-                //console.log($(this).get(0));
-                try {
-                    var tempArray = colorThief.getColor(__WEBPACK_IMPORTED_MODULE_0_jquery___default()(this).get(0));
-                } catch (event) {
-                    var tempArray = [255, 255, 255];
-                    setTimeout(setBackgroundColor, 1000);
-                }
-                var colorArray = [(255 - tempArray[0]) / 2, (255 - tempArray[1]) / 2, (255 - tempArray[2]) / 2];
-                __WEBPACK_IMPORTED_MODULE_0_jquery___default()(this).siblings(".informations").css("background-color", "rgb(" + colorArray[0] + "," + colorArray[1] + "," + colorArray[0] + ")");
-                console.log(contrast(colorArray, [0, 0, 0]));
-                if (contrast(colorArray, [0, 0, 0]) <= 5.14) {
-                    __WEBPACK_IMPORTED_MODULE_0_jquery___default()(this).siblings(".informations").children(".card-text").css("color", "white");
-                }
-            });
+        var setBackgroundColor = function setBackgroundColor(elm) {
+            try {
+                var tempArray = colorThief.getColor(elm.get(0));
+            } catch (event) {
+                var tempArray = [255, 255, 255];
+                setTimeout(function () {
+                    setBackgroundColor(elm);
+                }, 100);
+            }
+            var colorArray = [(255 - tempArray[0]) / 2, (255 - tempArray[1]) / 2, (255 - tempArray[2]) / 2];
+            elm.siblings(".informations").css("background-color", "rgb(" + colorArray[0] + "," + colorArray[1] + "," + colorArray[0] + ")");
+            console.log(contrast(colorArray, [0, 0, 0]));
+            if (contrast(colorArray, [0, 0, 0]) <= 5.14) {
+                elm.siblings(".informations").children(".card-text").css("color", "white");
+            }
         };
 
         var search = Object(__WEBPACK_IMPORTED_MODULE_1_instantsearch_js__["a" /* default */])({
@@ -14093,7 +14091,11 @@ __WEBPACK_IMPORTED_MODULE_0_jquery___default()(document).ready(function () {
 
         search.start();
 
-        search.on("render", setBackgroundColor);
+        search.on("render", function () {
+            __WEBPACK_IMPORTED_MODULE_0_jquery___default()(".screenshot").each(function () {
+                setBackgroundColor(__WEBPACK_IMPORTED_MODULE_0_jquery___default()(this));
+            });
+        });
     }
 
     if (__WEBPACK_IMPORTED_MODULE_0_jquery___default()("#register").length) {

@@ -73,23 +73,19 @@ $(document).ready(function() {
         }
 
         var colorThief = new ColorThief();
-        function setBackgroundColor() {
-            $(".screenshot").each(function(){
-
-                //console.log($(this).get(0));
+        function setBackgroundColor(elm) {
                 try {
-                    var tempArray = colorThief.getColor($(this).get(0));
+                    var tempArray = colorThief.getColor(elm.get(0));
                 } catch(event) {
                     var tempArray = [255,255,255];
-                    setTimeout(setBackgroundColor, 1000);
+                    setTimeout(function() {setBackgroundColor(elm)}, 100);
                 }
                 let colorArray = [(255-tempArray[0])/2,(255-tempArray[1])/2,(255-tempArray[2])/2];
-                $(this).siblings(".informations").css("background-color", "rgb("+colorArray[0]+","+colorArray[1]+","+colorArray[0]+")");
+                elm.siblings(".informations").css("background-color", "rgb("+colorArray[0]+","+colorArray[1]+","+colorArray[0]+")");
                 console.log(contrast(colorArray, [0,0,0]));
                 if (contrast(colorArray, [0,0,0]) <= 5.14) {
-                    $(this).siblings(".informations").children(".card-text").css("color", "white");
+                    elm.siblings(".informations").children(".card-text").css("color", "white");
                 }
-            });
         }
 
         search.addWidget(
@@ -147,7 +143,11 @@ $(document).ready(function() {
 
         search.start();
 
-        search.on("render", setBackgroundColor);
+        search.on("render", function() {
+            $(".screenshot").each(function() {
+                setBackgroundColor($(this));
+            });
+        });
     }
 
     if ($("#register").length) {
