@@ -12,21 +12,57 @@
   font-weight: 400;
 }
 
-.search-input input {
-  font-size: 28px;
-  font-weight: 100;
-  padding: 10px 0 6px;
-  border: none;
-  border-bottom: 5px solid #eee;
-}
 .search-input {
-  margin: 0 auto;
-  padding: 10px 20px 6px;
-  width: 80%;
+  width: 100%;
 }
 
-.search-box {
+.search-input .search-box{
+  margin: 0 auto;
+  padding: 10px 20px 6px;
+  width: 70%;
+  border-radius: 9999px;
+  font-size: 28px;
+  font-weight: 100;
+  border: none;
+  display: block;
+}
+
+.search-container {
   width: 100%;
+  position: relative;
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(to right, #003cff 0%, #553390 100%);
+    width: calc(70% + 12px);
+    height: 120%;
+    z-index: -10;
+    border-radius: 999px;
+  }
+}
+
+.ais-search-box--reset-wrapper {
+  box-sizing: content-box;
+  display: block;
+  position: absolute;
+  right: 17%;
+  top: 29%;
+}
+
+.ais-search-box-reset {
+  cursor: pointer;
+  margin: 0;
+  border: 0;
+  padding: 0;
+  background-color: initial;
+  border: initial;
+  color: initial;
+  width: 25px;
+  fill: #bfc7d8;
 }
 
 .studentcard {
@@ -51,10 +87,10 @@
 
 .studentcard .portrait {
   border-radius: 9999px;
-  height: 60%;
+  height: 70%;
   object-fit: cover;
   background-color: white;
-  margin: auto 2rem;
+  margin: auto 1.3rem;
 }
 
 .studentcard>.informations {
@@ -193,6 +229,7 @@
   border-radius: 99px;
   background-color: #f0f1f6;
   margin-left: 0.2rem;
+  font-size: 0.9rem;
 }
 
 .ais-refinement-list--label,
@@ -201,4 +238,108 @@
 .ais-price-ranges--item {
   cursor: pointer;
   line-height: 1.5em;
+}
+
+.ais-current-refined-values {
+  position: relative;
+}
+
+
+.ais-show-more {
+  font-weight: bold;
+  opacity: .7;
+  padding-left: 4px;
+  position: relative;
+  line-height: 25px;
+  font-size: .9em;
+  cursor: pointer;
+  color: #6473a5;
+}
+.ais-show-more:hover,
+.ais-show-more:focus {
+  opacity: 1;
+}
+.ais-show-more:before {
+  font-family: "Font Awesome 5 Free";
+  font-style: inherit;
+  font-weight: inherit;
+  text-decoration: inherit;
+  display: inline-block;
+  position: relative;
+  content: '';
+  margin: 0 5px 0 0;
+}
+
+.ais-show-more__inactive:before {
+  content: "\f107";
+}
+
+.ais-show-more__active:before {
+  content: "\f106";
+}
+
+.algolia-logo {
+  height: 20px;
+}
+
+.algolia-link {
+  margin-top: 5px;
+  position: absolute;
+  right: 17%;
+}
+
+.algolia-link-container {
+  position: relative;
+}
+
+.search-pagination {
+  margin-top: 60px;
+}
+.search-pagination ul {
+  font-size: 0;
+  list-style-type: none;
+  text-align: center;
+}
+.search-pagination li {
+  font-size: 14px;
+  display: inline;
+}
+.search-pagination a,
+.search-pagination span {
+  padding: 8px 12px;
+  text-decoration: none;
+  color: #000;
+  border: 1px solid #eee;
+}
+
+
+.search-pagination a:hover {
+  background: #f5f5f5;
+}
+.search-pagination li:first-child a {
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+.search-pagination li:last-child a {
+  border-right: 1px solid #eee;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+.search-pagination li.ais-pagination--item__active a {
+  color: white;
+  border-color: #3164ff;
+  background: #3164ff;
+}
+.search-pagination li.ais-pagination--item__active a:hover {
+  cursor: default;
+}
+.search-pagination li.ais-pagination--item__disabled a,
+.search-pagination li.ais-pagination--item__disabled span {
+  background-color: #eaeaea;
+  border-color: #bbb;
+  color: #888;
+  cursor: not-allowed;
+}
+.search-pagination li.ais-pagination--item__disabled a:hover {
+  background: none;
 }

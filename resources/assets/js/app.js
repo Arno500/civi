@@ -73,7 +73,6 @@ $(document).ready(function() {
                 }
                 let colorArray = [(255-tempArray[0])/2,(255-tempArray[1])/2,(255-tempArray[2])/2];
                 elm.siblings(".informations").css("background-color", "rgb("+colorArray[0]+","+colorArray[1]+","+colorArray[0]+")");
-                console.log(contrast(colorArray, [0,0,0]));
                 if (contrast(colorArray, [0,0,0]) <= 5.14) {
                     elm.siblings(".informations").children(".card-text").css("color", "white");
                     elm.siblings(".informations").find("small").css("color", "#d8d8d8");
@@ -89,7 +88,7 @@ $(document).ready(function() {
                 poweredBy: false,
                 cssClasses: {root: "search-container",
                     input: "search-box"},
-                placeholder: "Essayez de taper \"Valentin photoshop\""
+                placeholder: "Essayez de taper \"Valentin créatif\""
             })
         );
 
@@ -113,32 +112,59 @@ $(document).ready(function() {
                 attributeName: 'internship_preference',
                 templates: {
                     header: "<h3 class='facet-title'>Métiers</h3>"
-                }
+                },
+                showMore: {
+                    templates: {
+                        inactive: "<a class=\"ais-show-more ais-show-more__inactive\">Plus...</a>",
+                        active: "<a class=\"ais-show-more ais-show-more__active\">Réduire</a>"
+                    },
+                    limit: 15
+                },
+                limit: 6
             })
         );
         search.addWidget(
             refinementList({
                 container: '#softwares',
                 attributeName: 'softwares',
+                operator: "and",
                 templates: {
                     header: "<h3 class='facet-title'>Logiciels maîtrisés</h3>"
-                }
+                },
+                showMore: {
+                    templates: {
+                        inactive: "<a class=\"ais-show-more ais-show-more__inactive\">Plus...</a>",
+                        active: "<a class=\"ais-show-more ais-show-more__active\">Réduire</a>"
+                    },
+                    limit: 15
+                },
+                limit: 6
             })
         );
         search.addWidget(
             refinementList({
                 container: '#qualities',
                 attributeName: 'qualities',
+                operator: "and",
                 templates: {
                     header: "<h3 class='facet-title'>Qualités</h3>"
-                }
+                },
+                showMore: {
+                    templates: {
+                        inactive: "<a class=\"ais-show-more ais-show-more__inactive\">Plus...</a>",
+                        active: "<a class=\"ais-show-more ais-show-more__active\">Réduire</a>"
+                    },
+                    limit: 15
+                },
+                limit: 6
             })
         );
 
         search.addWidget(
             pagination({
                 container: '#pagination',
-                maxPages: 20
+                maxPages: 20,
+                scrollTo: '#searchResults'
             })
         );
 

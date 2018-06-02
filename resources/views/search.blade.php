@@ -7,7 +7,7 @@
     </div>
 
     <div class="row">
-        <div id="search-input" class="search-input search-container">
+        <div id="search-input" class="search-input">
 
         </div>
     </div>
@@ -26,7 +26,7 @@
         </div>
     </div>
 
-    <div id="pagination"></div>
+    <div id="pagination" class="search-pagination"></div>
 
     <script type="text/html" id="hit-template">
         <img class="screenshot" src="@{{ screenshoturl }}"

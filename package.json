@@ -1,6 +1,7 @@
 {
     "private": true,
     "scripts": {
+        "update": "npm update",
         "dev": "npm run development",
         "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
         "watch": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
@@ -12,20 +13,17 @@
     "devDependencies": {
         "axios": "^0.17",
         "bootstrap": "^4",
-        "popper.js": "^1.14.3",
-        "cross-env": "^5.1",
+        "cross-env": "^5.1.6",
         "jquery": "^3.2",
         "laravel-mix": "^1.0",
-        "lodash": "^4.17.4",
-        "vue": "^2.5.7"
+        "popper.js": "^1.14.3"
     },
     "dependencies": {
         "algoliasearch": "^3.1",
-        "export-loader": "^1.0.52",
         "exports-loader": "^0.7.0",
         "expose-loader": "^0.7.5",
         "imports-loader": "^0.8.0",
-        "instantsearch.js": "^2.7.4",
+        "instantsearch.js": "^2.8.0",
         "material-design-icons": "^3.0.1"
     }
 }
