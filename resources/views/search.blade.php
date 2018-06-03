@@ -3,7 +3,7 @@
 
     <div class="search-intro">
         <h1>Commencez à rechercher parmi
-            <br>{{ App\Student::all()->count() }} profiles</h1>
+            <br>{{ App\Student::all()->count() }} profils</h1>
     </div>
 
     <div class="row">
@@ -28,10 +28,25 @@
 
     <div id="pagination" class="search-pagination"></div>
 
+    <div class="embed">
+        <div class="flex-embed">
+            <div class="left-panel expanded">
+                <h4 class="student-name"></h4>
+                <h5 class="internship-preference"></h5>
+                <h5 class="internship-duration"></h5>
+                <a class="resume-static" href="#"></a>
+                <p class="description"></p>
+                <div class="retract retract__active"></div>
+            </div>
+            <iframe class="frame-panel"></iframe>
+        </div>
+        <div class="close-embed"></div>
+    </div>
+
     <script type="text/html" id="hit-template">
         <img class="screenshot" src="@{{ screenshoturl }}"
              alt="Capture d'écran du CV interactif de @{{ firstname }} @{{ surname }}">
-        <div class="informations">
+        <div class="informations" data-name="@{{ firstname }} @{{ surname }}" data-url="@{{ resumeurl_interactive }}" data-urlstatic="@{{ resumeurl_static }}" data-description="@{{ description }}" data-qualities="@{{ qualities }}" data-softwares="@{{ softwares }}">
             <img class="portrait" src="@{{ portraiturl }}" alt="Photo de @{{ firstname }} @{{ surname }}">
             <div class="card-text">
                 <h3>@{{{ _highlightResult.firstname.value }}} @{{{ _highlightResult.surname.value }}}</h3>

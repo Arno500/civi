@@ -66,13 +66,21 @@
 }
 
 .studentcard {
-  border-radius: 7px;
+  border-radius: 10px;
   background-color: #f7f7f7;
   position: relative;
   width: 40%;
   max-width: 400px;
   height: 300px;
   margin: 1rem 0.8rem;
+  cursor: pointer;
+  box-shadow: 1px 0px 18px -6px rgba(0,0,0,0.75);
+  transition: 0.3s all;
+
+  &:hover {
+    box-shadow: 1px 0px 18px -2px rgba(0,0,0,0.75);
+    transform: scale(1.02);
+  }
 }
 
 .studentcard>.screenshot {
@@ -82,7 +90,7 @@
   top: 0;
   left: 0;
   object-fit: cover;
-  border-radius: 7px 7px 0 0;
+  border-radius: 10px 10px 0 0;
 }
 
 .studentcard .portrait {
@@ -104,7 +112,7 @@
   width: 100%;
   top: 55%;
   left: 0;
-  border-radius: 0 0 7px 7px;
+  border-radius: 0 0 10px 10px;
 }
 
 .studentcard .card-text {
@@ -259,7 +267,7 @@
 .ais-show-more:focus {
   opacity: 1;
 }
-.ais-show-more:before {
+.ais-show-more::before {
   font-family: "Font Awesome 5 Free";
   font-style: inherit;
   font-weight: inherit;
@@ -270,11 +278,11 @@
   margin: 0 5px 0 0;
 }
 
-.ais-show-more__inactive:before {
+.ais-show-more__inactive::before {
   content: "\f107";
 }
 
-.ais-show-more__active:before {
+.ais-show-more__active::before {
   content: "\f106";
 }
 
@@ -342,4 +350,104 @@
 }
 .search-pagination li.ais-pagination--item__disabled a:hover {
   background: none;
+}
+
+.embed {
+  display: none;
+  position: absolute;
+  height: calc(100vh - 60px - 0.9em);
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: black;
+  z-index: 1000;
+}
+
+.flex-embed {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-content: stretch;
+  align-items: stretch;
+  height: 100%;
+  width: 100%;
+}
+
+.left-panel {
+  width: 25%;
+  background-color: #0b2e13;
+  box-shadow: 15px 0px 28px -15px rgba(0,0,0,0.75);
+  z-index: 10;
+  position: relative;
+  transition: 1s all;
+
+  &.retracted {
+    width: 0%;
+    box-shadow: none;
+    transform: translate3d(-100%,0,0);
+  }
+
+  &.expanded {
+  }
+}
+
+.frame-panel {
+  flex: 1 1 auto;
+  border: none;
+  background-color: #218838;
+  transition: 1s all;
+  &.retracted {
+    width: 100%;
+    transition: 1s transform, 1s box-shadow;
+  }
+}
+
+.retract {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translate(100%,-50%);
+  height: 50px;
+  width: 30px;
+  cursor: pointer;
+  background-color: #fff;
+  border-radius: 0 5px 5px 0;
+}
+
+.retract::after {
+  font-family: "Font Awesome 5 Free";
+  font-style: inherit;
+  font-weight: 900;
+  font-size: 1.5rem;
+  text-decoration: inherit;
+  display: block;
+  position: absolute;
+  content: '';
+  top: 50%;
+  left: 50%;
+  transform: translate(-60%,-50%);
+}
+
+.retract__active::after {
+  content: "\f104";
+}
+
+.retract__inactive::after {
+  content: "\f105";
+}
+
+.close-embed::after {
+  font-family: "Font Awesome 5 Free";
+  font-style: inherit;
+  font-weight: 900;
+  font-size: 2.5rem;
+  text-decoration: inherit;
+  display: block;
+  position: absolute;
+  top: 0px;
+  right: 18px;
+  content: "\F00D";
+  cursor: pointer;
+  padding: 5px;
 }

@@ -10474,6 +10474,10 @@ body {
   background-color: initial;
 }
 
+main {
+  position: relative;
+}
+
 .flex-responsive {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -10828,13 +10832,25 @@ nav {
 }
 
 .studentcard {
-  border-radius: 7px;
+  border-radius: 10px;
   background-color: #f7f7f7;
   position: relative;
   width: 40%;
   max-width: 400px;
   height: 300px;
   margin: 1rem 0.8rem;
+  cursor: pointer;
+  -webkit-box-shadow: 1px 0px 18px -6px rgba(0, 0, 0, 0.75);
+          box-shadow: 1px 0px 18px -6px rgba(0, 0, 0, 0.75);
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
+}
+
+.studentcard:hover {
+  -webkit-box-shadow: 1px 0px 18px -2px rgba(0, 0, 0, 0.75);
+          box-shadow: 1px 0px 18px -2px rgba(0, 0, 0, 0.75);
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
 }
 
 .studentcard > .screenshot {
@@ -10845,7 +10861,7 @@ nav {
   left: 0;
   -o-object-fit: cover;
      object-fit: cover;
-  border-radius: 7px 7px 0 0;
+  border-radius: 10px 10px 0 0;
 }
 
 .studentcard .portrait {
@@ -10878,7 +10894,7 @@ nav {
   width: 100%;
   top: 55%;
   left: 0;
-  border-radius: 0 0 7px 7px;
+  border-radius: 0 0 10px 10px;
 }
 
 .studentcard .card-text {
@@ -11054,7 +11070,7 @@ nav {
   opacity: 1;
 }
 
-.ais-show-more:before {
+.ais-show-more::before {
   font-family: "Font Awesome 5 Free";
   font-style: inherit;
   font-weight: inherit;
@@ -11065,11 +11081,11 @@ nav {
   margin: 0 5px 0 0;
 }
 
-.ais-show-more__inactive:before {
+.ais-show-more__inactive::before {
   content: "\F107";
 }
 
-.ais-show-more__active:before {
+.ais-show-more__active::before {
   content: "\F106";
 }
 
@@ -11145,6 +11161,127 @@ nav {
 
 .search-pagination li.ais-pagination--item__disabled a:hover {
   background: none;
+}
+
+.embed {
+  display: none;
+  position: absolute;
+  height: calc(100vh - 60px - 0.9em);
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: black;
+  z-index: 1000;
+}
+
+.flex-embed {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -ms-flex-line-pack: stretch;
+      align-content: stretch;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  height: 100%;
+  width: 100%;
+}
+
+.left-panel {
+  width: 25%;
+  background-color: #0b2e13;
+  -webkit-box-shadow: 15px 0px 28px -15px rgba(0, 0, 0, 0.75);
+          box-shadow: 15px 0px 28px -15px rgba(0, 0, 0, 0.75);
+  z-index: 10;
+  position: relative;
+  -webkit-transition: 1s all;
+  transition: 1s all;
+}
+
+.left-panel.retracted {
+  width: 0%;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  -webkit-transform: translate3d(-100%, 0, 0);
+          transform: translate3d(-100%, 0, 0);
+}
+
+.frame-panel {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  border: none;
+  background-color: #218838;
+  -webkit-transition: 1s all;
+  transition: 1s all;
+}
+
+.frame-panel.retracted {
+  width: 100%;
+  -webkit-transition: 1s -webkit-transform, 1s -webkit-box-shadow;
+  transition: 1s -webkit-transform, 1s -webkit-box-shadow;
+  transition: 1s transform, 1s box-shadow;
+  transition: 1s transform, 1s box-shadow, 1s -webkit-transform, 1s -webkit-box-shadow;
+}
+
+.retract {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  -webkit-transform: translate(100%, -50%);
+          transform: translate(100%, -50%);
+  height: 50px;
+  width: 30px;
+  cursor: pointer;
+  background-color: #fff;
+  border-radius: 0 5px 5px 0;
+}
+
+.retract::after {
+  font-family: "Font Awesome 5 Free";
+  font-style: inherit;
+  font-weight: 900;
+  font-size: 1.5rem;
+  text-decoration: inherit;
+  display: block;
+  position: absolute;
+  content: '';
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-60%, -50%);
+          transform: translate(-60%, -50%);
+}
+
+.retract__active::after {
+  content: "\F104";
+}
+
+.retract__inactive::after {
+  content: "\F105";
+}
+
+.close-embed::after {
+  font-family: "Font Awesome 5 Free";
+  font-style: inherit;
+  font-weight: 900;
+  font-size: 2.5rem;
+  text-decoration: inherit;
+  display: block;
+  position: absolute;
+  top: 0px;
+  right: 18px;
+  content: "\F00D";
+  cursor: pointer;
+  padding: 5px;
 }
 
 * {

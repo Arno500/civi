@@ -174,6 +174,52 @@ $(document).ready(function() {
             $(".screenshot").each(function() {
                 setBackgroundColor($(this));
             });
+            if (!authStatus) {
+                $(".informations").each(function() {
+                    $(this).removeAttr("data-url");
+                    $(this).removeAttr("data-urlstatic");
+                    $(this).removeAttr("data-description");
+                    $(this).removeAttr("data-qualities");
+                    $(this).removeAttr("data-softwares");
+                });
+            }
+            $(".searchresults>div").unbind('click');
+            $(".searchresults>div").click(function(event){
+                event.stopPropagation();
+                if (!authStatus){
+                    alert("Rejoignez CiVi pour accéder au profil détaillé des étudiants !");
+                } else {
+                    $("body").css("overflow", "hidden");
+                    $(".embed").fadeIn();
+                    $('html,body').animate({scrollTop:0},0);
+                    console.log(event);
+                    var studentData = $(event.currentTarget).children(".informations").data();
+                    var leftPanel = $(".left-panel");
+                    leftPanel.children(".student-name").text(studentData.name);
+                    leftPanel.children(".resume-static").attr("href",studentData.urlstatic).text("Lien vers le CV statique (PDF)");
+                }
+            });
+
+            $(".retract").click(function(){
+                var leftPanel = $(".left-panel");
+                var button = $(".retract");
+                if (leftPanel.hasClass("expanded")) {
+                    leftPanel.removeClass("expanded");
+                    button.removeClass("retract__active");
+                    leftPanel.addClass("retracted");
+                    button.addClass("retract__inactive");
+                } else {
+                    leftPanel.removeClass("retracted");
+                    button.removeClass("retract__inactive");
+                    leftPanel.addClass("expanded");
+                    button.addClass("retract__active");
+                }
+            })
+
+            $(".close-embed").click(function() {
+                $("body").css("overflow", "initial");
+                $(".embed").fadeOut();
+            })
         });
     }
 

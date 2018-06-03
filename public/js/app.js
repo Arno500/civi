@@ -14185,6 +14185,52 @@ __WEBPACK_IMPORTED_MODULE_0_jquery___default()(document).ready(function () {
             __WEBPACK_IMPORTED_MODULE_0_jquery___default()(".screenshot").each(function () {
                 setBackgroundColor(__WEBPACK_IMPORTED_MODULE_0_jquery___default()(this));
             });
+            if (!authStatus) {
+                __WEBPACK_IMPORTED_MODULE_0_jquery___default()(".informations").each(function () {
+                    __WEBPACK_IMPORTED_MODULE_0_jquery___default()(this).removeAttr("data-url");
+                    __WEBPACK_IMPORTED_MODULE_0_jquery___default()(this).removeAttr("data-urlstatic");
+                    __WEBPACK_IMPORTED_MODULE_0_jquery___default()(this).removeAttr("data-description");
+                    __WEBPACK_IMPORTED_MODULE_0_jquery___default()(this).removeAttr("data-qualities");
+                    __WEBPACK_IMPORTED_MODULE_0_jquery___default()(this).removeAttr("data-softwares");
+                });
+            }
+            __WEBPACK_IMPORTED_MODULE_0_jquery___default()(".searchresults>div").unbind('click');
+            __WEBPACK_IMPORTED_MODULE_0_jquery___default()(".searchresults>div").click(function (event) {
+                event.stopPropagation();
+                if (!authStatus) {
+                    alert("Rejoignez CiVi pour accéder au profil détaillé des étudiants !");
+                } else {
+                    __WEBPACK_IMPORTED_MODULE_0_jquery___default()("body").css("overflow", "hidden");
+                    __WEBPACK_IMPORTED_MODULE_0_jquery___default()(".embed").fadeIn();
+                    __WEBPACK_IMPORTED_MODULE_0_jquery___default()('html,body').animate({ scrollTop: 0 }, 0);
+                    console.log(event);
+                    var studentData = __WEBPACK_IMPORTED_MODULE_0_jquery___default()(event.currentTarget).children(".informations").data();
+                    var leftPanel = __WEBPACK_IMPORTED_MODULE_0_jquery___default()(".left-panel");
+                    leftPanel.children(".student-name").text(studentData.name);
+                    leftPanel.children(".resume-static").attr("href", studentData.urlstatic).text("Lien vers le CV statique (PDF)");
+                }
+            });
+
+            __WEBPACK_IMPORTED_MODULE_0_jquery___default()(".retract").click(function () {
+                var leftPanel = __WEBPACK_IMPORTED_MODULE_0_jquery___default()(".left-panel");
+                var button = __WEBPACK_IMPORTED_MODULE_0_jquery___default()(".retract");
+                if (leftPanel.hasClass("expanded")) {
+                    leftPanel.removeClass("expanded");
+                    button.removeClass("retract__active");
+                    leftPanel.addClass("retracted");
+                    button.addClass("retract__inactive");
+                } else {
+                    leftPanel.removeClass("retracted");
+                    button.removeClass("retract__inactive");
+                    leftPanel.addClass("expanded");
+                    button.addClass("retract__active");
+                }
+            });
+
+            __WEBPACK_IMPORTED_MODULE_0_jquery___default()(".close-embed").click(function () {
+                __WEBPACK_IMPORTED_MODULE_0_jquery___default()("body").css("overflow", "initial");
+                __WEBPACK_IMPORTED_MODULE_0_jquery___default()(".embed").fadeOut();
+            });
         });
     }
 
