@@ -14119,8 +14119,6 @@ __WEBPACK_IMPORTED_MODULE_0_jquery___default()(document).ready(function () {
                 var colorArray = rgbToHsl(tempArray[0], tempArray[1], tempArray[2]);
                 var colorArrayReduced = [Math.floor(colorArray[0] * 360), Math.floor(colorArray[1] / 2 * 100), Math.floor(colorArray[2] * 100)];
                 var hsl = "hsl(" + colorArrayReduced[0] + "," + colorArrayReduced[1] + "%," + colorArrayReduced[2] + "%)";
-                console.log(colorArrayReduced);
-                console.log(hsl);
                 __WEBPACK_IMPORTED_MODULE_0_jquery___default()(event.currentTarget).siblings(".informations").css({
                     'background-color': hsl
                 });
@@ -14248,7 +14246,6 @@ __WEBPACK_IMPORTED_MODULE_0_jquery___default()(document).ready(function () {
                         __WEBPACK_IMPORTED_MODULE_0_jquery___default()("body").css("overflow", "hidden");
                         __WEBPACK_IMPORTED_MODULE_0_jquery___default()(".embed").fadeIn();
                         __WEBPACK_IMPORTED_MODULE_0_jquery___default()('html,body').animate({ scrollTop: 0 }, 500);
-                        console.log(event);
                         var studentData = __WEBPACK_IMPORTED_MODULE_0_jquery___default()(event.currentTarget).children(".informations").data();
                         var leftPanel = __WEBPACK_IMPORTED_MODULE_0_jquery___default()(".left-panel");
                         var iframe = __WEBPACK_IMPORTED_MODULE_0_jquery___default()(".frame-panel");

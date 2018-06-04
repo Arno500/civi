@@ -106,8 +106,6 @@ $(document).ready(function() {
                 let colorArray = rgbToHsl(tempArray[0],tempArray[1],tempArray[2]);
                 let colorArrayReduced = [Math.floor(colorArray[0]*360),Math.floor((colorArray[1]/2)*100),Math.floor((colorArray[2])*100)];
                 let hsl = "hsl("+colorArrayReduced[0]+","+colorArrayReduced[1]+"%,"+colorArrayReduced[2]+"%)";
-                console.log(colorArrayReduced);
-                console.log(hsl);
                 $(event.currentTarget).siblings(".informations").css({
                     'background-color': hsl
                 });
@@ -237,7 +235,6 @@ $(document).ready(function() {
                         $("body").css("overflow", "hidden");
                         $(".embed").fadeIn();
                         $('html,body').animate({scrollTop: 0}, 500);
-                        console.log(event);
                         var studentData = $(event.currentTarget).children(".informations").data();
                         var leftPanel = $(".left-panel");
                         var iframe = $(".frame-panel");
