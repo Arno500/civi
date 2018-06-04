@@ -63,8 +63,9 @@ $(document).ready(function() {
                 / (luminanace(rgb2[0], rgb2[1], rgb2[2]) + 0.05);
         }
 
-        var colorThief = new ColorThief();
+
         function setBackgroundColor(elm) {
+            var colorThief = new ColorThief();
                 try {
                     var tempArray = colorThief.getColor(elm.get(0));
                 } catch(event) {
@@ -73,6 +74,7 @@ $(document).ready(function() {
                 }
                 let colorArray = [(255-tempArray[0])/2,(255-tempArray[1])/2,(255-tempArray[2])/2];
                 elm.siblings(".informations").css("background-color", "rgb("+colorArray[0]+","+colorArray[1]+","+colorArray[0]+")");
+                console.log(elm.siblings(".informations").css("background-color"));
                 if (contrast(colorArray, [0,0,0]) <= 5.14) {
                     elm.siblings(".informations").children(".card-text").css("color", "white");
                     elm.siblings(".informations").find("small").css("color", "#d8d8d8");
@@ -183,36 +185,41 @@ $(document).ready(function() {
                     $(this).removeAttr("data-softwares");
                 });
             }
-            $(".searchresults>div").unbind('click');
             $(".searchresults>div").click(function(event){
-                event.stopPropagation();
-                if (!authStatus){
-                    alert("Rejoignez CiVi pour accéder au profil détaillé des étudiants !");
-                } else {
-                    $("body").css("overflow", "hidden");
-                    $(".embed").fadeIn();
-                    $('html,body').animate({scrollTop:0},0);
-                    console.log(event);
-                    var studentData = $(event.currentTarget).children(".informations").data();
-                    var leftPanel = $(".left-panel");
-                    leftPanel.children(".student-name").text(studentData.name);
-                    leftPanel.children(".resume-static").attr("href",studentData.urlstatic).text("Lien vers le CV statique (PDF)");
+                if ($(event.currentTarget).is("div.studentcard")) {
+                    if (!authStatus) {
+                        alert("Rejoignez CiVi pour accéder au profil détaillé des étudiants !");
+                    } else {
+                        $("body").css("overflow", "hidden");
+                        $(".embed").fadeIn();
+                        $('html,body').animate({scrollTop: 0}, 500);
+                        console.log(event);
+                        var studentData = $(event.currentTarget).children(".informations").data();
+                        var leftPanel = $(".left-panel");
+                        leftPanel.children(".student-name").text(studentData.name);
+                        leftPanel.children(".resume-static").attr("href", studentData.urlstatic).text("Lien vers le CV statique (PDF)");
+                    }
                 }
             });
 
             $(".retract").click(function(){
                 var leftPanel = $(".left-panel");
                 var button = $(".retract");
+                var flexContainer = $(".flex-embed");
                 if (leftPanel.hasClass("expanded")) {
                     leftPanel.removeClass("expanded");
                     button.removeClass("retract__active");
+                    flexContainer.removeClass("flex-embed-expanded");
                     leftPanel.addClass("retracted");
                     button.addClass("retract__inactive");
+                    flexContainer.addClass("flex-embed-retracted");
                 } else {
+                    flexContainer.removeClass("flex-embed-retracted");
                     leftPanel.removeClass("retracted");
                     button.removeClass("retract__inactive");
                     leftPanel.addClass("expanded");
                     button.addClass("retract__active");
+                    flexContainer.addClass("flex-embed-expanded");
                 }
             })
 
