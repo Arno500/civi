@@ -240,8 +240,15 @@ $(document).ready(function() {
                         console.log(event);
                         var studentData = $(event.currentTarget).children(".informations").data();
                         var leftPanel = $(".left-panel");
+                        var iframe = $(".frame-panel");
                         leftPanel.children(".student-name").text(studentData.name);
                         leftPanel.children(".resume-static").attr("href", studentData.urlstatic).text("Lien vers le CV statique (PDF)");
+                        if (studentData.url !== "#") {
+                            iframe.prop("src", studentData.url);
+                        } else {
+                            iframe.prop("src", "");
+                        }
+
                     }
                 }
             });

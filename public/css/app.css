@@ -11199,7 +11199,7 @@ nav {
 }
 
 .left-panel {
-  width: 35vh;
+  width: 25vw;
   background-color: #0b2e13;
   -webkit-box-shadow: 15px 0px 28px -15px rgba(0, 0, 0, 0.75);
           box-shadow: 15px 0px 28px -15px rgba(0, 0, 0, 0.75);
@@ -11221,10 +11221,10 @@ nav {
       -ms-flex: 1 1 auto;
           flex: 1 1 auto;
   border: none;
-  background: -webkit-gradient(linear, left top, right top, from(#003cff), to(#553390));
-  background: linear-gradient(to right, #003cff 0%, #553390 100%);
-  -webkit-transition: 1s all;
-  transition: 1s all;
+  background: linear-gradient(135deg, #003cff 15%, #553390 56%);
+  background-size: 400% 400%;
+  -webkit-animation: loadingResume 10s ease infinite;
+          animation: loadingResume 10s ease infinite;
 }
 
 .frame-panel.retracted {
@@ -11294,6 +11294,34 @@ nav {
   width: 125vw;
   -webkit-transform: translateX(-20%);
           transform: translateX(-20%);
+}
+
+@-webkit-keyframes loadingResume {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes loadingResume {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 * {

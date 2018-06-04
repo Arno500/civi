@@ -376,7 +376,7 @@
 }
 
 .left-panel {
-  width: 35vh;
+  width: 25vw;
   background-color: #0b2e13;
   box-shadow: 15px 0px 28px -15px rgba(0,0,0,0.75);
   z-index: 10;
@@ -395,7 +395,9 @@
 .frame-panel {
   flex: 1 1 auto;
   border: none;
-  background: linear-gradient(to right, rgba(0,60,255,1) 0%, rgba(85,51,144,1) 100%);  transition: 1s all;
+  background: linear-gradient(135deg, rgba(0,60,255,1) 15%,rgba(85,51,144,1) 56%);;
+  background-size: 400% 400%;
+  animation: loadingResume 10s ease infinite;
   &.retracted {
     width: 100%;
     transition: 1s transform, 1s box-shadow;
@@ -458,4 +460,16 @@
 .flex-embed-retracted {
   width: 125vw;
   transform: translateX(-20%);
+}
+
+@keyframes loadingResume {
+  0% {
+    background-position: 0% 50%
+  }
+  50% {
+    background-position: 100% 50%
+  }
+  100% {
+    background-position: 0% 50%
+  }
 }

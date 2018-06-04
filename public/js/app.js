@@ -14251,8 +14251,14 @@ __WEBPACK_IMPORTED_MODULE_0_jquery___default()(document).ready(function () {
                         console.log(event);
                         var studentData = __WEBPACK_IMPORTED_MODULE_0_jquery___default()(event.currentTarget).children(".informations").data();
                         var leftPanel = __WEBPACK_IMPORTED_MODULE_0_jquery___default()(".left-panel");
+                        var iframe = __WEBPACK_IMPORTED_MODULE_0_jquery___default()(".frame-panel");
                         leftPanel.children(".student-name").text(studentData.name);
                         leftPanel.children(".resume-static").attr("href", studentData.urlstatic).text("Lien vers le CV statique (PDF)");
+                        if (studentData.url !== "#") {
+                            iframe.prop("src", studentData.url);
+                        } else {
+                            iframe.prop("src", "");
+                        }
                     }
                 }
             });
