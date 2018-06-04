@@ -14038,6 +14038,47 @@ __WEBPACK_IMPORTED_MODULE_0_jquery___default.a.ajaxSetup({
     }
 });
 
+/**
+ * Converts an RGB color value to HSL. Conversion formula
+ * adapted from http://en.wikipedia.org/wiki/HSL_color_space.
+ * Assumes r, g, and b are contained in the set [0, 255] and
+ * returns h, s, and l in the set [0, 1].
+ *
+ * @param   Number  r       The red color value
+ * @param   Number  g       The green color value
+ * @param   Number  b       The blue color value
+ * @return  Array           The HSL representation
+ */
+function rgbToHsl(r, g, b) {
+    r /= 255, g /= 255, b /= 255;
+
+    var max = Math.max(r, g, b),
+        min = Math.min(r, g, b);
+    var h,
+        s,
+        l = (max + min) / 2;
+
+    if (max == min) {
+        h = s = 0; // achromatic
+    } else {
+        var d = max - min;
+        s = l > 0.5 ? d / (2 - max - min) : d / (max + min);
+
+        switch (max) {
+            case r:
+                h = (g - b) / d + (g < b ? 6 : 0);break;
+            case g:
+                h = (b - r) / d + 2;break;
+            case b:
+                h = (r - g) / d + 4;break;
+        }
+
+        h /= 6;
+    }
+
+    return [h, s, l];
+}
+
 __WEBPACK_IMPORTED_MODULE_0_jquery___default()(document).ready(function () {
 
     __WEBPACK_IMPORTED_MODULE_0_jquery___default()(".navbar-toggler").click(function () {
@@ -14072,22 +14113,28 @@ __WEBPACK_IMPORTED_MODULE_0_jquery___default()(document).ready(function () {
         };
 
         var setBackgroundColor = function setBackgroundColor(elm) {
-            var colorThief = new ColorThief();
-            try {
+            __WEBPACK_IMPORTED_MODULE_0_jquery___default()(elm).on('load', function (event) {
+                var colorThief = new ColorThief();
+                var tempArray = colorThief.getColor(event.currentTarget);
+                var colorArray = rgbToHsl(tempArray[0], tempArray[1], tempArray[2]);
+                var colorArrayReduced = [Math.floor(colorArray[0] * 360), Math.floor(colorArray[1] / 2 * 100), Math.floor(colorArray[2] * 100)];
+                var hsl = "hsl(" + colorArrayReduced[0] + "," + colorArrayReduced[1] + "%," + colorArrayReduced[2] + "%)";
+                console.log(colorArrayReduced);
+                console.log(hsl);
+                __WEBPACK_IMPORTED_MODULE_0_jquery___default()(event.currentTarget).siblings(".informations").css({
+                    'background-color': hsl
+                });
+                if (contrast(tempArray, [0, 0, 0]) <= 5.14) {
+                    __WEBPACK_IMPORTED_MODULE_0_jquery___default()(event.currentTarget).siblings(".informations").children(".card-text").css("color", "white");
+                    __WEBPACK_IMPORTED_MODULE_0_jquery___default()(event.currentTarget).siblings(".informations").find("small").css("color", "#d8d8d8");
+                }
+            });
+            /*try {
                 var tempArray = colorThief.getColor(elm.get(0));
-            } catch (event) {
-                var tempArray = [255, 255, 255];
-                setTimeout(function () {
-                    setBackgroundColor(elm);
-                }, 100);
-            }
-            var colorArray = [(255 - tempArray[0]) / 2, (255 - tempArray[1]) / 2, (255 - tempArray[2]) / 2];
-            elm.siblings(".informations").css("background-color", "rgb(" + colorArray[0] + "," + colorArray[1] + "," + colorArray[0] + ")");
-            console.log(elm.siblings(".informations").css("background-color"));
-            if (contrast(colorArray, [0, 0, 0]) <= 5.14) {
-                elm.siblings(".informations").children(".card-text").css("color", "white");
-                elm.siblings(".informations").find("small").css("color", "#d8d8d8");
-            }
+            } catch(event) {
+                var tempArray = [255,255,255];
+                setTimeout(function() {setBackgroundColor(elm)}, 100);
+            }*/
         };
 
         var search = Object(__WEBPACK_IMPORTED_MODULE_1_instantsearch_js__["a" /* default */])({
@@ -14181,7 +14228,7 @@ __WEBPACK_IMPORTED_MODULE_0_jquery___default()(document).ready(function () {
         search.start();
 
         search.on("render", function () {
-            __WEBPACK_IMPORTED_MODULE_0_jquery___default()(".screenshot").each(function () {
+            __WEBPACK_IMPORTED_MODULE_0_jquery___default()(".screenshot").each(function (elm) {
                 setBackgroundColor(__WEBPACK_IMPORTED_MODULE_0_jquery___default()(this));
             });
             if (!authStatus) {
