@@ -496,3 +496,19 @@
     background-position: 0% 50%
   }
 }
+
+@media screen and (max-device-width: $responsive-breakpoint){
+  .entries{
+    width: 100%;
+  }
+  .facets {
+    display: none;
+  }
+  .resultscontainer {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  .studentcard {
+    width: 100%;
+  }
+}
