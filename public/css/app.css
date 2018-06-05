@@ -10420,7 +10420,7 @@ a.text-dark:focus {
   -moz-osx-font-smoothing: grayscale;
 }
 
-hr {
+.vertical-line {
   width: 1px;
   height: initial;
   margin-top: 10%;
@@ -10458,7 +10458,7 @@ p {
 }
 
 @media screen and (max-width: 900px) {
-  hr {
+  .vertical-line {
     display: none;
   }
 }
@@ -10736,6 +10736,41 @@ nav {
 .student,
 .boss {
   padding: 30px;
+}
+
+.button-to-search {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 35vh;
+}
+
+.button-to-search > a {
+  color: white;
+  background: aqua;
+  padding: 15px 30px;
+  border-radius: 9999px;
+  background: -webkit-gradient(linear, left top, right top, from(#003cff), color-stop(55%, #435099), to(#553390));
+  background: linear-gradient(to right, #003cff 0%, #435099 55%, #553390 100%);
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.button-to-search > a:hover {
+  color: white;
+  text-decoration: none;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.button-to-search > a i {
+  margin-left: 0.5rem;
 }
 
 @media screen and (max-width: 900px) {
@@ -11322,6 +11357,15 @@ nav {
   background-color: white;
   -webkit-box-shadow: 0px 0px 31px -4px rgba(0, 0, 0, 0.75);
           box-shadow: 0px 0px 31px -4px rgba(0, 0, 0, 0.75);
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.close-embed:hover::after {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-box-shadow: 0px 0px 20px 2px rgba(0, 0, 0, 0.75);
+          box-shadow: 0px 0px 20px 2px rgba(0, 0, 0, 0.75);
 }
 
 .flex-embed-expanded {

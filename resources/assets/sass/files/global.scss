@@ -2,7 +2,7 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-hr{
+.vertical-line{
   width: 1px;
   height: initial;
   margin-top: 10%;
@@ -33,7 +33,7 @@ p {
 }
 
 @media screen and (max-width: $responsive-breakpoint) {
-  hr {
+  .vertical-line {
     display: none;
   }
 }

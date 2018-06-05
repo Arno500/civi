@@ -6,10 +6,11 @@
     <div class="flex-responsive main-home">
         <div class="home-text">
             <h1>Une liste de talents, rien que pour vous !</h1>
-            <h2>Choisissez parmi plus de 50 étudiants prêts à travailler à coup de café !</h2>
+            <h2>Choisissez parmi plus de 50 étudiants prêts à travailler<br>à coups de café !</h2>
             <p>Grâce à notre moteur de recherche innovant, la moindre particularité peut faire la différence. Que ce soit le métier, les logiciels maîtrisés, les qualités requises...
                 Vous n’avez plus qu’à trouver VOTRE étudiant parfait !
             </p>
+            <hr>
             <div class="flex-responsive comparison">
                 <div class="boss">
                     <h1>Boss...</h1>
@@ -18,7 +19,7 @@
                         Choississez selon différents critères tels que les années d'expérience, les compétences,...
                     </p>
                 </div>
-                <hr>
+                <hr class="vertical-line">
                 <div class="student">
                     <h1>...et étudiants</h1>
                     <img src="/img/student.svg" alt="">
@@ -28,6 +29,13 @@
                     </p>
                 </div>
             </div>
+            <hr>
+            <div class="button-to-search">
+                <a href="{{ route("search") }}" title="Accéder au moteur de rechercbe">Accéder aux étudiants !  <i class="fas fa-arrow-right"></i>
+
+                </a>
+            </div>
+            <hr>
             <h1>La créativité ne se mesure pas à un bout de papier</h1>
             <h2>Et c'est bien pour ça qu'on est là</h2>
             <p>Avoir le diplôme n’est pas toujours synonyme d’avoir les compétences. Vous pouvez donc rechercher ce dont vous avez besoin, avec  des mots-clés et un système de filtres.

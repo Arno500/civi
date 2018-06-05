@@ -68,7 +68,7 @@
   width: 60%;
 }
 .home-text p {
-  margin-bottom: 20px;
+  margin-bottom: 4rem;
 }
 
 .home-text h1 {
@@ -113,6 +113,32 @@
 
 .student,.boss{
   padding: 30px;
+}
+
+.button-to-search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 35vh;
+}
+
+.button-to-search>a {
+  color: white;
+  background: aqua;
+  padding: 15px 30px;
+  border-radius: 9999px;
+  background: linear-gradient(to right, #003cff 0%, #435099 55%, #553390 100%);
+  transition: all 0.4s;
+  
+  &:hover {
+    color: white;
+    text-decoration: none;
+    transform: scale(1.1);
+  }
+
+  i {
+    margin-left: 0.5rem;
+  }
 }
 
 @media screen and (max-width: $responsive-breakpoint) {
