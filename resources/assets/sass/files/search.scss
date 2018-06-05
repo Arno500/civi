@@ -395,7 +395,6 @@
 
   &.retracted {
     box-shadow: none;
-    transform: translate3d(0,0,0);
   }
 
   &.expanded {
@@ -510,5 +509,16 @@
   }
   .studentcard {
     width: 100%;
+  }
+  .left-panel {
+    width: 90vw;
+  }
+  .flex-embed-retracted {
+    width: 190vw;
+    transform: translateX(-47.4%);
+  }
+
+  .flex-embed-expanded {
+    width: 190vw;
   }
 }

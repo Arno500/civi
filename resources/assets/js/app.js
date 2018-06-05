@@ -267,6 +267,7 @@ $(document).ready(function() {
                         leftPanel.children(".resume-static").attr("href", studentData.urlstatic).text("Lien vers le CV statique (PDF)");
                         leftPanel.children(".internship-preference").text(studentData.internshippreference);
                         leftPanel.children(".internship-duration").text(studentData.internshipduration);
+                        leftPanel.children(".description").text(studentData.description);
                         if (studentData.url !== "#") {
                             iframe.prop("src", studentData.url);
                         } else {

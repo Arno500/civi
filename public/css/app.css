@@ -11271,8 +11271,6 @@ nav {
 .left-panel.retracted {
   -webkit-box-shadow: none;
           box-shadow: none;
-  -webkit-transform: translate3d(0, 0, 0);
-          transform: translate3d(0, 0, 0);
 }
 
 .frame-panel {
@@ -11427,6 +11425,20 @@ nav {
 
   .studentcard {
     width: 100%;
+  }
+
+  .left-panel {
+    width: 90vw;
+  }
+
+  .flex-embed-retracted {
+    width: 190vw;
+    -webkit-transform: translateX(-47.4%);
+            transform: translateX(-47.4%);
+  }
+
+  .flex-embed-expanded {
+    width: 190vw;
   }
 }
 
