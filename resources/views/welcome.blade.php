@@ -5,7 +5,7 @@
     </div>
     <div class="flex-responsive main-home">
         <div class="home-text">
-            <h1>Un liste de talent, rien que pour vous !</h1>
+            <h1>Une liste de talents, rien que pour vous !</h1>
             <h2>Choisissez parmi plus de 50 étudiants prêts à travailler à coup de café !</h2>
             <p>Grâce à notre moteur de recherche innovant, la moindre particularité peut faire la différence. Que ce soit le métier, les logiciels maîtrisés, les qualités requises...
                 Vous n’avez plus qu’à trouver VOTRE étudiant parfait !

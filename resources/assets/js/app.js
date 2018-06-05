@@ -104,7 +104,7 @@ $(document).ready(function() {
                 var colorThief = new ColorThief();
                 var tempArray = colorThief.getColor(event.currentTarget);
                 let colorArray = rgbToHsl(tempArray[0],tempArray[1],tempArray[2]);
-                let colorArrayReduced = [Math.floor(colorArray[0]*360),Math.floor((colorArray[1]/2)*100),Math.floor((colorArray[2])*100)];
+                let colorArrayReduced = [Math.floor(colorArray[0]*360),Math.floor((colorArray[1]/1.3)*100),Math.floor((colorArray[2])*100)];
                 let hsl = "hsl("+colorArrayReduced[0]+","+colorArrayReduced[1]+"%,"+colorArrayReduced[2]+"%)";
                 $(event.currentTarget).siblings(".informations").css({
                     'background-color': hsl
@@ -145,7 +145,7 @@ $(document).ready(function() {
                 },
                 templates: {
                     item: document.getElementById('hit-template').innerHTML,
-                    empty: "We didn't find any results for the search <em>\"{{query}}\"</em>"
+                    empty: "Nous n'avons pas trouvé de résultats pour la requête <em>\"{{query}}\"</em>"
                 }
             })
         );
@@ -215,6 +215,7 @@ $(document).ready(function() {
         search.start();
 
         search.on("render", function() {
+            $(".studentcard").unbind("click");
             $(".screenshot").each(function(elm) {
                 setBackgroundColor($(this));
             });
@@ -225,9 +226,12 @@ $(document).ready(function() {
                     $(this).removeAttr("data-description");
                     $(this).removeAttr("data-qualities");
                     $(this).removeAttr("data-softwares");
+                    $(this).removeAttr("data-internship-duration");
+                    $(this).removeAttr("data-internship-preference");
                 });
             }
-            $(".searchresults>div").click(function(event){
+            $(".studentcard").click(function(event){
+                console.log(event);
                 if ($(event.currentTarget).is("div.studentcard")) {
                     if (!authStatus) {
                         alert("Rejoignez CiVi pour accéder au profil détaillé des étudiants !");
@@ -235,11 +239,34 @@ $(document).ready(function() {
                         $("body").css("overflow", "hidden");
                         $(".embed").fadeIn();
                         $('html,body').animate({scrollTop: 0}, 500);
+                        $(".retract").unbind("click");
+                        $(".retract").click(function(){
+                            const leftPanel = $(".left-panel");
+                            const button = $(".retract");
+                            const flexContainer = $(".flex-embed");
+                            if (leftPanel.hasClass("expanded")) {
+                                leftPanel.removeClass("expanded");
+                                button.removeClass("retract__active");
+                                flexContainer.removeClass("flex-embed-expanded");
+                                leftPanel.addClass("retracted");
+                                button.addClass("retract__inactive");
+                                flexContainer.addClass("flex-embed-retracted");
+                            } else {
+                                flexContainer.removeClass("flex-embed-retracted");
+                                leftPanel.removeClass("retracted");
+                                button.removeClass("retract__inactive");
+                                leftPanel.addClass("expanded");
+                                button.addClass("retract__active");
+                                flexContainer.addClass("flex-embed-expanded");
+                            }
+                        });
                         var studentData = $(event.currentTarget).children(".informations").data();
                         var leftPanel = $(".left-panel");
                         var iframe = $(".frame-panel");
                         leftPanel.children(".student-name").text(studentData.name);
                         leftPanel.children(".resume-static").attr("href", studentData.urlstatic).text("Lien vers le CV statique (PDF)");
+                        leftPanel.children(".internship-preference").text(studentData.internshippreference);
+                        leftPanel.children(".internship-duration").text(studentData.internshipduration);
                         if (studentData.url !== "#") {
                             iframe.prop("src", studentData.url);
                         } else {
@@ -250,26 +277,6 @@ $(document).ready(function() {
                 }
             });
 
-            $(".retract").click(function(){
-                var leftPanel = $(".left-panel");
-                var button = $(".retract");
-                var flexContainer = $(".flex-embed");
-                if (leftPanel.hasClass("expanded")) {
-                    leftPanel.removeClass("expanded");
-                    button.removeClass("retract__active");
-                    flexContainer.removeClass("flex-embed-expanded");
-                    leftPanel.addClass("retracted");
-                    button.addClass("retract__inactive");
-                    flexContainer.addClass("flex-embed-retracted");
-                } else {
-                    flexContainer.removeClass("flex-embed-retracted");
-                    leftPanel.removeClass("retracted");
-                    button.removeClass("retract__inactive");
-                    leftPanel.addClass("expanded");
-                    button.addClass("retract__active");
-                    flexContainer.addClass("flex-embed-expanded");
-                }
-            })
 
             $(".close-embed").click(function() {
                 $("body").css("overflow", "initial");

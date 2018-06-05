@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Montserrat:400|Lato|Source+Sans+Pro:400,600,700);@import url(https://use.fontawesome.com/releases/v5.0.13/css/all.css);@import url(https://fonts.googleapis.com/icon?family=Material+Icons);/*!
+@import url(https://fonts.googleapis.com/icon?family=Material+Icons);/*!
  * Bootstrap v4.1.1 (https://getbootstrap.com/)
  * Copyright 2011-2018 The Bootstrap Authors
  * Copyright 2011-2018 Twitter, Inc.
@@ -10567,13 +10567,22 @@ main {
 
 .navbar-brand {
   margin-left: 1rem;
-  display: inline-block;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding-top: 0.3rem;
   padding-bottom: 0.3rem;
   margin-right: 1rem;
   font-size: 1.25rem;
   line-height: inherit;
   white-space: nowrap;
+}
+
+.navbar-brand > img {
+  margin-right: inherit;
 }
 
 nav {
@@ -10757,7 +10766,7 @@ nav {
 .search-intro {
   width: 100%;
   text-align: center;
-  height: 30vh;
+  height: 20vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -10780,10 +10789,11 @@ nav {
 
 .search-input .search-box {
   margin: 0 auto;
-  padding: 10px 20px 6px;
-  width: 70%;
-  border-radius: 9999px;
-  font-size: 28px;
+  padding: 6px 20px 6px;
+  width: 60%;
+  max-width: 600px;
+  border-radius: 4px;
+  font-size: 1.3rem;
   font-weight: 100;
   border: none;
   display: block;
@@ -10804,10 +10814,11 @@ nav {
           transform: translate(-50%, -50%);
   background: -webkit-gradient(linear, left top, right top, from(#003cff), to(#553390));
   background: linear-gradient(to right, #003cff 0%, #553390 100%);
-  width: calc(70% + 12px);
+  width: calc(60% + 10px);
+  max-width: 610px;
   height: 120%;
   z-index: -10;
-  border-radius: 999px;
+  border-radius: 6px;
 }
 
 .ais-search-box--reset-wrapper {
@@ -10862,6 +10873,8 @@ nav {
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 10px 10px 0 0;
+  -webkit-filter: brightness(0.8) saturate(1.2);
+          filter: brightness(0.8) saturate(1.2);
 }
 
 .studentcard .portrait {
@@ -10890,11 +10903,22 @@ nav {
       -ms-flex-align: center;
           align-items: center;
   position: absolute;
-  height: 45%;
+  height: 46%;
   width: 100%;
-  top: 55%;
+  top: 54%;
   left: 0;
   border-radius: 0 0 10px 10px;
+  -webkit-box-shadow: 0px -9px 22px -11px rgba(0, 0, 0, 0.75);
+          box-shadow: 0px -9px 22px -11px rgba(0, 0, 0, 0.75);
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.studentcard:hover > .informations {
+  -webkit-box-shadow: 0px -9px 34px -11px rgba(0, 0, 0, 0.75);
+          box-shadow: 0px -9px 34px -11px rgba(0, 0, 0, 0.75);
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
 }
 
 .studentcard .card-text {
@@ -11096,7 +11120,7 @@ nav {
 .algolia-link {
   margin-top: 5px;
   position: absolute;
-  right: 17%;
+  right: 20%;
 }
 
 .algolia-link-container {
@@ -11277,13 +11301,27 @@ nav {
   font-weight: 900;
   font-size: 2.5rem;
   text-decoration: inherit;
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   position: absolute;
-  top: 0px;
+  top: 18px;
   right: 18px;
   content: "\F00D";
   cursor: pointer;
-  padding: 5px;
+  line-height: 1.7rem;
+  width: 55px;
+  height: 55px;
+  border-radius: 9999px;
+  background-color: white;
+  -webkit-box-shadow: 0px 0px 31px -4px rgba(0, 0, 0, 0.75);
+          box-shadow: 0px 0px 31px -4px rgba(0, 0, 0, 0.75);
 }
 
 .flex-embed-expanded {
@@ -11410,16 +11448,16 @@ textarea {
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
   color: #fff;
-  background-color: #8e6cc7;
-  border: 1px solid #8e6cc7;
+  background-color: #6500c7;
+  border: 1px solid #6500c7;
   cursor: pointer;
   width: 100%;
 }
 
 .button-shadow:focus,
 .button-shadow:active {
-  -webkit-box-shadow: 0 0 0 0.2rem rgba(95, 0, 255, 0.5);
-          box-shadow: 0 0 0 0.2rem rgba(95, 0, 255, 0.5);
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(0, 60, 255, 0.5);
+          box-shadow: 0 0 0 0.2rem rgba(0, 60, 255, 0.5);
 }
 
 .button-short {
@@ -11429,18 +11467,18 @@ textarea {
 
 .radio-color {
   color: white;
-  background-color: #8e6cc7;
-  border: 1px solid #8e6cc7;
+  background-color: #6500c7;
+  border: 1px solid #6500c7;
 }
 
 .radio-color:hover {
-  background-color: #6a4f98;
-  border-color: #6a4f98;
+  background-color: #402698;
+  border-color: #402698;
 }
 
 .active {
-  background-color: #6a4f98;
-  border-color: #6a4f98;
+  background-color: #402698;
+  border-color: #402698;
 }
 
 .enterprise-group {

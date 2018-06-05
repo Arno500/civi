@@ -2,7 +2,7 @@
 @section('content')
 
     <div class="search-intro">
-        <h1>Commencez à rechercher parmi
+        <h1>Votre talent parmi
             <br>{{ App\Student::all()->count() }} profils</h1>
     </div>
 
@@ -38,7 +38,7 @@
                 <p class="description"></p>
                 <div class="retract retract__active"></div>
             </div>
-            <iframe class="frame-panel"></iframe>
+            <iframe class="frame-panel" security="restricted" sandbox="allow-same-origin allow-scripts allow-top-navigation"></iframe>
         </div>
         <div class="close-embed"></div>
     </div>
@@ -46,7 +46,7 @@
     <script type="text/html" id="hit-template">
         <img class="screenshot" src="@{{ screenshoturl }}"
              alt="Capture d'écran du CV interactif de @{{ firstname }} @{{ surname }}">
-        <div class="informations" data-name="@{{ firstname }} @{{ surname }}" data-url="@{{ resumeurl_interactive }}" data-urlstatic="@{{ resumeurl_static }}" data-description="@{{ description }}" data-qualities="@{{ qualities }}" data-softwares="@{{ softwares }}">
+        <div class="informations" data-internshippreference="@{{ internship_preference }}" data-internshipduration="@{{ internship_duration }}" data-name="@{{ firstname }} @{{ surname }}" data-url="@{{ resumeurl_interactive }}" data-urlstatic="@{{ resumeurl_static }}" data-description="@{{ description }}" data-qualities="@{{ qualities }}" data-softwares="@{{ softwares }}">
             <img class="portrait" src="@{{ portraiturl }}" alt="Photo de @{{ firstname }} @{{ surname }}">
             <div class="card-text">
                 <h3>@{{{ _highlightResult.firstname.value }}} @{{{ _highlightResult.surname.value }}}</h3>

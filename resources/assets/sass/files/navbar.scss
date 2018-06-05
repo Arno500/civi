@@ -30,13 +30,18 @@
 
   .navbar-brand {
     margin-left: 1rem;
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
     padding-top: 0.3rem;
     padding-bottom: 0.3rem;
     margin-right: 1rem;
     font-size: 1.25rem;
     line-height: inherit;
     white-space: nowrap;
+
+    &>img {
+      margin-right: inherit;
+    }
   }
 
   nav {

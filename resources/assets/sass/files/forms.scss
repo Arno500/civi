@@ -72,14 +72,14 @@ textarea {
   border-radius: 0.25rem;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   color: #fff;
-  background-color: #8e6cc7;
-  border: 1px solid #8e6cc7;
+  background-color: #6500c7;
+  border: 1px solid #6500c7;
   cursor: pointer;
   width: 100%;
 }
 
 .button-shadow:focus, .button-shadow:active {
- box-shadow: 0 0 0 0.2rem rgba(95, 0, 255, 0.5);
+ box-shadow: 0 0 0 0.2rem rgba(0, 60, 255, 0.5);
 }
 
 .button-short {
@@ -89,18 +89,18 @@ textarea {
 
 .radio-color {
   color: white;
-  background-color: #8e6cc7;
-  border: 1px solid #8e6cc7;
+  background-color: #6500c7;
+  border: 1px solid #6500c7;
 }
 
 .radio-color:hover {
-  background-color: #6a4f98;
-  border-color: #6a4f98;
+  background-color: #402698;
+  border-color: #402698;
 }
 
 .active {
-  background-color: #6a4f98;
-  border-color: #6a4f98;
+  background-color: #402698;
+  border-color: #402698;
 }
 
 .enterprise-group {

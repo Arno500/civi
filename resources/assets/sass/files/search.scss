@@ -1,7 +1,7 @@
 .search-intro {
   width: 100%;
   text-align: center;
-  height: 30vh;
+  height: 20vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -18,10 +18,11 @@
 
 .search-input .search-box{
   margin: 0 auto;
-  padding: 10px 20px 6px;
-  width: 70%;
-  border-radius: 9999px;
-  font-size: 28px;
+  padding: 6px 20px 6px;
+  width: 60%;
+  max-width: 600px;
+  border-radius: 4px;
+  font-size: 1.3rem;
   font-weight: 100;
   border: none;
   display: block;
@@ -38,10 +39,11 @@
     top: 50%;
     transform: translate(-50%, -50%);
     background: linear-gradient(to right, #003cff 0%, #553390 100%);
-    width: calc(70% + 12px);
+    width: calc(60% + 10px);
+    max-width: 610px;
     height: 120%;
     z-index: -10;
-    border-radius: 999px;
+    border-radius: 6px;
   }
 }
 
@@ -91,6 +93,7 @@
   left: 0;
   object-fit: cover;
   border-radius: 10px 10px 0 0;
+  filter: brightness(0.8) saturate(1.2);
 }
 
 .studentcard .portrait {
@@ -108,11 +111,18 @@
   align-content: center;
   align-items: center;
   position: absolute;
-  height: 45%;
+  height: 46%;
   width: 100%;
-  top: 55%;
+  top: 54%;
   left: 0;
   border-radius: 0 0 10px 10px;
+  box-shadow: 0px -9px 22px -11px rgba(0,0,0,0.75);
+  transition: all 0.4s;
+}
+
+.studentcard:hover>.informations {
+  box-shadow: 0px -9px 34px -11px rgba(0,0,0,0.75);
+  transform: scale(1.05);
 }
 
 .studentcard .card-text {
@@ -293,7 +303,7 @@
 .algolia-link {
   margin-top: 5px;
   position: absolute;
-  right: 17%;
+  right: 20%;
 }
 
 .algolia-link-container {
@@ -444,13 +454,20 @@
   font-weight: 900;
   font-size: 2.5rem;
   text-decoration: inherit;
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: absolute;
-  top: 0px;
+  top: 18px;
   right: 18px;
   content: "\F00D";
   cursor: pointer;
-  padding: 5px;
+  line-height: 1.7rem;
+  width: 55px;
+  height: 55px;
+  border-radius: 9999px;
+  background-color: white;
+  box-shadow: 0px 0px 31px -4px rgba(0,0,0,0.75);
 }
 
 .flex-embed-expanded {
