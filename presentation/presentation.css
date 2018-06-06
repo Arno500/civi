@@ -1,5 +1,10 @@
-<<<<<<< HEAD
-.Title {
+@media (min-width:700px){
+body {
+    color: #083d77;
+}
+
+
+.title {
 
     display: flex;
     justify-content: center;
@@ -18,32 +23,29 @@ div {
 }
 
 
-h1{
+h1 {
     justify-content: center;
     display: flex;
 }
-=======
-.Title {
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 15px;
-    -webkit-box-shadow: 0px 2px 27px -4px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 0px 2px 27px -4px rgba(0, 0, 0, 0.75);
-    box-shadow: 0px 2px 27px -4px rgba(0, 0, 0, 0.75);
-    width: 800px;
+
+h2,
+p {
+    margin-top: 50px
 }
 
 
-div {
-    width: 80%;
-    margin: 0 auto;
-}
 
 
-h1{
-    justify-content: center;
-    display: flex;
+.video {
+
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-right: 0;
+
+
+
+
+
 }
->>>>>>> dc28907c2174e682bb674172677a9d6bfacad5a0
+}
