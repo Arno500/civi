@@ -265,8 +265,8 @@ $(document).ready(function() {
                         var iframe = $(".frame-panel");
                         leftPanel.children(".student-name").text(studentData.name);
                         leftPanel.children(".resume-static").attr("href", studentData.urlstatic).text("Lien vers le CV statique (PDF)");
-                        leftPanel.children(".internship-preference").text(studentData.internshippreference);
-                        leftPanel.children(".internship-duration").text(studentData.internshipduration);
+                        leftPanel.find(".internship-preference>.fill-span").text(studentData.internshippreference);
+                        leftPanel.find(".internship-duration>.fill-span").text(studentData.internshipduration);
                         leftPanel.children(".description").text(studentData.description);
                         if (studentData.url !== "#") {
                             iframe.prop("src", studentData.url);

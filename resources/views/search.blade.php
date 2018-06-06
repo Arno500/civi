@@ -32,10 +32,18 @@
         <div class="flex-embed">
             <div class="left-panel expanded">
                 <h4 class="student-name"></h4>
-                <h5 class="internship-preference"></h5>
-                <h5 class="internship-duration"></h5>
-                <a class="resume-static" href="#"></a>
+                <h5 class="internship-preference">
+                    <span class="name-category ">Type de stage souhaité :</span>
+                    <br>
+                    <span class="fill-span"></span>
+                </h5>
+                <h5 class="internship-duration">
+                    <span class="name-category ">Durée de stage souhaité :</span>
+                    <br>
+                    <span class="fill-span"></span>
+                </h5>
                 <p class="description"></p>
+                <a class="resume-static" href="#"></a>
                 <div class="retract retract__active"></div>
             </div>
             <iframe class="frame-panel" security="restricted" sandbox="allow-same-origin allow-scripts allow-top-navigation"></iframe>
