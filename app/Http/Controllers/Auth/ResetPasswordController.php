@@ -4,8 +4,10 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ResetsPasswords;
+use Illuminate\Notifications\Messages\MailMessage;
+use Illuminate\Auth\Notifications\ResetPassword as ResetPassword;
 
-class ResetPasswordController extends Controller
+class ResetPasswordController extends ResetPassword
 {
     /*
     |--------------------------------------------------------------------------
@@ -27,13 +29,17 @@ class ResetPasswordController extends Controller
      */
     protected $redirectTo = '/profile';
 
+
     /**
-     * Create a new controller instance.
-     *
-     * @return void
+     * @param mixed $notifiable
+     * @return \Illuminate\Notifications\Messages\MailMessage
      */
-    public function __construct()
+    public function toMail($notifiable)
     {
-        $this->middleware('guest');
+        return (new MailMessage)
+            ->subject('Réinitialisation de mot de passe - ' . config('app.name'))
+            ->line('Vous recevez ce mail car nous avoncs reçu une demande de réinitialisation de mot de passe pour votre compte.')
+            ->action('Réinitialiser le mot de passe', url(config('app.url').route('password.reset', $this->token, false)))
+            ->line('Si vous n\'avez jamais demandé de réinitialiser votre mot de passe, vous pouvez ignorer cet email.');
     }
 }
