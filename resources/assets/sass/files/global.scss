@@ -58,3 +58,25 @@ body {
 main {
   position: relative;
 }
+
+input, button, select, optgroup, textarea {
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+input {
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  :focus {
+    color: #495057;
+    background-color: #fff;
+    border-color: #80bdff;
+    outline: 0;
+    -webkit-box-shadow: 0 0 0 0.2rem rgba(128, 0, 199, 0.25);
+    box-shadow: 0 0 0 0.2rem rgba(128, 0, 199, 0.25);
+  }
+}

@@ -2,7 +2,7 @@
 @import "variables";
 
 // Bootstrap
-@import "~bootstrap/scss/bootstrap";
+//@import "~bootstrap/scss/bootstrap";
 
 // Our own classes
 
@@ -13,6 +13,9 @@
 @import "files/search";
 @import "files/forms";
 
+.margin-content {
+  margin-top: 3rem;
+}
 
 .offer-link {
   display: block;
@@ -20,9 +23,6 @@
 }
 .card-offer {
   height: 150px;
-}
-.card {
-  display: flex; flex-direction: column;
 }
 .card-img {
   order: -1;

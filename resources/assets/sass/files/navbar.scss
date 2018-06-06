@@ -24,9 +24,14 @@
   padding-left: 0;
   margin-bottom: 0;
   list-style: none;
+  margin-top: 0;
 }
 
-.navbar-light .navbar-nav .button-register:hover, .navbar-light .navbar-nav .button-register:focus {
+.mr-auto {
+  margin-right: auto !important;
+}
+
+.navbar-nav .button-register:hover, .navbar-light .navbar-nav .button-register:focus {
   color: white;
   transform: scale(1.04);
 }
@@ -41,7 +46,7 @@
   color: white;
   transition: 0.5s all;
 }
-.navbar-light .navbar-nav .button-register:hover {
+.navbar-nav .button-register:hover {
   color: #e2f1ff;
 }
 
@@ -74,6 +79,7 @@
 }
 
 .navbar-brand {
+  color: #404040;
   margin-left: 1rem;
   display: inline-flex;
   align-items: center;
@@ -110,35 +116,49 @@
 }
 
 @media screen and (min-width: 768px) {
-  .navbar-expand-md .navbar-nav .dropdown-menu {
+  .navbar-nav .dropdown-menu {
     position: absolute;
   }
-}
-
-@media (min-width: 768px) {
-  .navbar-expand-md {
+  .navbar {
     flex-flow: row nowrap;
     justify-content: flex-start;
+  }
+  .navbar-toggler {
+    display: none;
+  }
+  .navbar-nav {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+  .navbar-nav .nav-link {
+    display: block;
+    padding: 0.5rem 0.5rem;
   }
 }
 
 .navbar-toggler:not(:disabled):not(.disabled) {
   cursor: pointer;
 }
-.navbar-light .navbar-toggler {
+.navbar-toggler {
   color: rgba(0, 0, 0, 0.5);
   border-color: rgba(0, 0, 0, 0.1);
-}
-@media (min-width: 768px) {
-  .navbar-expand-md .navbar-toggler {
-    display: none;
-  }
-}
-.navbar-toggler {
   padding: 0.25rem 0.75rem;
   font-size: 1.25rem;
   line-height: 1;
   background-color: transparent;
-  border: 1px solid transparent;
   border-radius: 0.25rem;
+}
+
+.navbar-nav .nav-link {
+  color: rgba(0, 0, 0, 0.5);
+
+  &:hover {
+    color: rgba(0, 0, 0, 0.7);
+  }
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,<svg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'><path stroke='rgba(0, 0, 0, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/></svg>");
 }

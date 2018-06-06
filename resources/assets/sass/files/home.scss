@@ -35,15 +35,10 @@
   background: linear-gradient(to right, #003cff 0%,#435099 55%,#553390 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#003cff', endColorstr='#553390',GradientType=1 );
   transition: 0.5s all;
+  width: 100%;
 }
 .register-bloc button:hover{
   transform: scale(1.04);
-}
-.register-bloc button:active {
-  background: inherit;
-}
-.btn:not(:disabled):not(.disabled):active {
-  background: inherit;
 }
 .register-bloc-container {
   position: sticky;
