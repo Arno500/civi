@@ -141,6 +141,7 @@ textarea {
 
 .button-shadow:focus, .button-shadow:active {
   box-shadow: 0 0 0 0.2rem rgba(101, 0, 200, 0.83);
+  outline: none;
 }
 
 .button-short {

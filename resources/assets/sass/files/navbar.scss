@@ -38,10 +38,7 @@
 .navbar-nav .nav-link.button-register{
   padding: 7px 13px ;
   background: #003cff;
-  background: -moz-linear-gradient(left, #003cff 0%, #435099 55%, #553390 100%);
-  background: -webkit-linear-gradient(left, #003cff 0%,#435099 55%,#553390 100%);
   background: linear-gradient(to right, #003cff 0%,#435099 55%,#553390 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#003cff', endColorstr='#553390',GradientType=1 );
   border-radius: 9px;
   color: white;
   transition: 0.5s all;
@@ -92,19 +89,13 @@
 
   &>img {
     margin-right: inherit;
+    filter: brightness(1.4) saturate(0.7);
   }
 }
 
   nav {
     font-family: "Montserrat Light", "DejaVu Sans", sans-serif;
   }
-
-@media (min-width: 768px) {
-  .navbar-expand-md .navbar-collapse {
-    display: flex !important;
-    flex-basis: auto;
-  }
-}
 
 .collapse:not(.show) {
   display: none;
@@ -116,6 +107,10 @@
 }
 
 @media screen and (min-width: 768px) {
+  .navbar-expand-md .navbar-collapse {
+    display: flex !important;
+    flex-basis: auto;
+  }
   .navbar-nav .dropdown-menu {
     position: absolute;
   }
@@ -160,5 +155,11 @@
 }
 
 .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml;charset=utf8,<svg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'><path stroke='rgba(0, 0, 0, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/></svg>");
+  display: inline-block;
+  width: 1.5em;
+  height: 1.5em;
+  vertical-align: middle;
+  content: "";
+  background: url("data:image/svg+xml;charset=utf8,<svg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'><path stroke='rgba(0, 0, 0, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/></svg>") no-repeat center center;
+  background-size: 100% 100%;
 }

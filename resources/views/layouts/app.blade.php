@@ -98,6 +98,18 @@
 <main>
     @yield('content')
 </main>
+    <footer>
+        <div class="about">
+            <h2>À propos :</h2>
+            <p>Nous sommes une petite équipe de 3 personnes (Valentin Trinty, Romain Laze, Arno Dubois) basée à Champs-sur-Marne. Ceci est notre projet-tutoré, une plateforme de CV interactifs qui regroupe les Curricculum Vitae web des étudiants de la promotion MMI 2017-2018.</p>
+        </div>
+        <div class="location">
+                <h2>IUT de Champs-sur-Marne</h2>
+            <p>
+            Contact :
+            </p>
+        </div>
+    </footer>
 </div>
 
 <!-- Scripts -->
