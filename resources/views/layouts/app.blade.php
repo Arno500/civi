@@ -106,7 +106,11 @@
         <div class="location">
                 <h2>IUT de Champs-sur-Marne</h2>
             <p>
-            Contact :
+                Contact : Martine Thireau
+                <br>
+                <a href="tel:+33160958590s"><i class="fas fa-phone"></i> +33 1 60 95 85 90</a>
+                <br>
+                <a href=""><i class="fas fa-envelope"></i> <span class="mail"></span></a>
             </p>
         </div>
     </footer>

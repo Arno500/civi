@@ -91,17 +91,26 @@ footer {
 }
 
 footer>div {
-  //width: 100%;
+  width: 100%;
   margin: 2rem;
 }
 
 footer p,
-footer h2 {
+footer h2,
+footer a {
   color: hsl(236, 100%, 20%);
 }
 
+footer a {
+  text-decoration: underline;
+}
+
+footer a:hover {
+  color: #0056b3;
+}
+
 .location {
-  max-width: 200px;
+  max-width: 250px;
   min-width: 10rem;
 }
 

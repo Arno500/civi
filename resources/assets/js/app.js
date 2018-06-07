@@ -53,6 +53,10 @@ function rgbToHsl(r, g, b) {
 }
 
 $(document).ready(function() {
+    const mail1 = "martine.th";
+    const mail2 = "ireau@u-";
+    const mail3 = "pem.fr";
+    $(".mail").prop("href", "mailto:"+mail1+mail2+mail3).text(mail1+mail2+mail3);
 
     $(".navbar-toggler").click(function () {
         var menu = $(".collapse");
