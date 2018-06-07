@@ -38,9 +38,6 @@ p {
     margin-top: 20px;
 }
 
-
-
-
 .video {
     margin-top: 50px;
     margin-bottom: 50px;
@@ -51,4 +48,9 @@ p {
 
 span {
     font-weight: bold;
+}
+
+.button-to-search {
+    height: auto;
+
 }
