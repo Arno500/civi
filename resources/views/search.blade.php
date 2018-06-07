@@ -1,7 +1,8 @@
 @extends('layouts.app')
 @section('content')
 
-    <div class="search-intro">
+    <header>
+        <div class="search-intro">
         <h1>Votre talent parmi
             <br>{{ App\Student::all()->count() }} profils</h1>
     </div>
@@ -16,7 +17,8 @@
                                                                     src="https://www.algolia.com/static_assets/images/press/downloads/search-by-algolia.svg"
                                                                     alt="Powered by Algolia"></a>
     </div>
-    <div class="resultscontainer">
+    </header>
+    <section class="resultscontainer">
         <div id="searchResults" class="entries">
         </div>
         <div class="facets">
@@ -24,7 +26,7 @@
             <div id="softwares" class="softwares"></div>
             <div id="qualities" class="softwares"></div>
         </div>
-    </div>
+    </section>
 
     <div id="pagination" class="search-pagination"></div>
 
