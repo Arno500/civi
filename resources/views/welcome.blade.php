@@ -31,7 +31,7 @@
             </div>
             <hr>
             <div class="button-to-search">
-                <a href="{{ route("search") }}" title="Accéder au moteur de rechercbe">Accéder aux étudiants !  <i class="fas fa-arrow-right"></i>
+                <a href="{{ route("search") }}" title="Accéder au moteur de recherche">Accéder aux étudiants !  <i class="fas fa-arrow-right"></i>
 
                 </a>
             </div>
