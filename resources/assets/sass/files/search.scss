@@ -78,6 +78,7 @@
   cursor: pointer;
   box-shadow: 1px 0px 18px -6px rgba(0,0,0,0.75);
   transition: 0.3s all;
+  overflow: hidden;
 
   &:hover {
     box-shadow: 1px 0px 18px -2px rgba(0,0,0,0.75);
@@ -101,7 +102,7 @@
   height: 70%;
   object-fit: cover;
   background-color: white;
-  margin: auto 1.3rem;
+  margin: auto 0.7rem;
 }
 
 .studentcard>.informations {
@@ -118,6 +119,7 @@
   border-radius: 0 0 10px 10px;
   box-shadow: 0px -9px 22px -11px rgba(0,0,0,0.75);
   transition: all 0.4s;
+  overflow: hidden;
 }
 
 .studentcard:hover>.informations {
@@ -143,6 +145,7 @@
   color: inherit;
   font-size: initial;
   margin: 0;
+  overflow-wrap: break-word;
 }
 
 .card-text small {
@@ -312,6 +315,7 @@
 
 .search-pagination {
   margin-top: 60px;
+  margin-bottom: 40px;
 }
 .search-pagination ul {
   font-size: 0;
