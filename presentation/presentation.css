@@ -52,13 +52,3 @@ p {
 span {
     font-weight: bold;
 }
-
-button,
-input {
-    display: block;
-    margin-right: auto;
-    margin-left: auto;
-    font-family: sans-serif;
-}
-
-<button type="submit" class="btn w-100" > Trouver mon bonheur</button >
