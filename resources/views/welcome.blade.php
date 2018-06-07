@@ -45,9 +45,6 @@
         </div>
         <div class="register-bloc">
             <div class="register-bloc-container">
-{{--
-                <img src="{{ asset('img/catchline.svg') }}" alt="Rejoignez la plateforme de découverte de talents :">
---}}
                 <h2>Rejoignez la plateforme de découverte de talents</h2>
                 <p>Accéder à nos talents prends deux secon... C'est déjà fini ?
                 </p>
