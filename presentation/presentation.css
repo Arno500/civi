@@ -24,14 +24,14 @@ body {
 
 .content {
     margin-bottom: 30px;
-    width: 750px
+    width: 750px;
 }
 
 
 h1 {
     justify-content: center;
     display: flex;
-    padding-top: 15px
+    padding-top: 15px;
 }
 
 ;
