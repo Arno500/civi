@@ -10,10 +10,10 @@
 
             <h2>Ce que vous devez savoir :</h2>
 
-            <p>Le Diplôme Universitaire de Technologie (DUT) Métiers du Mutlimédia et de l'Internet (MMI) est un diplôme reconnu par l'Etat qui s'effectue en 2 ans en formation initiale.
+            <p>Le Diplôme Universitaire de Technologie (DUT) Métiers du Multimédia et de l'Internet (MMI) est un diplôme reconnu par l'Etat qui s'effectue en 2 ans en formation initiale.
             </p>
 
-            <p>Ce DUT est très polyvalent, les matières enseignées sont diverses et variées. [24] matières en tout, d'Anglais au Réseau ainsi qu'à l'Esthétique et l'expression artistique. Les élèves y sont formés par des enseignants qualifiés dans leur domaine. Les intervenants apportent un côté professionnel pour une formation en initiale.
+            <p>Ce DUT est très polyvalent, les matières enseignées sont diverses et variées. 24 matières en tout, d'Anglais aux Services sur réseau ou esthétique et l'expression artistique. Les élèves y sont formés par des enseignants qualifiés dans leur domaine. Les intervenants apportent un côté professionnel pour une formation initiale.
 
             </p>
 
@@ -42,13 +42,13 @@
 
             <h2>Ce que vous ne savez pas encore :</h2>
 
-            <p>Cette formation, très complète, forme les nouveaux intégrateurs de demain, les nouveaux graphistes qui exposeront leur talents sur des affiches publicitaires, de nouveaux developpeurs d'applications mobile, ou bien peut-être le prochain Spielberg. De nouveaux talents, de nouvelles passions grandissent chaque jour.
+            <p>Cette formation, très complète, forme les nouveaux intégrateurs de demain, les nouveaux graphistes qui exposeront leur talents sur des affiches publicitaires, les nouveaux développeurs d'applications mobiles, ou bien peut-être le prochain Spielberg. De nouveaux talents, de nouvelles passions grandissent chaque jour.
             </p>
 
             <h2>Ils sont parmi nous :</h2>
 
-            <p>Vous recherchez un étudiant ? Un profil ? un talent ? vous recherchez la perle rare ?
-                <span>Bienvenue sur notre site de CV en ligne  [CIVI].</span>Nous avons créé un site de recrutement de talents. Chacun des étudiants issus de la formation MMI a un bagage très large en matière de polyvalence. Vous souhaitez rechercher un profil particulier ? Alors n'hésitez plus, rendez vous sur la page d'acceuil et nous vous guiderons pour que votre expérience ce passe au mieux. </p>
+            <p>Vous recherchez un étudiant ? Un profil ? Un talent ? Vous recherchez la perle rare ?
+                <b>Bienvenue sur notre site de CV en ligne, <i>CiVi</i>.</b>Nous avons créé un site de recrutement de talents. Chacun des étudiants issus de la formation MMI a un baggage très large en matière de polyvalence. Vous souhaitez rechercher un profil particulier ? Alors n'hésitez plus, rendez vous sur la page d'acceuil et nous vous guiderons pour que votre expérience se passe au mieux. </p>
 
             <div class="button-to-search">
                 <a href="{{ route("search") }}" title="Accéder au moteur de recherche">Je veux les découvrir ! <i class="fas fa-arrow-right"></i>
