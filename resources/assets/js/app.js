@@ -159,7 +159,7 @@ $(document).ready(function() {
                 container: '#internship',
                 attributeName: 'internship_preference',
                 templates: {
-                    header: "<h3 class='facet-title'>Métiers</h3>"
+                    header: "<h3 class='facet-title'>Métier souhaité</h3>"
                 },
                 showMore: {
                     templates: {
