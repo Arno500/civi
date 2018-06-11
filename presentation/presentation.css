@@ -1,46 +1,25 @@
-body {
-    color: #083d77;
-
-}
-
-
 .container-presentation {
-
     display: block;
-
     margin-top: 15px;
-    -webkit-box-shadow: 0px 2px 27px -4px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 0px 2px 27px -4px rgba(0, 0, 0, 0.75);
     box-shadow: 0px 2px 27px -4px rgba(0, 0, 0, 0.75);
     width: 800px;
     margin-left: auto;
     margin-right: auto;
-
-
 }
 
-
-
-
-.content {
+.container-presentation .content {
     margin-bottom: 30px;
     width: auto;
 }
 
-
-h1 {
+.container-presentation h1 {
     justify-content: center;
     display: flex;
     padding-top: 15px;
 }
-
-;
-
-
-h2,
-p {
+.container-presentation h2,
+.container-presentation p {
     margin-top: 20px;
-
 }
 
 .video {
@@ -51,11 +30,11 @@ p {
 
 }
 
-span {
+.container-presentation span {
     font-weight: bold;
 }
 
-.button-to-search {
+.container-presentation .button-to-search {
     height: auto;
     padding-bottom: 15px
 }
