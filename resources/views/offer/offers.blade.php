@@ -3,7 +3,7 @@
 @section('content')
 
 <div class="container">
-    @if(Auth::user()->enterprise !== "")
+    @if(Auth::user() && Auth::user()->enterprise !== "")
     <div class="row">
         <div class="row">
             <a href="{{ route('offers.create') }}"><i class="material-icons icon-in-link">note_add</i> Créer une offre</a>
