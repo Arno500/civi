@@ -41,6 +41,7 @@
   transform: scale(1.04);
 }
 .register-bloc-container {
+  opacity: 0.6;
   position: sticky;
   top: calc(20% + 90px);
   transform: translateY(-33%);
@@ -48,8 +49,14 @@
   padding: 15px;
   border-radius: 15px;
   box-shadow: 0px -2px 33px -8px rgba(0,0,0,0.75);
+  transition: 0.4s all;
+
+  &:hover {
+    opacity: 1;
+  }
 }
 .register-bloc h2 {
+  margin-top: 0;
   line-height: 1.9rem;
   font-weight: 600;
   font-size: 2rem;
