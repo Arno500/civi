@@ -58,9 +58,9 @@ Route::get('/offers/create', function () {
     } else {
         return redirect('offers');
     }
-})->name('offers.create');
-Route::post('/offers/create', 'OffersController@create')->name('offers.create');
-Route::get('offers/{n}', ['uses' => 'OffersController@offer', 'as' => 'offerid'])->where('n', '[0-9]+')->name('offers.offer');
+})->name('offers.create')->middleware('auth');
+Route::post('/offers/create', 'OffersController@create')->name('offers.create')->middleware('auth');
+Route::get('offers/{n}', ['uses' => 'OffersController@offer', 'as' => 'offerid'])->where('n', '[0-9]+')->name('offers.offer')->middleware('auth');
 
 Route::get('/mmi', function () {
     return view('mmi');

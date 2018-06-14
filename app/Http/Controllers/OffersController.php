@@ -9,11 +9,7 @@ use Illuminate\Support\Facades\Auth;
 
 class OffersController extends Controller
 {
-
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
+    
 
     protected function index()
     {
