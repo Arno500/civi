@@ -53,12 +53,12 @@ Route::get('/search', 'SearchController@index')->name('search');
 
 Route::get('/offers', 'OffersController@index')->name('offers');
 Route::get('/offers/create', function () {
-    if (Auth::user()->enterprise != null) {
+    if (Auth::user() && Auth::user()->enterprise != null) {
         return view('offer.createoffer');
     } else {
         return redirect('offers');
     }
-})->name('offers.create')->middleware('auth');
+})->name('offers.create');
 Route::post('/offers/create', 'OffersController@create')->name('offers.create')->middleware('auth');
 Route::get('offers/{n}', ['uses' => 'OffersController@offer', 'as' => 'offerid'])->where('n', '[0-9]+')->name('offers.offer')->middleware('auth');
 

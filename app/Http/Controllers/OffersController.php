@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Auth;
 
 class OffersController extends Controller
 {
-    
+
 
     protected function index()
     {
