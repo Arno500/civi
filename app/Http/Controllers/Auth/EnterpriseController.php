@@ -44,10 +44,10 @@ class EnterpriseController extends Controller
 
         $enterprise->save();
 
-        return redirect()->action('HomeController@index');
+        return redirect()->action('HomeController@index')->with('message', 'created');
     }
 
-    protected function redirect()
+    protected function display()
     {
         return redirect()->action('HomeController@index');
     }

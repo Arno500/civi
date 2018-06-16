@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\User;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Session;
 
 
 class HomeController extends Controller
@@ -34,7 +35,7 @@ class HomeController extends Controller
             if ($enterpriseData == null){
                 return view('auth.enterprise-setup');
             } else {
-                return view('profile_enterprise');
+                return view('profile_enterprise')->with('message', Session::get('message'));
             }
         } else {
             return view('profile');

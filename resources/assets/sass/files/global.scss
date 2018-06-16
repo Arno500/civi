@@ -114,6 +114,15 @@ footer a:hover {
   min-width: 10rem;
 }
 
+.alert {
+  width: 100%;
+  padding: 1rem;
+  background-color: #93d091;
+  color: #0b3807;
+  margin: 1rem auto;
+  border-radius: 5px;
+}
+
 @media screen and (max-device-width: $responsive-breakpoint) {
   footer {
     flex-direction: column;

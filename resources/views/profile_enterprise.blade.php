@@ -13,6 +13,11 @@
                                 {{ session('status') }}
                             </div>
                         @endif
+                        @if ($message === 'created')
+                            <div class="alert">
+                                Votre entreprise a bien été créée !
+                            </div>
+                        @endif
 
                         <div class="btn-group btn-group-justified" role="group" aria-label="Sections du site">
                             <a class="btn" href="{{ route('offers.create') }}">Créer une offre</a>
