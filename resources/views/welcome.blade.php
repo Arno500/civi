@@ -18,6 +18,11 @@
                     <p>Pourquoi chercher parmi des millions de profils ? Ne regardez que ceux qui vous corrspondent.
                         Choississez selon différents critères tels que les années d'expérience, les compétences,...
                     </p>
+                    <div class="button-to-search">
+                        <a href="{{ route("search") }}" title="Accéder au moteur de recherche">Étudiants  <i class="fas fa-arrow-right"></i>
+
+                        </a>
+                    </div>
                 </div>
                 <hr class="vertical-line">
                 <div class="student">
@@ -27,15 +32,13 @@
                         sites d'offres, tels qu'<i>AlsaCréation</i>, <i>Linkedin</i>, <i>MonkeyTie</i>... Un job est à votre portée,
                         maintenant !
                     </p>
+                    <div class="button-to-search">
+                        <a href="{{ route("offers") }}" title="Accéder au moteur de recherche">Offres  <i class="fas fa-arrow-right"></i>
+
+                        </a>
+                    </div>
                 </div>
             </div>
-            <hr>
-            <div class="button-to-search">
-                <a href="{{ route("search") }}" title="Accéder au moteur de recherche">Accéder aux étudiants !  <i class="fas fa-arrow-right"></i>
-
-                </a>
-            </div>
-            <hr>
             <h1>La créativité ne se mesure pas à un bout de papier</h1>
             <h2>Et c'est bien pour ça qu'on est là</h2>
             <p>Avoir le diplôme n’est pas toujours synonyme d’avoir les compétences. Vous pouvez donc rechercher ce dont vous avez besoin, avec  des mots-clés et un système de filtres.
