@@ -162,6 +162,7 @@ textarea {
   border-bottom-right-radius: 0;
 }
 .btn:not(:disabled):not(.disabled):active, .btn:not(:disabled):not(.disabled).active {
+  box-shadow: inset 0px 0px 18px -4px rgb(0, 0, 0);
   background-image: none;
 }
 .btn-group > .btn:first-child {
