@@ -1,2 +1,42 @@
 /* Ne met que des sélecteurs de classe ici
 Il est égalemetn préférable de ne pas utiliser le style "ombre" de la page d'accueil et de la présentation */
+
+.return {
+    margin-right: 100px;
+}
+
+.row {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.offer-link {
+    border: solid 2px;
+    border-style: dashed;
+}
+
+.card-title {
+    margin-right: 20px;
+    margin-left: 20px;
+
+}
+
+.card-text {
+    text-align: center;
+    padding-bottom: 10px;
+
+}
+
+.card {
+    margin-bottom:
+}
+
+.container {
+    border: solid 2px;
+    border-style: dashed;
+    width: 25%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border-color: #0000ff;
+
+}
