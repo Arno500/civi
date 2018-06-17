@@ -2,23 +2,21 @@
 
 namespace App\Notifications;
 
-use Illuminate\Bus\Queueable;
 use Illuminate\Notifications\Notification;
-use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Messages\MailMessage;
 
 class ResetPassword extends Notification
 {
-    use Queueable;
+    public $token;
 
     /**
      * Create a new notification instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct($token)
     {
-        //
+        $this->token = $token;
     }
 
     /**
@@ -41,9 +39,10 @@ class ResetPassword extends Notification
     public function toMail($notifiable)
     {
         return (new MailMessage)
-                    ->line('The introduction to the notification.')
-                    ->action('Notification Action', url('/'))
-                    ->line('Thank you for using our application!');
+            ->subject('Réinitialisation de mot de passe - ' . config('app.name'))
+            ->line('Vous recevez ce mail car nous avons reçu une demande de réinitialisation de mot de passe pour votre compte.')
+            ->action('Réinitialiser le mot de passe', url(config('app.url').route('password.reset', $this->token, false)))
+            ->line('Si vous n\'avez jamais demandé de réinitialiser votre mot de passe, vous pouvez ignorer cet email.');
     }
 
     /**

@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
-use App\Http\Controllers\Auth\ResetPasswordController as ResetPasswordNotification;
+use App\Notifications\ResetPassword as ResetPasswordOverride;
 
 class User extends Authenticatable
 {
@@ -28,7 +28,7 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
-    //Return the informations of the linked enterprise
+    //Return the data of the linked enterprise
     public function enterprise() {
         return $this->belongsTo('App\Enterprise', 'enterprise', 'id');
     }
@@ -39,7 +39,7 @@ class User extends Authenticatable
 
     public function sendPasswordResetNotification($token)
     {
-        $this->notify(new ResetPasswordNotification($token));
+        $this->notify(new ResetPasswordOverride($token));
     }
 
 }
