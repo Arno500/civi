@@ -8,6 +8,7 @@ Il est égalemetn préférable de ne pas utiliser le style "ombre" de la page d'
 
 .row-margin {
     margin-right: 50px;
+    
 }
 
 .offer-link {
@@ -48,11 +49,13 @@ Il est égalemetn préférable de ne pas utiliser le style "ombre" de la page d'
 
 .entreprise {
     width: 100%;
+    margin-right: 20px
 }
 
-main {
+.main {
     width: 100%;
     display: flex;
+     margin: 20px;
 
 }
 
