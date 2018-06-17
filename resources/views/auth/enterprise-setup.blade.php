@@ -339,6 +339,7 @@
                                     <input id="logo" name="logo" type="file" value="" required
                                            class="custom-file-input{{ $errors->has('logo') ? ' is-invalid' : '' }}">
                                     <label class="custom-file-label" for="logo" aria-describedby="imageHelpBlock">Sélectionner une image...</label>
+                                    <br>
                                     <small id="imageHelpBlock" class="form-text text-muted">
                                         Une image contenant une couche de transparence est fortement recommandée (PNG ou GIF)
                                     </small>
