@@ -1,92 +1,67 @@
 <!DOCTYPE html>
 <html lang="fr">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="csrf-token" content="q5jb0GxthaYlbFM5aviFC96tBzFM6YllTzvbfDfs">
-        <title>CiVi</title>
-        <script src="/cdn-cgi/apps/head/U5BQnmsukSlply5SPsw0h11HMOQ.js"></script>
-        <link href="../public/css/app.css" rel="stylesheet">
-		<link href="./lecssquetumodifies.css" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Montserrat:400|Lato|Source+Sans+Pro:400,600,700" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        <link href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" rel="stylesheet">
-    </head>
-    <body>
-        <div id="app">
-            <nav class="navbar navbar-expand-md bg-light">
-                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#app-navbar-collapse" aria-expanded="false">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <a class="navbar-brand" href="https://civi.arnaux.cf">
-                    <img src="../public/img/logo.svg" alt="CiVi" height="50" data-pagespeed-url-hash="4207360981" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">CiVi
 
-                </a>
-                <div class="collapse navbar-collapse" id="app-navbar-collapse">
-                    <ul class="navbar-nav mr-auto">&nbsp;</ul>
-                    <ul class="navbar-nav navbar-right">
-                        <li class="nav-item">
-                            <a href="https://civi.arnaux.cf/mmi" class="nav-link">La formation MMI</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="https://civi.arnaux.cf/search" class="nav-link">Nos étudiants</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="https://civi.arnaux.cf/offers" class="nav-link">Les offres</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="https://civi.arnaux.cf/login" class="nav-link">Se connecter</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="https://civi.arnaux.cf/register" class="nav-link button-register">S'inscrire</a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-            <main>
-			
-			<!-- Modifie tout dans le main, met une offre dans un container row -->
-                <div class="container">
-				<!-- l'offre commence ici -->
-                    <div class="row">
-                        <a class="offer-link" href="/offers/1">
-                            <div class="card card-horizontal-md-up card-offer">
-                                <img class="card-img" src="https://civi.arnaux.cf/storage/img/enterprise-logos/arno-co.jpg" alt="logo de l'entreprise" data-pagespeed-url-hash="857315774" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
-                                <div class="card-block">
-                                    <h5 class="card-title">Nom de l'offre</h5>
-                                    <p class="card-text">description de l'offre, blablabla</p>
-                                    <h2>Entreprise</h2>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="csrf-token" content="q5jb0GxthaYlbFM5aviFC96tBzFM6YllTzvbfDfs">
+    <title>CiVi</title>
+    <script src="/cdn-cgi/apps/head/U5BQnmsukSlply5SPsw0h11HMOQ.js"></script>
+    <link href="../public/css/app.css" rel="stylesheet">
+    <link href="./lecssquetumodifies.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400|Lato|Source+Sans+Pro:400,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" rel="stylesheet"> </head>
 
-                                </div>
-                            </div>
-                        </a>
-                    </div>
+<body>
+    <div id="app">
+        <nav class="navbar navbar-expand-md bg-light">
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#app-navbar-collapse" aria-expanded="false"> <span class="navbar-toggler-icon"></span> </button>
+            <a class="navbar-brand" href="https://civi.arnaux.cf"> <img src="../public/img/logo.svg" alt="CiVi" height="50" data-pagespeed-url-hash="4207360981" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">CiVi </a>
+            <div class="collapse navbar-collapse" id="app-navbar-collapse">
+                <ul class="navbar-nav mr-auto">&nbsp;</ul>
+                <ul class="navbar-nav navbar-right">
+                    <li class="nav-item"> <a href="https://civi.arnaux.cf/mmi" class="nav-link">La formation MMI</a> </li>
+                    <li class="nav-item"> <a href="https://civi.arnaux.cf/search" class="nav-link">Nos étudiants</a> </li>
+                    <li class="nav-item"> <a href="https://civi.arnaux.cf/offers" class="nav-link">Les offres</a> </li>
+                    <li class="nav-item"> <a href="https://civi.arnaux.cf/login" class="nav-link">Se connecter</a> </li>
+                    <li class="nav-item"> <a href="https://civi.arnaux.cf/register" class="nav-link button-register">S'inscrire</a> </li>
+                </ul>
+            </div>
+        </nav>
+        <main>
+            <!-- Modifie tout dans le main, met une offre dans un container row -->
+            <div class="container">
+                <!-- l'offre commence ici -->
+                <div class="row larg">
+                    <a class="offer-link" href="/offers/1">
+                        <div class="card card-horizontal-md-up card-offer"> <img class="card-img" src="http://www.kinyu-z.net/data/wallpapers/206/1426857.jpg" alt="logo de l'entreprise" data-pagespeed-url-hash="857315774" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+                            <div class="offres-card">
+                                <h5 class="card-title">Developpeur Front</h5> <span class="card-description"> Description de l'offre</span>
+                                <br> </div>
+                            <h2 class="name-firm">Entreprise</h2> </div>
+                    </a>
                 </div>
-            </main>
-            <footer>
-                <div class="about">
-                    <h2>À propos :</h2>
-                    <p>Nous sommes une petite équipe de 3 personnes (Valentin Trinty, Romain Laze, Arno Dubois) basée à Champs-sur-Marne. Ceci est notre projet-tutoré, une plateforme de CV interactifs qui regroupe les Curricculum Vitae web des étudiants de la promotion MMI 2017-2018.</p>
-                </div>
-                <div class="location">
-                    <h2>IUT de Champs-sur-Marne</h2>
-                    <p>
-                        Contact : Martine Thireau
-<br>
-                        <a href="tel:+33160958590s">
-                            <i class="fas fa-phone"></i>
-                            +33 1 60 95 85 90
-                        </a>
-                        <br>
-                        <a href="">
-                            <i class="fas fa-envelope"></i>
-                            <span class="mail"></span>
-                        </a>
-                    </p>
-                </div>
-            </footer>
-        </div>
-        <script src="https://civi.arnaux.cf/js/app.js" defer></script>
-    </body>
+            </div>
+        </main>
+        <footer>
+            <div class="about">
+                <h2>À propos :</h2>
+                <p>Nous sommes une petite équipe de 3 personnes (Valentin Trinty, Romain Laze, Arno Dubois) basée à Champs-sur-Marne. Ceci est notre projet-tutoré, une plateforme de CV interactifs qui regroupe les Curricculum Vitae web des étudiants de la promotion MMI 2017-2018.</p>
+            </div>
+            <div class="location">
+                <h2>IUT de Champs-sur-Marne</h2>
+                <p> Contact : Martine Thireau
+                    <br>
+                    <a href="tel:+33160958590s"> <i class="fas fa-phone"></i> +33 1 60 95 85 90 </a>
+                    <br>
+                    <a href=""> <i class="fas fa-envelope"></i> <span class="mail"></span> </a>
+                </p>
+            </div>
+        </footer>
+    </div>
+    <script src="https://civi.arnaux.cf/js/app.js" defer></script>
+</body>
+
 </html>

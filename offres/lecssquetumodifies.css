@@ -1,40 +1,58 @@
 /* Ne met que des sélecteurs de classe ici
 Il est égalemetn préférable de ne pas utiliser le style "ombre" de la page d'accueil et de la présentation */
 
+
+/*----offres----*/
+.larg{
+    width:50%
+}
+
 .row {
-
-    margin: 50px;
+    margin-top: auto;
+    margin-top: 50px;
 }
 
-.row-margin {
-    margin-right: 50px;
-    
+.offres-card {
+    margin: auto;
+    flex: 1 1 auto;
 }
 
-.offer-link {
-    border: solid 2px;
-    border-style: dashed;
+.card-img {
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 10px;
+    margin-right: 10px;
+    height: 70%;
 }
 
 .card-title {
-    margin-right: 20px;
-    margin-left: 20px;
-
+    margin-top: auto;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
-.card-text {
+.card-description {
+    margin-left: 10px;
+    color: #000000;
+}
+
+.name-firm {
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 220px;
     text-align: center;
-    padding-bottom: 10px;
-
 }
+
+
+/*----affichage offres----*/
 
 .affichage {
-
     background-color: rgba(0, 0, 255, 0.08);
     margin-top: 50px;
     margin-bottom: 50px;
-
-
 }
 
 .link {
@@ -49,14 +67,13 @@ Il est égalemetn préférable de ne pas utiliser le style "ombre" de la page d'
 
 .entreprise {
     width: 100%;
-    margin-right: 20px
+    margin-right: 20px;
 }
 
 .main {
     width: 100%;
     display: flex;
-     margin: 20px;
-
+    margin: 20px;
 }
 
 .photo {
@@ -65,7 +82,6 @@ Il est égalemetn préférable de ne pas utiliser le style "ombre" de la page d'
     width: 200px;
     margin: auto;
     margin-top: 50px;
-
 }
 
 .description-entreprise {
