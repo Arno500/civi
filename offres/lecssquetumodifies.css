@@ -28,11 +28,11 @@ Il est égalemetn préférable de ne pas utiliser le style "ombre" de la page d'
 }
 
 .affichage {
-    
-   background-color: rgba(0, 0, 255, 0.08);
+
+    background-color: rgba(0, 0, 255, 0.08);
     margin-top: 50px;
     margin-bottom: 50px;
-  
+
 
 }
 
@@ -67,9 +67,10 @@ main {
 
 .description-entreprise {
     margin: 20px;
+    margin-bottom: 50px;
 }
 
-.description-stage{
-    background-color:rgba(0, 0, 255, 0.03);
-    padding: 10px
+.description-stage {
+    background-color: rgba(0, 0, 255, 0.03);
+    padding: 10px;
 }
