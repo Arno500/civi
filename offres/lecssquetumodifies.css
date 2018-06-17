@@ -4,8 +4,8 @@ Il est égalemetn préférable de ne pas utiliser le style "ombre" de la page d'
 
 
 .row {
-    margin-top: 50px;
-    margin-bottom: 50px;
+    
+    margin: 50px;
 }
 
 .row-margin{
@@ -38,3 +38,10 @@ Il est égalemetn préférable de ne pas utiliser le style "ombre" de la page d'
 
 }
 
+.link{
+    color: #0000ff;
+}
+
+.title{
+    margin:auto;
+}

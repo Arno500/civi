@@ -1,107 +1,126 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="csrf-token" content="q5jb0GxthaYlbFM5aviFC96tBzFM6YllTzvbfDfs">
-        <title>CiVi</title>
-        <script src="/cdn-cgi/apps/head/U5BQnmsukSlply5SPsw0h11HMOQ.js"></script>
-        <link href="../public/css/app.css" rel="stylesheet">
-		<link href="./lecssquetumodifies.css" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Montserrat:400|Lato|Source+Sans+Pro:400,600,700" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        <link href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" rel="stylesheet">
-    </head>
-    <body>
-        <div id="app">
-            <nav class="navbar navbar-expand-md bg-light">
-                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#app-navbar-collapse" aria-expanded="false">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="csrf-token" content="q5jb0GxthaYlbFM5aviFC96tBzFM6YllTzvbfDfs">
+    <title>CiVi</title>
+    <script src="/cdn-cgi/apps/head/U5BQnmsukSlply5SPsw0h11HMOQ.js"></script>
+    <link href="../public/css/app.css" rel="stylesheet">
+    <link href="./lecssquetumodifies.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400|Lato|Source+Sans+Pro:400,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" rel="stylesheet">
+</head>
+
+<body>
+    <div id="app">
+        <nav class="navbar navbar-expand-md bg-light">
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#app-navbar-collapse" aria-expanded="false">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <a class="navbar-brand" href="https://civi.arnaux.cf/offers">
+            <a class="navbar-brand" href="https://civi.arnaux.cf/offers">
                     <img src="../public/img/logo.svg" alt="CiVi" height="50" data-pagespeed-url-hash="4207360981" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">CiVi
 
                 </a>
-                <div class="collapse navbar-collapse" id="app-navbar-collapse">
-                    <ul class="navbar-nav mr-auto">&nbsp;</ul>
-                    <ul class="navbar-nav navbar-right">
-                        <li class="nav-item">
-                            <a href="https://civi.arnaux.cf/mmi" class="nav-link">La formation MMI</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="https://civi.arnaux.cf/search" class="nav-link">Nos étudiants</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="https://civi.arnaux.cf/offers" class="nav-link">Les offres</a>
-                        </li>
-                        <li class="dropdown nav-item">
-                            <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">iouyhj
+            <div class="collapse navbar-collapse" id="app-navbar-collapse">
+                <ul class="navbar-nav mr-auto">&nbsp;</ul>
+                <ul class="navbar-nav navbar-right">
+                    <li class="nav-item">
+                        <a href="https://civi.arnaux.cf/mmi" class="nav-link">La formation MMI</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="https://civi.arnaux.cf/search" class="nav-link">Nos étudiants</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="https://civi.arnaux.cf/offers" class="nav-link">Les offres</a>
+                    </li>
+                    <li class="dropdown nav-item">
+                        <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true">iouyhj
 </a>
-                            <ul class="dropdown-menu">
-                                <li class="dropdown-item">
-                                    <a href="https://civi.arnaux.cf/profile">Profil
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-item">
+                                <a href="https://civi.arnaux.cf/profile">Profil
 </a>
-                                </li>
-                                <div class="dropdown-divider"></div>
-                                <li class="dropdown-item">
-                                    <a href="https://civi.arnaux.cf/logout" aria-labelledby="dropdownMenu" onclick="event.preventDefault();
+                            </li>
+                            <div class="dropdown-divider"></div>
+                            <li class="dropdown-item">
+                                <a href="https://civi.arnaux.cf/logout" aria-labelledby="dropdownMenu" onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">Déconnexion
 </a>
-                                    <form id="logout-form" action="https://civi.arnaux.cf/logout" method="POST" style="display: none;">
-                                        <input type="hidden" name="_token" value="q5jb0GxthaYlbFM5aviFC96tBzFM6YllTzvbfDfs">
-                                    </form>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-            <main>
-                <div class="container affichage">
-                    <div class="row row-margin">
-                        <a href="https://civi.arnaux.cf/offers">
-                            <i class="material-icons icon-in-link">arrow_back</i>
-                            Retourner aux offres
-                        </a>
-                    </div>
-					<!-- Les infos de l'offre sont juste dans cette div -->
-                    <div class="row">
-                        Nom du stage
-						<br>
-                        Description du stage
-						<br>
-                         Nom de l'entreprise
-						<br>
-                        <a href="https://arno.arnaux.cf">Lien de l'entreprise</a>
-                        <br>Durée du stage
+                                <form id="logout-form" action="https://civi.arnaux.cf/logout" method="POST" style="display: none;">
+                                    <input type="hidden" name="_token" value="q5jb0GxthaYlbFM5aviFC96tBzFM6YllTzvbfDfs">
+                                </form>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <main>
+            <div class="row row-margin">
+                <a href="https://civi.arnaux.cf/offers">
 
+                    <h2> <i class="material-icons icon-in-link">arrow_back</i>Retourner aux offres</h2>
+                </a>
+            </div>
+            <div class="container affichage">
+
+                <!-- Les infos de l'offre sont juste dans cette div -->
+                <div class="row">
+                    <h1 class="title">Developpeur Front</h1>
+                    <br>
+                    <br>
+                    <div>
+                        <h2>Description du stage :</h2>
+                        <p>Quid? qui se etiam nunc subsidiis patrimonii aut amicorum liberalitate sustentant, hos perire patiemur? An, si qui frui publico non potuit per hostem, hic tegitur ipsa lege censoria; quem is frui non sinit, qui est, etiamsi non appellatur, hostis, huic ferri auxilium non oportet? Retinete igitur in provincia diutius eum, qui de sociis cum hostibus, de civibus cum sociis faciat pactiones, qui hoc etiam se pluris esse quam collegam putet, quod ille vos tristia voltuque deceperit, ipse numquam se minus quam erat, nequam esse simularit. Piso autem alio quodam modo gloriatur se brevi tempore perfecisse, ne Gabinius unus omnium nequissimus existimaretur.</p>
                     </div>
+                    <br>
+                    <h2>Nom de l'entreprise : </h2>
+                    <p>J'aime les pommes</p>
+                    <br>
+                    <h2>Compétences souhaitées :</h2>
+                    <p>Lorem ipsum lorem lorem ipsum ipsum, psumpsumlorem.</p>
+                    <br>
+                    <h2>Lieu :</h2>
+                    <p>Champs-sur-Marne, 77420</p>
+                    <br>
+                    <a href="https://arno.arnaux.cf">
+                        <h2 class="link">Lien de l'entreprise</h2>
+
+                    </a>
+                    <br>
+
+                    <h2>Durée du stage :</h2>
+                    <p>De 2 à 6 mois</p>
+
                 </div>
-            </main>
-            <footer>
-                <div class="about">
-                    <h2>À propos :</h2>
-                    <p>Nous sommes une petite équipe de 3 personnes (Valentin Trinty, Romain Laze, Arno Dubois) basée à Champs-sur-Marne. Ceci est notre projet-tutoré, une plateforme de CV interactifs qui regroupe les Curricculum Vitae web des étudiants de la promotion MMI 2017-2018.</p>
-                </div>
-                <div class="location">
-                    <h2>IUT de Champs-sur-Marne</h2>
-                    <p>
-                        Contact : Martine Thireau
-<br>
-                        <a href="tel:+33160958590s">
+            </div>
+        </main>
+        <footer>
+            <div class="about">
+                <h2>À propos :</h2>
+                <p>Nous sommes une petite équipe de 3 personnes (Valentin Trinty, Romain Laze, Arno Dubois) basée à Champs-sur-Marne. Ceci est notre projet-tutoré, une plateforme de CV interactifs qui regroupe les Curricculum Vitae web des étudiants de la promotion MMI 2017-2018.</p>
+            </div>
+            <div class="location">
+                <h2>IUT de Champs-sur-Marne</h2>
+                <p>
+                    Contact : Martine Thireau
+                    <br>
+                    <a href="tel:+33160958590s">
                             <i class="fas fa-phone"></i>
                             +33 1 60 95 85 90
                         </a>
-                        <br>
-                        <a href="">
+                    <br>
+                    <a href="">
                             <i class="fas fa-envelope"></i>
                             <span class="mail"></span>
                         </a>
-                    </p>
-                </div>
-            </footer>
-        </div>
-        <script src="https://civi.arnaux.cf/js/app.js" defer></script>
-    </body>
+                </p>
+            </div>
+        </footer>
+    </div>
+    <script src="https://civi.arnaux.cf/js/app.js" defer></script>
+</body>
 </html>
