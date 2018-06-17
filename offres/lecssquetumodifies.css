@@ -1,15 +1,13 @@
 /* Ne met que des sélecteurs de classe ici
 Il est égalemetn préférable de ne pas utiliser le style "ombre" de la page d'accueil et de la présentation */
 
-
-
 .row {
-    
+
     margin: 50px;
 }
 
-.row-margin{
-    margin-right: 50px
+.row-margin {
+    margin-right: 50px;
 }
 
 .offer-link {
@@ -28,20 +26,50 @@ Il est égalemetn préférable de ne pas utiliser le style "ombre" de la page d'
     padding-bottom: 10px;
 
 }
- .affichage {
-    border: solid 2px;
-    border-style: dashed;
-    width: 25%;
+
+.affichage {
+    
+   background-color: rgba(0, 0, 255, 0.08);
     margin-top: 50px;
     margin-bottom: 50px;
-    border-color: #0000ff;
+  
 
 }
 
-.link{
+.link {
     color: #0000ff;
+    text-align: center;
+    margin-top: 50px;
 }
 
-.title{
-    margin:auto;
+.title {
+    margin: auto;
+}
+
+.entreprise {
+    width: 100%;
+}
+
+main {
+    width: 100%;
+    display: flex;
+
+}
+
+.photo {
+    display: flex;
+    margin: 50px;
+    width: 200px;
+    margin: auto;
+    margin-top: 50px;
+
+}
+
+.description-entreprise {
+    margin: 20px;
+}
+
+.description-stage{
+    background-color:rgba(0, 0, 255, 0.03);
+    padding: 10px
 }
