@@ -55,12 +55,9 @@ body {
   background-color: initial;
 }
 
-html,body,body>div {
-  min-height: 100vh;
-}
-
 main {
   position: relative;
+  min-height: 53.3vh;
 }
 
 input, button, select, optgroup, textarea {
