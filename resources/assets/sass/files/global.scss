@@ -55,6 +55,10 @@ body {
   background-color: initial;
 }
 
+html,body {
+  min-height: 100vh;
+}
+
 main {
   position: relative;
 }
