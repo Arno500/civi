@@ -12,6 +12,7 @@
 @import "files/home";
 @import "files/search";
 @import "files/forms";
+@import "files/offers.scss";
 
 .margin-content {
   margin-top: 3rem;
@@ -38,15 +39,8 @@
 }
 .card-horizontal {
   flex-direction: row;
-}
-.card-horizontal-sm-up {
-  flex-direction: row;
-}
-.card-horizontal-md-up {
-  flex-direction: row;
-}
-.card-horizontal-lg-up {
-  flex-direction: row;
+  align-items: center;
+  margin: 0;
 }
 .card-horizontal .card-img {
   flex: 0 0 $card-img-width;
