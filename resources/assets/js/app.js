@@ -235,7 +235,6 @@ $(document).ready(function() {
                 });
             }
             $(".studentcard").click(function(event){
-                console.log(event);
                 if ($(event.currentTarget).is("div.studentcard")) {
                     if (!authStatus) {
                         alert("Rejoignez CiVi pour accéder au profil détaillé des étudiants !");
