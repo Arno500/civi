@@ -44,6 +44,16 @@
                     <br>
                     <span class="fill-span"></span>
                 </h5>
+                <h5 class="softwares">
+                    <span class="name-category ">Qualités :</span>
+                    <br>
+                    <span class="fill-span"></span>
+                </h5>
+                <h5 class="qualities">
+                    <span class="name-category ">Logiciels :</span>
+                    <br>
+                    <span class="fill-span"></span>
+                </h5>
                 <p class="description"></p>
                 <a class="resume-static" href="#"></a>
                 <div class="retract retract__active"></div>
