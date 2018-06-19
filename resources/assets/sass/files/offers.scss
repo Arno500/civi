@@ -142,6 +142,10 @@
   margin-top: 1.5rem;
 }
 
+.row-return>a:hover {
+  text-decoration: underline;
+}
+
 @media screen and (max-device-width: $responsive-breakpoint) {
   .card-horizontal {
     flex-direction: column;

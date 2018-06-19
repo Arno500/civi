@@ -4,7 +4,7 @@
 @section('content')
 
 
-        <div class="row">
+        <div class="row row-return">
             <a href="{{ route('offers') }}"><i class="material-icons icon-in-link">arrow_back</i> Retourner aux offres</a>
         </div>
         <div class="affichage-offre-contenu">
