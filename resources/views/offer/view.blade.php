@@ -4,7 +4,6 @@
 @section('content')
 
 
-    <div class="container">
         <div class="row">
             <a href="{{ route('offers') }}"><i class="material-icons icon-in-link">arrow_back</i> Retourner aux offres</a>
         </div>
@@ -46,6 +45,5 @@
                 </div>
             </div>
         </div>
-    </div>
 
 @endsection
