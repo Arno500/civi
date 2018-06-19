@@ -1,13 +1,12 @@
 /* Ne met que des sélecteurs de classe ici
 Il est égalemetn préférable de ne pas utiliser le style "ombre" de la page d'accueil et de la présentation */
 
-
 /*----offres----*/
-
 
 .row {
     margin-top: auto;
     margin-top: 50px;
+    padding:
 }
 
 .offres-card {
@@ -51,6 +50,7 @@ Il est égalemetn préférable de ne pas utiliser le style "ombre" de la page d'
     background-color: rgba(0, 0, 255, 0.08);
     margin-top: 50px;
     margin-bottom: 50px;
+    display: block
 }
 
 .link {
@@ -63,6 +63,8 @@ Il est égalemetn préférable de ne pas utiliser le style "ombre" de la page d'
     margin: auto;
 }
 
+
+
 .entreprise {
     width: 100%;
     margin-right: 20px;
@@ -71,7 +73,7 @@ Il est égalemetn préférable de ne pas utiliser le style "ombre" de la page d'
 .main {
     width: 100%;
     display: flex;
-    margin: 20px;
+
 }
 
 .photo {
@@ -90,4 +92,11 @@ Il est égalemetn préférable de ne pas utiliser le style "ombre" de la page d'
 .description-stage {
     background-color: rgba(0, 0, 255, 0.03);
     padding: 10px;
+}
+
+
+.stage {
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: 10px
 }
