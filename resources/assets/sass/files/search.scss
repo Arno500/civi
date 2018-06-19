@@ -396,6 +396,7 @@
   position: relative;
   transition: 1s all;
   padding: 1.2rem;
+  overflow-y: scroll;
 
   &.retracted {
     box-shadow: none;
@@ -551,7 +552,6 @@
   }
   .left-panel {
     width: 90vw;
-    overflow-y: scroll;
   }
   .flex-embed-retracted {
     width: 190vw;
