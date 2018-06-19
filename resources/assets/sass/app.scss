@@ -14,49 +14,6 @@
 @import "files/forms";
 @import "files/offers.scss";
 
-.margin-content {
-  margin-top: 3rem;
-}
-
-.offer-link {
-  display: block;
-  width: 100%;
-}
-.card-offer {
-  height: 150px;
-}
-.card-img {
-  order: -1;
-  width: 200px;
-  object-fit: scale-down;
-}
-.card-block {
-  order: 0;
-  width: 100%;
-}
-.card-img-last {
-  order: 1;
-}
-.card-horizontal {
-  flex-direction: row;
-  align-items: center;
-  margin: 0;
-}
-.card-horizontal .card-img {
-  flex: 0 0 $card-img-width;
-}
-.card-horizontal .card-block {
-  flex: 0 0 calc(100% - $card-img-width);
-}
-
-.icon-in-link {
-  bottom: -5px;
-  right: 3px;
-  position: relative;
-}
-
-
-
 
 // Algolia section
 

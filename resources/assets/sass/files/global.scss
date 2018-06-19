@@ -123,6 +123,16 @@ footer a:hover {
   border-radius: 5px;
 }
 
+.margin-content {
+  margin-top: 3rem;
+}
+
+.icon-in-link {
+  bottom: -5px;
+  right: 3px;
+  position: relative;
+}
+
 @media screen and (max-device-width: $responsive-breakpoint) {
   footer {
     flex-direction: column;

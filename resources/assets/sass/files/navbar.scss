@@ -131,6 +131,9 @@
     display: block;
     padding: 0.5rem 0.5rem;
   }
+  .nav-link:last-of-type {
+    margin-top: 0.3rem;
+  }
 }
 
 .navbar-toggler:not(:disabled):not(.disabled) {

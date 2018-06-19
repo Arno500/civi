@@ -1,3 +1,34 @@
+.offer-link {
+  display: block;
+  width: 100%;
+}
+.card-offer {
+  height: 150px;
+}
+.card-img {
+  order: -1;
+  width: 200px;
+  object-fit: scale-down;
+}
+.card-block {
+  order: 0;
+  width: 100%;
+}
+.card-img-last {
+  order: 1;
+}
+.card-horizontal {
+  flex-direction: row;
+  align-items: center;
+  margin: 0;
+}
+.card-horizontal .card-img {
+  flex: 0 0 $card-img-width;
+}
+.card-horizontal .card-block {
+  flex: 0 0 calc(100% - $card-img-width);
+}
+
 .large {
   margin-top: 50px;
   width: 50%;
@@ -42,9 +73,81 @@
   margin-bottom: 3rem;
 }
 
+.affichage-offre {
+  background-color: rgba(0, 60, 255, 0.02);
+  display: block;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.offer-name {
+  margin-top: 1rem;
+  background: -webkit-linear-gradient(right, #003CFF, #553390);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.link>h2 {
+  color: #5c5cfa;
+  text-align: center;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+.entreprise {
+  width: 40%;
+  margin-right: 20px;
+}
+
+.entreprise>h2 {
+  font-size: 2rem;
+  color: #022aad;
+  font-weight: 600;
+}
+
+.affichage-offre-contenu {
+  display: flex;
+  margin: 2rem 1rem;
+}
+
+.photo {
+  display: flex;
+  height: 100px;
+  margin: 0 auto;
+}
+
+.description-entreprise {
+  margin: 20px;
+  margin-bottom: 50px;
+}
+
+.description-stage {
+  background-color: rgba(44, 44, 175, 0.03);
+  padding: 10px;
+}
+
+.stage {
+  padding: 0 1rem;
+  margin-top: 0;
+}
+
+.affichage-offre-contenu>div {
+  margin: 0 1rem;
+}
+
+.row-return {
+  margin-left: 2rem;
+  margin-top: 1.5rem;
+}
+
 @media screen and (max-device-width: $responsive-breakpoint) {
   .card-horizontal {
     flex-direction: column;
+  }
+  .card-horizontal .card-img {
+    flex: 0 0 auto;
   }
   .card-offer {
     height: initial;
@@ -56,5 +159,15 @@
   .offer-link {
     width: 90%;
     margin: 0 auto;
+  }
+  .affichage-offre-contenu {
+    flex-direction: column;
+  }
+  .affichage-offre-contenu>div {
+    width: 90%;
+    margin: 1rem auto;
+  }
+  .large {
+    width: 90%;
   }
 }
