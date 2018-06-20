@@ -1,0 +1,100 @@
+body::before {
+    content: "";
+    background: linear-gradient(90deg, #003cff 0, #435099 55%, #553390);
+    width: 100%;
+    height: 20px;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.reveal .logo {
+    height: 40vh;
+    border: initial;
+    outline: initial;
+    box-shadow: initial;
+}
+
+.reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6 {
+    color: #4a4a4a;
+    text-transform: initial;
+}
+
+.reveal h1, .reveal h2 {
+    background: linear-gradient(90deg, #003cff 0, #435099 55%, #553390);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.reveal *, .reveal h3, .reveal h4, .reveal h5, .reveal h6 {
+    color: #2c4198;
+}
+
+.reveal .slide-number {
+    background-color: initial;
+    color: #7c7c7c;
+    font-size: 1.5rem;
+}
+
+.reveal .progress {
+    height: 5px;
+}
+
+.reveal .progress span {
+    background: linear-gradient(90deg, #003cff 0, #435099 55%, #553390);
+}
+
+.reveal .full-screen {
+    background: linear-gradient(90deg, #003cff 0, #435099 55%, #553390);
+    padding: 0;
+}
+
+.reveal.slide .full-screen {
+    backface-visibility: initial;
+}
+
+.reveal .full-screen>* {
+    background: initial;
+    -webkit-background-clip: initial;
+    background-clip: initial;
+    -webkit-text-fill-color: initial;
+    color: white;
+}
+
+.reveal .flex-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.reveal .flex-container img {
+    border: initial;
+    outline: initial;
+    box-shadow: initial;
+    width: 25vw;
+    object-fit: contain;
+}
+
+.reveal .flex-container>div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 15vw;
+}
+
+.reveal .flex-container>div>img {
+    width: 100%;
+}
+
+.reveal .flex-container.stretch img {
+    width: initial;
+}
+
+.reveal .no-border {
+    border: initial;
+    outline: initial;
+}
+
+.reveal .php-img {
+    transform: translateY(50%);
+}
