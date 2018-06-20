@@ -266,8 +266,8 @@ $(document).ready(function() {
                         var studentData = $(event.currentTarget).children(".informations").data();
                         var leftPanel = $(".left-panel");
                         var iframe = $(".frame-panel");
-                        leftPanel.children(".student-name").text(studentData.name);
-                        leftPanel.children(".resume-static").attr("href", studentData.urlstatic).text("Lien vers le CV statique (PDF)");
+                        leftPanel.find(".student-name").text(studentData.name);
+                        leftPanel.find(".resume-static").attr("href", studentData.urlstatic).text("Lien vers le CV statique (PDF)");
                         leftPanel.find(".internship-preference>.fill-span").text(studentData.internshippreference);
                         leftPanel.find(".internship-duration>.fill-span").text(studentData.internshipduration);
                         leftPanel.find(".softwares>.fill-span").text(studentData.softwares.replace(/,/g, ', '));
