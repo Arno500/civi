@@ -63,7 +63,7 @@ body::before {
     padding: 0;
 }
 
-.reveal.slide .full-screen {
+.reveal .slide .full-screen {
     backface-visibility: initial;
 }
 
