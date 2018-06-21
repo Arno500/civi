@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 22.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 2000 2000" style="enable-background:new 0 0 2000 2000;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:url(#SVGID_1_);}
+	.st1{fill:url(#SVGID_2_);}
+	.st2{fill:url(#SVGID_3_);}
+	.st3{fill:none;}
+	.st4{font-family:'Montserrat-Regular';}
+	.st5{font-size:24px;}
+	.st6{fill:url(#SVGID_4_);}
+	.st7{fill:url(#SVGID_5_);}
+</style>
+<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="1656" y1="952" x2="2000" y2="952">
+	<stop  offset="0" style="stop-color:#003CFF"/>
+	<stop  offset="0" style="stop-color:#435099"/>
+	<stop  offset="1" style="stop-color:#553390"/>
+</linearGradient>
+<polyline class="st0" points="1656,904 2000,1000 1720,957 "/>
+<linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="1656" y1="806" x2="2000" y2="806" gradientTransform="matrix(1 0 0 -1 0 1853)">
+	<stop  offset="0" style="stop-color:#003CFF"/>
+	<stop  offset="0" style="stop-color:#435099"/>
+	<stop  offset="1" style="stop-color:#553390"/>
+</linearGradient>
+<polyline class="st1" points="1656,1094 2000,1000 1719,1049 "/>
+<linearGradient id="SVGID_3_" gradientUnits="userSpaceOnUse" x1="0" y1="999" x2="2000" y2="999">
+	<stop  offset="0" style="stop-color:#003CFF"/>
+	<stop  offset="0.55" style="stop-color:#435099"/>
+	<stop  offset="1" style="stop-color:#553390"/>
+</linearGradient>
+<polygon class="st2" points="2000,1000 1819,1049 0,1049 0,949 1846,957 2000,1000 "/>
+<g>
+	<rect x="30" y="887" class="st3" width="915" height="133"/>
+	<text transform="matrix(1 0 0 1 30 904.8076)" class="st4 st5">Ce que nous avons apporté</text>
+	<rect x="30" y="887" class="st3" width="915" height="133"/>
+	<text transform="matrix(1 0 0 1 30 904.8076)" class="st4 st5">Ce que nous avons apporté</text>
+</g>
+<rect x="431" y="1096" class="st3" width="915" height="133"/>
+<text transform="matrix(1 0 0 1 431 1113.8076)" class="st4 st5">Ce que nous avons de spécial</text>
+<rect x="847" y="887" class="st3" width="915" height="133"/>
+<text transform="matrix(1 0 0 1 847 904.8076)" class="st4 st5">Ce que nous avons utilisé</text>
+<polygon class="st3" points="2017,1230 1102,1230 1121,1097 2036,1097 "/>
+<text transform="matrix(1 0 0 1 1120.7466 1114.8076)" class="st4 st5">Comment nous avons géré le projet</text>
+<circle cx="192" cy="1001" r="23"/>
+<circle cx="586" cy="1001" r="23"/>
+<circle cx="994" cy="1001" r="23"/>
+<circle cx="1301" cy="1001" r="23"/>
+<circle cx="1723" cy="1001" r="23"/>
+<linearGradient id="SVGID_4_" gradientUnits="userSpaceOnUse" x1="1973" y1="1049" x2="1973" y2="1049">
+	<stop  offset="0" style="stop-color:#003CFF"/>
+	<stop  offset="0.55" style="stop-color:#435099"/>
+	<stop  offset="1" style="stop-color:#553390"/>
+</linearGradient>
+<path class="st6" d="M1973,1049"/>
+<linearGradient id="SVGID_5_" gradientUnits="userSpaceOnUse" x1="1973" y1="1049" x2="1973" y2="1049">
+	<stop  offset="0" style="stop-color:#003CFF"/>
+	<stop  offset="0.55" style="stop-color:#435099"/>
+	<stop  offset="1" style="stop-color:#553390"/>
+</linearGradient>
+<path class="st7" d="M1973,1049"/>
+<rect x="1497" y="887" class="st3" width="915" height="133"/>
+<text transform="matrix(1 0 0 1 1497 904.8076)" class="st4 st5">Nos CV intéractifs et bilans personnels</text>
+</svg>
