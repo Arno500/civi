@@ -31,6 +31,19 @@ body::before {
     color: #2c4198;
 }
 
+.reveal section img {
+    border: 4px solid #2c4198;
+    box-shadow: 0 0 20px 3px rgba(49, 72, 177, 0.21);
+}
+
+.reveal p {
+    font-size: 0.7em;
+}
+
+.reveal pre {
+    font-size: 0.35em;
+}
+
 .reveal .slide-number {
     background-color: initial;
     color: #7c7c7c;
@@ -97,4 +110,27 @@ body::before {
 
 .reveal .php-img {
     transform: translateY(50%);
+}
+
+.reveal .laravel-logos img {
+    width: 40% !important;
+    margin: 0 auto;
+}
+
+.reveal .workflow-images img {
+    height: 68vh;
+    margin: 0 2rem;
+    width: 20%;
+}
+
+.reveal .algolia-logo {
+    height: 35vh;
+    border: none;
+    box-shadow: none;
+}
+
+.reveal .tools-images img {
+    height: 68vh;
+    margin: 0 1rem;
+    width: 13%;
 }

@@ -38,20 +38,24 @@
                 </aside>
             </section>
             <section>
-                <section>
-                    <aside class="notes">
-                        <ul>
-                            <li>CVs des MMIs de la promo</li>
-                            <li>Depot d'offres</li>
-                        </ul>
-                    </aside>
-
-                    <h2>Quel est le principe de la plateforme ?</h2>
+                <aside class="notes">
                     <ul>
-                        <li class="fragment fade-up">Donner un accès aux CVs des MMI en première année</li>
-                        <li class="fragment fade-up">Permettre aux entreprises de déposer des offres de stage</li>
+                        <li>
+                            <em>1x DEVELOPPER</em>
+                        </li>
+                        <li>CVs des MMIs de la promo</li>
+                        <li>
+                            <em>1x DEVELOPPER</em>
+                        </li>
+                        <li>Depot d'offres</li>
                     </ul>
-                </section>
+                </aside>
+
+                <h2>Quel est le principe de la plateforme ?</h2>
+                <ul>
+                    <li class="fragment fade-up">Donner un accès aux CVs des MMI en première année</li>
+                    <li class="fragment fade-up">Permettre aux entreprises de déposer des offres de stage</li>
+                </ul>
             </section>
             <section>
                 <section class="full-screen">
@@ -61,6 +65,9 @@
                 <section>
                     <aside class="notes">
                         <ul>
+                            <li>
+                                <em>2x DEVELOPPER</em>
+                            </li>
                             <li>Etablir un contact entre entreprises et etudiants</li>
                             <li>Valoriser les étudiants de MMI</li>
                             <li>Faciliter la découverte de profils</li>
@@ -79,7 +86,13 @@
                 <section>
                     <aside class="notes">
                         <ul>
+                            <li>
+                                <em>1x DEVELOPPER</em>
+                            </li>
                             <li>Recherche avancée -> tout l'objet du site, la killer-feature</li>
+                            <li>
+                                <em>1x DEVELOPPER</em>
+                            </li>
                             <li>Connexion/Inscription</li>
                         </ul>
                     </aside>
@@ -104,7 +117,7 @@
                             <li>
                                 <em>2x DEVELOPPER</em>
                             </li>
-                            <li>Standard, effet lumière, lisible</li>
+                            <li>Standard, effet lumière</li>
 
                             <p>Une fois cette identité définie, nous avons pu commencer à créer la maquette, amorcer l'intégration
                                 et le backend.</p>
@@ -127,6 +140,50 @@
             <section>
                 <section>
                     <aside class="notes">
+
+                        <h1>DYNAMIQUE</h1>
+                    </aside>
+
+                    <h1>Nous nous démarquons des autres par :</h1>
+                </section>
+                <section>
+                    <aside class="notes">
+                        <ul>
+                            <li>La rapidité, l'objectif est atteignable en peu de clics</li>
+                            <li>D'où le bleu de la confiance avec la modernité du violet</li>
+                            <li>
+                                <em>1x DEVELOPPER</em>
+                            </li>
+                            <li>Filtres</li>
+                            <li>Critères multiples</li>
+                            <li>
+                                <em>1x DEVELOPPER</em>
+                            </li>
+                            <li>Éviter le spam d'offres</li>
+                            <li>Facilite la création d'offres</li>
+                            <li>Créer une forme exclusivité</li>
+                            <li>Mots de passe cryptés (via l'algo Blowfish)</li>
+                        </ul>
+                    </aside>
+                    <ul>
+                        <li>
+
+                            <h2>Notre design</h2>
+                        </li>
+                        <li class="fragment fade-up">
+
+                            <h2>Notre recherche avancée</h2>
+                        </li>
+                        <li class="fragment fade-up">
+
+                            <h2>Notre système d'inscription</h2>
+                        </li>
+                    </ul>
+                </section>
+            </section>
+            <section>
+                <section>
+                    <aside class="notes">
                         <ul>
                             <li>HTML/CSS : Front-end</li>
                             <li>PHP : Back-end</li>
@@ -135,7 +192,7 @@
                         </ul>
                     </aside>
 
-                    <h2>Nos technologies</h2>
+                    <h1>Nos technologies</h1>
 
                     <div class="flex-container">
 
@@ -165,6 +222,10 @@
                     </div>
                 </section>
                 <section>
+                    <aside class="notes">
+
+                        <p> Mon travail avait pour but de reproduire la maquette préalablement réalisée</p>
+                    </aside>
 
                     <h3>HTML / CSS</h3>
 
@@ -172,20 +233,136 @@
                         <img src="img/maquette.png">
                         <img src="img/site.png"> </div>
                 </section>
-            </section>
-            <section data-transition="zoom-in fade-out">
+                <section>
+                    <aside class="notes">
+                        <ul>
+                            <li>Un framework : Laravel</li>
+                            <li>Type MVC (Modèle Vue Contrôlleur) -> Modèle définit les objets (ex les etudiants), Vue définie
+                                ce qu'on voit (contient l'HTML notamment et complète avec les données fournies par le contrôlleur),
+                                et le fameux contrôlleur qui définie toute la logique (on lui donne des informations, il
+                                les traites et les redonnes le plus souvent à la vue)</li>
+                            <li>Passé le temps de d'apprentissage -> gain de temps</li>
+                            <li>Laravel Scout (par Laravel) -> Envoie les données formatées à Algolia</li>
+                            <li>
+                                <em>1x DEVELOPPER</em>
+                            </li>
+                            <li>Eloquent (ORM = Doctrine) -> Pour gérer la base de données très facilement</li>
+                            <li>Ex : Obtenir les infos de l'entreprise liée à l'offre. On définie qu'une offre appartient donc
+                                à une entreprise (en accord avec la BDD). On a plus qu'ensuite à utiliser les méthodes "magiques"
+                                (leur vrai nom) de Laravel pour obtenir l'information que l'on souhaite.</li>
+                        </ul>
+                    </aside>
 
-                <h3>data-transition: zoom-in fade-out</h3>
+                    <h3>PHP</h3>
+
+                    <div class="flex-container laravel-logos">
+
+                        <div>
+                            <img src="img/laravel.svg" alt="">
+
+                            <p>Laravel</p>
+                        </div>
+
+                        <div>
+                            <img src="img/scout.svg" alt="">
+
+                            <p>Laravel Scout</p>
+                        </div>
+                    </div>
+
+                    <div class="fragment fade-up">
+                        <pre><code>
+    public function enterprise() {
+        return $this->belongsTo('App\Enterprise');
+    }
+    //On peut ensuite obtenir les informations de l'entreprise liée à l'offre :
+    $offer->enterprise->name
+                        </code></pre>
+
+                        <p>Eloquent</p>
+                    </div>
+                </section>
+                <section>
+                    <aside class="notes">
+                        <li>Une base de donnée relationnelle</li>
+                        <li>Un design précis : gérer les inscriptions/connexions/mdp oubliés/offres/entreprises/étudiants</li>
+                        <li>On peut noter la table migrations qui contient l'historique des opérations effectuées pour créer
+                            les tables, par justement Eloquent qui permet d'éviter de créer toute les tables et les relations
+                            à la main</li>
+                    </aside>
+
+                    <h3>MySQL</h3>
+                    <img src="img/bdd.PNG"> </section>
+                <section>
+                    <aside class="notes">
+                        <li>La technologie du moteur de recherche -> fournie par Algolia</li>
+                        <li>Un moteur : instantanné, qui peut rechercher de nombreux types de données, supporte le filtrage</li>
+                        <li>Un des critères importants pour le choix : sa compatibilité avec la RGPD</li>
+                    </aside>
+
+                    <h3>Algolia</h3>
+                    <img class="algolia-logo" src="img/Algolia.webp"> </section>
             </section>
             <section>
+                <section>
+                    <aside class="notes">
+                        <li>Maintenant : comment le projet s'est déroulé ?</li>
+                    </aside>
 
-                <h3>Default</h3>
+                    <h1>Notre gestion de projet</h1>
+                </section>
+                <section>
+                    <aside class="notes">
+                        <li></li>
+                    </aside>
+                    <h2>1. La Communication</h2>
+                </section>
+                <section>
+
+                    <h2>2. Planning</h2>
+                </section>
+                <section>
+
+                    <h2>3. Workflow</h2>
+
+                    <div class="flex-container workflow-images">
+                        <img src="img/Github.svg" alt="" class="git">
+                        <img src="img/sass.png" alt="">
+                        <img src="img/webpack-logo-horizontal.png" alt="">
+                        <img src="img/drive.png" alt=""> </div>
+                </section>
+                <section>
+
+                    <h2>4. Les Outils</h2>
+
+                    <div class="flex-container tools-images">
+                        <img src="img/001-illustrator.svg" alt="">
+                        <img src="img/005-premier.svg" alt="">
+                        <img src="img/006-after-effects.svg" alt="">
+                        <img src="img/007-Visual-studio.png" alt="">
+                        <img src="img/008-phpstorm.png" alt="">
+                        <img src="img/009-coggle.png" alt="">
+                        <img src="img/gantt.png" alt=""> </div>
+                </section>
+                <section>
+                    <aside>
+                        <ul></ul>
+                            l
+                        </ul>
+                    </aside>
+                    <h2>5. Les Erreurs
+                        <br> Problèmes et solutions</h2>
+                </section>
             </section>
-            <section data-background="#00ffff">
+            <section>
+                <section>
 
-                <h2>data-background: #00ffff</h2>
+                    <h1>Notre Ressenti</h1>
+                </section>
             </section>
         </div>
+    </div>
+    </div>
     </div>
     <script src="lib/js/head.min.js "></script>
     <script src="js/reveal.js "></script>
